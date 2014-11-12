@@ -1,0 +1,84 @@
+%Inleidende tekst
+Om de ogenblikkelijke totale rotatiesnelheidsvector $\overrightarrow{\omega}_{w}$ te bepalen worden de drie afzonderlijke rotatiesnelheidsvectoren uitgedrukt in het wereldassenstelsel en vervolgens opgeteld.
+\begin{equation*}
+\overrightarrow{\omega}_{w}=R^{x'y'z' \rightarrow xyz}\,\overrightarrow{\omega}_{g}'+R^{x'y'z' \rightarrow xyz}\,\overrightarrow{\omega}_{i}'+R^{x'''y'''z''' \rightarrow xyz}\,\overrightarrow{\omega}_{w}'''
+\end{equation*}
+
+
+
+Deze termen worden nu afzonderlijk bepaald.
+%omega_g
+\begin{equation*}
+\begin{split}
+R^{x'y'z' \rightarrow xyz}\,\overrightarrow{\omega}_{g}'
+&=	  \begin{bmatrix}
+      1 & 0 & 0\\
+      0 & \cos(\alpha) & -\sin{\alpha}\\ 
+      0 & \sin{\alpha} & \cos(\alpha)\
+      \end{bmatrix}
+      \begin{bmatrix}
+      0\\
+      0\\
+      \omega_{g}\
+      \end{bmatrix}     
+&=	  \begin{bmatrix}
+      0\\
+      -\sin{\alpha}\,\omega_{g}\\
+      \cos(\alpha)\,\omega_{g}\
+      \end{bmatrix}
+\end{split}
+\end{equation*}
+
+%omega_i
+\begin{equation*}
+\begin{split}
+R^{x'y'z' \rightarrow xyz}\,\overrightarrow{\omega}_{g}'
+&=	  \begin{bmatrix}
+      1 & 0 & 0\\
+      0 & \cos(\alpha) & -\sin{\alpha}\\ 
+      0 & \sin{\alpha} & \cos(\alpha)\
+      \end{bmatrix}
+      \begin{bmatrix}
+      0\\
+      \omega_{i}\\
+      0\
+      \end{bmatrix}     
+&=	  \begin{bmatrix}
+      0\\
+      \cos{\alpha}\,\omega_{i}\\
+      \sin(\alpha)\,\omega_{i}\
+      \end{bmatrix}
+\end{split}
+\end{equation*}
+
+%omega_w
+\begin{equation*}
+\begin{split}
+R^{x'''y'''z''' \rightarrow xyz}\,\overrightarrow{\omega}_{w}'''
+&=	  \begin{bmatrix}
+      \cos(\beta) & 0 & \sin(\beta)\\
+      \sin(\alpha)\sin(\beta) & \cos(\alpha) & -\sin(\alpha)\cos(\beta)\\
+      -\cos(\alpha)\sin(\beta) & \sin(\alpha) & \cos(\alpha)\cos(\beta)\  
+      \end{bmatrix}
+      \begin{bmatrix}
+      -\omega_{w}\\
+      0\\
+      0\
+      \end{bmatrix}
+&=    \begin{bmatrix}
+      -\cos(\beta)\,\omega_{w}\\
+      -\sin(\alpha)\sin(\beta)\,\omega_{w}\\
+      \cos(\alpha)\sin(\beta)\,\omega_{w}\
+      \end{bmatrix}
+\end{split}
+\end{equation*}
+
+De ogenblikkelijke rotatievector wordt dus weergegeven door door de volgende vergelijking.
+\begin{equation*}
+\overrightarrow(\omega)_{w}=
+\begin{bmatrix}
+	-\cos(\beta)\,\omega_{w}\\
+	\cos(\alpha)\,\omega_{i} - \sin(\alpha)(\omega_{g}+\sin{\beta}\,\omega_{w})\\
+	\sin(\alpha)\,\omega_{i} + \cos(\alpha)(\omega_{g}+\sin{\beta}\,\omega_{w})\
+\end{bmatrix}
+\end{equation*}
