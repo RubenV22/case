@@ -1,6 +1,58 @@
 \subsubsection{De ogenblikkelijke snelheid}
-De snelheid van C kan beschouwd worden als de som van de relatieve snelheid van het punt C in het $x'y'z'$-assenstelsel en de snelheid van dat assenstelsel. In dit assenstelsel kan de beweging van C beschouwd worden als een som van rotaties, nl. een rotatie rond het punt A door $\overrightarrow{\omega}_{g}$ en een rotatie rond het punt B door $\overrightarrow{\omega}_{i}$
+De snelheid van C kan beschouwd worden als de som van de relatieve snelheid van het punt C in het $x'y'z'$-assenstelsel en de snelheid van dat assenstelsel. In dit assenstelsel kan de beweging van C beschouwd worden als een som van rotaties, nl. een rotatie rond het punt A door $\overrightarrow{\omega_{g}}$ en een rotatie rond het punt B door $\overrightarrow{\omega_{i}}$
 
 \begin{equation*}
-\overrightarrow{v}_{C}=\overrightarrow{v}_{A}+\overrightarrow{\omega}_{g}\times(\overrightarrow{r}_{C}-\overrightarrow{r}_{A})+\overrightarrow{\omega}_{i}\times(\overrightarrow{r}_{C}-\overrightarrow{r}_{B})
+\overrightarrow{v_{C}}=\overrightarrow{v_{A}}+\overrightarrow{\omega_{g}}\times(\overrightarrow{r_{C}}-\overrightarrow{r_{A}})+\overrightarrow{\omega_{i}}\times(\overrightarrow{r_{C}}-\overrightarrow{r_{B}})
+\end{equation*}
+
+Deze termen worden afzonderlijk bepaald.
+
+\begin{equation*}
+\begin{split}
+\overrightarrow{v_{A}}
+&=R^{x'y'z' \rightarrow xyz}
+	\begin{bmatrix}
+	0\\
+	v_v\\
+	0
+	\end{bmatrix}
+&=	\begin{bmatrix}
+0\\
+v_v\cos(\alpha)\\
+v_v\sin(\alpha)\
+\end{bmatrix}
+\end{split}
+\end{equation*}
+
+\begin{equation*}
+\begin{split}
+\overrightarrow{r_{C}}-\overrightarrow{r_{A}}
+&=\begin{bmatrix}
+r_{CAx}\\
+r_{CAy}\\
+r_{CAz}\
+\end{bmatrix}
+&=R^{x'y'z' \rightarrow xyz}
+	\begin{bmatrix}
+	l_{1}-l_{3}\sin(\beta)-l_{4}\cos(\beta)\\
+	0\\
+	l_{2}-l_{3}\cos(\beta)+l_{4}\sin(\beta)\
+	\end{bmatrix}
+&=	\begin{bmatrix}
+	l_{1}-l_{3}\sin(\beta)-l_{4}\cos(\beta)\\
+	-\sin(\alpha)(l_{2}-l_{3}\cos(\beta)+l_{4}\sin(\beta))\\
+	\cos(\alpha)(l_{2}-l_{3}\cos(\beta)+l_{4}\sin(\beta))\
+	\end{bmatrix}
+\end{split}
+\end{equation*}
+
+\begin{equation*}
+\begin{split}
+\overrightarrow{\omega_{g}}\times(\overrightarrow{r_{C}}-\overrightarrow{r_{A}})
+&=	\begin{vmatrix}
+\overrightarrow{e_{x}} & \overrightarrow{e_{y}} & \overrightarrow{e_{z}}\\
+\omega_{gx} & \omega_{gy} & \omega_{gz}\\
+r_{CAx} & r_{CAy} & r_{Caz}\
+\end{vmatrix}
+\end{split}
 \end{equation*}
