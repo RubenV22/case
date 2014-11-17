@@ -1,0 +1,933 @@
+%% Created by Maple 18.01, Windows 7
+%% Source Worksheet: Bewerkingen.mw
+%% Generated: Mon Nov 17 21:10:22 CET 2014
+\documentclass{article}
+\usepackage{maplestd2e}
+\def\emptyline{\vspace{12pt}}
+\begin{document}
+\pagestyle{empty}
+\DefineParaStyle{Maple Heading 1}
+\DefineParaStyle{Maple Text Output}
+\DefineParaStyle{Maple Dash Item}
+\DefineParaStyle{Maple Bullet Item}
+\DefineParaStyle{Maple Normal}
+\DefineParaStyle{Maple Heading 4}
+\DefineParaStyle{Maple Heading 3}
+\DefineParaStyle{Maple Heading 2}
+\DefineParaStyle{Maple Warning}
+\DefineParaStyle{Maple Title}
+\DefineParaStyle{Maple Error}
+\DefineCharStyle{Maple Hyperlink}
+\DefineCharStyle{Maple 2D Math}
+\DefineCharStyle{Maple Maple Input}
+\DefineCharStyle{Maple 2D Output}
+\DefineCharStyle{Maple 2D Input}
+\begin{maplegroup}
+\begin{Maple Normal}{
+Case mechanica 2}\end{Maple Normal}
+
+\begin{Maple Normal}{
+Pieter Van Damme, Wouter Van Gansbeke, Lennert Vanmunster, Ruben Verhulst}\end{Maple Normal}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{restart;with(LinearAlgebra);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{[`&x`, Add, Adjoint, BackwardSubstitute, BandMatrix, Basis, BezoutMatrix, BidiagonalForm, BilinearForm, CARE, CharacteristicMatrix, CharacteristicPolynomial, Column, ColumnDimension, ColumnOperation, ColumnSpace, CompanionMatrix, CompressedSparseForm, ConditionNumber, ConstantMatrix, ConstantVector, Copy, CreatePermutation, CrossProduct, DARE, DeleteColumn, DeleteRow, Determinant, Diagonal, DiagonalMatrix, Dimension, Dimensions, DotProduct, EigenConditionNumbers, Eigenvalues, Eigenvectors, Equal, ForwardSubstitute, FrobeniusForm, FromCompressedSparseForm, FromSplitForm, GaussianElimination, GenerateEquations, GenerateMatrix, Generic, GetResultDataType, GetResultShape, GivensRotationMatrix, GramSchmidt, HankelMatrix, HermiteForm, HermitianTranspose, HessenbergForm, HilbertMatrix, HouseholderMatrix, IdentityMatrix, IntersectionBasis, IsDefinite, IsOrthogonal, IsSimilar, IsUnitary, JordanBlockMatrix, JordanForm, KroneckerProduct, LA_Main, LUDecomposition, LeastSquares, LinearSolve, LyapunovSolve, Map, Map2, MatrixAdd, MatrixExponential, MatrixFunction, MatrixInverse, MatrixMatrixMultiply, MatrixNorm, MatrixPower, MatrixScalarMultiply, MatrixVectorMultiply, MinimalPolynomial, Minor, Modular, Multiply, NoUserValue, Norm, Normalize, NullSpace, OuterProductMatrix, Permanent, Pivot, PopovForm, ProjectionMatrix, QRDecomposition, RandomMatrix, RandomVector, Rank, RationalCanonicalForm, ReducedRowEchelonForm, Row, RowDimension, RowOperation, RowSpace, ScalarMatrix, ScalarMultiply, ScalarVector, SchurForm, SingularValues, SmithForm, SplitForm, StronglyConnectedBlocks, SubMatrix, SubVector, SumBasis, SylvesterMatrix, SylvesterSolve, ToeplitzMatrix, Trace, Transpose, TridiagonalForm, UnitVector, VandermondeMatrix, VectorAdd, VectorAngle, VectorMatrixMultiply, VectorNorm, VectorScalarMultiply, ZeroMatrix, ZeroVector, Zip]}{\[\displaystyle [\mbox {{\tt `\&x`}},{\it Add},{\it Adjoint},{\it BackwardSubstitute}\\
+\mbox{},{\it BandMatrix},{\it Basis},{\it BezoutMatrix},{\it BidiagonalForm}\\
+\mbox{},{\it BilinearForm},{\it CARE},{\it CharacteristicMatrix}\\
+\mbox{},{\it CharacteristicPolynomial},{\it Column},{\it ColumnDimension}\\
+\mbox{},{\it ColumnOperation},{\it ColumnSpace},{\it CompanionMatrix}\\
+\mbox{},{\it CompressedSparseForm},{\it ConditionNumber}\\
+\mbox{},{\it ConstantMatrix},{\it ConstantVector},{\it Copy}\\
+\mbox{},{\it CreatePermutation},{\it CrossProduct},{\it DARE}\\
+\mbox{},{\it DeleteColumn},{\it DeleteRow},{\it Determinant}\\
+\mbox{},{\it Diagonal},{\it DiagonalMatrix},{\it Dimension}\\
+\mbox{},{\it Dimensions},{\it DotProduct},{\it EigenConditionNumbers}\\
+\mbox{},{\it Eigenvalues},{\it Eigenvectors},{\it Equal}\\
+\mbox{},{\it ForwardSubstitute},{\it FrobeniusForm},{\it FromCompressedSparseForm}\\
+\mbox{},{\it FromSplitForm},{\it GaussianElimination},{\it GenerateEquations}\\
+\mbox{},{\it GenerateMatrix},{\it Generic},{\it GetResultDataType}\\
+\mbox{},{\it GetResultShape},{\it GivensRotationMatrix},{\it GramSchmidt}\\
+\mbox{},{\it HankelMatrix},{\it HermiteForm},{\it HermitianTranspose}\\
+\mbox{},{\it HessenbergForm},{\it HilbertMatrix},{\it HouseholderMatrix}\\
+\mbox{},{\it IdentityMatrix},{\it IntersectionBasis},{\it IsDefinite}\\
+\mbox{},{\it IsOrthogonal},{\it IsSimilar},{\it IsUnitary}\\
+\mbox{},{\it JordanBlockMatrix},{\it JordanForm},{\it KroneckerProduct}\\
+\mbox{},{\it LA\_Main},{\it LUDecomposition},{\it LeastSquares}\\
+\mbox{},{\it LinearSolve},{\it LyapunovSolve},{\it Map},{\it Map2}\\
+\mbox{},{\it MatrixAdd},{\it MatrixExponential},{\it MatrixFunction}\\
+\mbox{},{\it MatrixInverse},{\it MatrixMatrixMultiply},{\it MatrixNorm}\\
+\mbox{},{\it MatrixPower},{\it MatrixScalarMultiply},{\it MatrixVectorMultiply}\\
+\mbox{},{\it MinimalPolynomial},{\it Minor},{\it Modular}\\
+\mbox{},{\it Multiply},{\it NoUserValue},{\it Norm},{\it Normalize}\\
+\mbox{},{\it NullSpace},{\it OuterProductMatrix},{\it Permanent}\\
+\mbox{},{\it Pivot},{\it PopovForm},{\it ProjectionMatrix}\\
+\mbox{},{\it QRDecomposition},{\it RandomMatrix},{\it RandomVector}\\
+\mbox{},{\it Rank},{\it RationalCanonicalForm},{\it ReducedRowEchelonForm}\\
+\mbox{},{\it Row},{\it RowDimension},{\it RowOperation},{\it RowSpace}\\
+\mbox{},{\it ScalarMatrix},{\it ScalarMultiply},{\it ScalarVector}\\
+\mbox{},{\it SchurForm},{\it SingularValues},{\it SmithForm}\\
+\mbox{},{\it SplitForm},{\it StronglyConnectedBlocks},{\it SubMatrix}\\
+\mbox{},{\it SubVector},{\it SumBasis},{\it SylvesterMatrix}\\
+\mbox{},{\it SylvesterSolve},{\it ToeplitzMatrix},{\it Trace}\\
+\mbox{},{\it Transpose},{\it TridiagonalForm},{\it UnitVector}\\
+\mbox{},{\it VandermondeMatrix},{\it VectorAdd},{\it VectorAngle}\\
+\mbox{},{\it VectorMatrixMultiply},{\it VectorNorm},{\it VectorScalarMultiply}\\
+\mbox{},{\it ZeroMatrix},{\it ZeroVector},{\it Zip}]\]}
+\end{maplelatex}
+\end{maplegroup}
+\section{\textbf{Introduceer variabelen}}
+\begin{maplelatex}\begin{Maple Normal}{
+Let bij inertiematrices op gebruikte assenstelsel.}\end{Maple Normal}
+\end{maplelatex}
+\begin{maplelatex}\begin{Maple Normal}{
+Iv wordt uitgedrukt in x'y'z'}\end{Maple Normal}
+\end{maplelatex}
+\begin{maplelatex}\begin{Maple Normal}{
+Il wordt uitgedrukt in x'''y'''z'''}\end{Maple Normal}
+\end{maplelatex}
+\begin{maplelatex}\begin{Maple Normal}{
+Iw wordt uitgedrukt in x''''y''''z''''}\end{Maple Normal}
+\end{maplelatex}
+\begin{maplelatex}\begin{Maple Normal}{
+}\end{Maple Normal}
+\end{maplelatex}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{alpha:='alpha':
+beta:='beta':
+
+omega_g:='omega__g':
+alpha_g:='alpha__g':
+
+omega_i:='omega__i':
+alpha_i:='alpha__i':
+
+omega_w:='omega__w':
+alpha_w:='alpha__w':
+
+v_v:='v__v':
+alpha_v:='alpha__v':
+
+l1:='l__1':
+l2:='l__2':
+l3:='l__3':
+l4:='l__4':
+
+g:=10:
+m_v:='m__v':
+m_l:='m__l':
+m_w:='m__w':
+Iv:=Matrix(3,3,[[I_v_xx,0,0],[0,I_v_yy,0],[0,0,I_v_zz]]);
+Il:=Matrix(3,3,[[I_l_xx,0,0],[0,I_l_yy,0],[0,0,I_l_zz]]);
+Iw:=Matrix(3,3,[[I_w_xx,0,0],[0,I_w_yy,0],[0,0,I_w_zz]]);
+
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{Iv := Matrix(%id = 18446744074533669814)}{\[\displaystyle {\it Iv}\, := \, \left[ \begin {array}{ccc} {\it I\_v\_xx}&0&0\\ \noalign{\medskip}0&{\it I\_v\_yy}&0\\ \noalign{\medskip}0&0&{\it I\_v\_zz}\end {array} \right] \]}
+\end{maplelatex}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{Il := Matrix(%id = 18446744074533670534)}{\[\displaystyle {\it Il}\, := \, \left[ \begin {array}{ccc} {\it I\_l\_xx}&0&0\\ \noalign{\medskip}0&{\it I\_l\_yy}&0\\ \noalign{\medskip}0&0&{\it I\_l\_zz}\end {array} \right] \]}
+\end{maplelatex}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{Iw := Matrix(%id = 18446744074533662958)}{\[\displaystyle {\it Iw}\, := \, \left[ \begin {array}{ccc} {\it I\_w\_xx}&0&0\\ \noalign{\medskip}0&{\it I\_w\_yy}&0\\ \noalign{\medskip}0&0&{\it I\_w\_zz}\end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\section{\textbf{Transformatiematrices}}
+\begin{maplelatex}\begin{Maple Normal}{
+R1 zorgt voor de transformatie x'y'z' naar xyz}\end{Maple Normal}
+\end{maplelatex}
+\begin{maplelatex}\begin{Maple Normal}{
+R2 zorgt voor de transformatie x'''y'''z''' naar x'y'z'}\end{Maple Normal}
+\end{maplelatex}
+\begin{maplelatex}\begin{Maple Normal}{
+R3 zorgt voor de transformatie x'''y'''z''' naar xyz}\end{Maple Normal}
+\end{maplelatex}
+\begin{maplelatex}\begin{Maple Normal}{
+R4 zorgt voor de omgekeerde transformatie van R2, namelijk van x'y'z' naar x'''y'''z'''}\end{Maple Normal}
+\end{maplelatex}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{R1:=Matrix(3,3,[[1,0,0],[0,cos(alpha),-sin(alpha)],[0,sin(alpha),cos(alpha)]]);
+R2:=Matrix(3,3,[[cos(beta),0,sin(beta)],[0,1,0],[-sin(beta),0,cos(beta)]]);
+R3:=MatrixMatrixMultiply(R1,R2);
+R4:=simplify(MatrixInverse(R2));
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{R1 := Matrix(%id = 18446744074533663558)}{\[\displaystyle {\it R1}\, := \, \left[ \begin {array}{ccc} 1&0&0\\ \noalign{\medskip}0&\cos \left( \alpha \right) &-\sin \left( \alpha \right) \\ \noalign{\medskip}0&\sin \left( \alpha \right) &\cos \left( \alpha \right) \end {array} \right] \]}
+\end{maplelatex}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{R2 := Matrix(%id = 18446744074533664158)}{\[\displaystyle {\it R2}\, := \, \left[ \begin {array}{ccc} \cos \left( \beta \right) &0&\sin \left( \beta \right) \\ \noalign{\medskip}0&1&0\\ \noalign{\medskip}-\sin \left( \beta \right) &0&\cos \left( \beta \right) \end {array} \right] \]}
+\end{maplelatex}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{R3 := Matrix(%id = 18446744074533664758)}{\[\displaystyle {\it R3}\, := \, \left[ \begin {array}{ccc} \cos \left( \beta \right) &0&\sin \left( \beta \right) \\ \noalign{\medskip}\sin \left( \alpha \right) \sin \left( \beta \right) &\cos \left( \alpha \right) &-\sin \left( \alpha \right) \cos \left( \beta \right) \\ \noalign{\medskip}-\cos \left( \alpha \right) \sin \left( \beta \right) &\sin \left( \alpha \right) &\cos \left( \alpha \right) \cos \left( \beta \right) \end {array} \right] \]}
+\end{maplelatex}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{R4 := Matrix(%id = 18446744074533665598)}{\[\displaystyle {\it R4}\, := \, \left[ \begin {array}{ccc} \cos \left( \beta \right) &0&-\sin \left( \beta \right) \\ \noalign{\medskip}0&1&0\\ \noalign{\medskip}\sin \left( \beta \right) &0&\cos \left( \beta \right) \end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\section{\textbf{Kinematica}}
+\subsection{\textbf{Vraag 1}}
+\begin{maplelatex}\begin{Maple Normal}{
+Bereken de ogenblikkelijke totale rotatievector omega\_w (hier omega\_tot genoemd om verwarring te vermijden) en rotatieversnellingsvector alpha\_w van het wiel.}\end{Maple Normal}
+\end{maplelatex}
+\subsubsection{\textbf{\textit{Omega\_tot}}}
+\begin{maplelatex}\begin{Maple Normal}{
+De drie verschillende rotatievectoren worden uitgedrukt in het wereldassenstelsel en vervolgens opgeteld.}\end{Maple Normal}
+\end{maplelatex}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{a:=<0,0,omega_g>:
+omega_g_vec:=MatrixVectorMultiply(R1,a);
+unassign('a');
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{omega_g_vec := Vector[column](%id = 18446744074533666198)}{\[\displaystyle {\it omega\_g\_vec}\, := \, \left[ \begin {array}{c} 0\\ \noalign{\medskip}-\sin \left( \alpha \right) \omega_{g}\\ \noalign{\medskip}\cos \left( \alpha \right) \omega_{g}\end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{a:=<0,omega_i,0>:
+omega_i_vec:=MatrixVectorMultiply(R1,a);
+unassign('a');
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{omega_i_vec := Vector[column](%id = 18446744074533658982)}{\[\displaystyle {\it omega\_i\_vec}\, := \, \left[ \begin {array}{c} 0\\ \noalign{\medskip}\cos \left( \alpha \right) \omega_{i}\\ \noalign{\medskip}\sin \left( \alpha \right) \omega_{i}\end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{a:=<-omega_w,0,0>:
+omega_w_vec:=MatrixVectorMultiply(R3,a);
+unassign('a');
+
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{omega_w_vec := Vector[column](%id = 18446744074533659942)}{\[\displaystyle {\it omega\_w\_vec}\, := \, \left[ \begin {array}{c} -\cos \left( \beta \right) \omega_{w}\\ \noalign{\medskip}-\sin \left( \alpha \right) \sin \left( \beta \right) \omega_{w}\\ \noalign{\medskip}\cos \left( \alpha \right) \sin \left( \beta \right) \omega_{w}\end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{omega_tot_vec:=omega_g_vec+omega_i_vec+omega_w_vec;
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{omega_tot_vec := Vector[column](%id = 18446744074533662222)}{\[\displaystyle {\it omega\_tot\_vec}\, := \, \left[ \begin {array}{c} -\cos \left( \beta \right) \omega_{w}\\ \noalign{\medskip}-\sin \left( \alpha \right) \omega_{g}+\cos \left( \alpha \right) \omega_{i}-\sin \left( \alpha \right) \sin \left( \beta \right) \omega_{w}\\ \noalign{\medskip}\cos \left( \alpha \right) \omega_{g}+\sin \left( \alpha \right) \omega_{i}+\cos \left( \alpha \right) \sin \left( \beta \right) \omega_{w}\end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\subsubsection{\textbf{\textit{Alpha\_tot}}}
+\begin{maplelatex}\begin{Maple Normal}{
+De ogenblikkelijke versnelling is de som van de verschillende rotatieversnellingsvectoren uitgedrukt in het wereldassenstelsel en de kruisproducten van omega\_g met omega\_i en omega\_w en het kruisproduct van omega\_i en omega\_w.}\end{Maple Normal}
+\end{maplelatex}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{a:=<0,0,alpha_g>;
+alpha_g_vec:=MatrixVectorMultiply(R1,a);
+unassign('a');
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{a := Vector[column](%id = 18446744074533655846)}{\[\displaystyle a\, := \, \left[ \begin {array}{c} 0\\ \noalign{\medskip}0\\ \noalign{\medskip}\alpha_{g}\end {array} \right] \]}
+\end{maplelatex}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{alpha_g_vec := Vector[column](%id = 18446744074533656806)}{\[\displaystyle {\it alpha\_g\_vec}\, := \, \left[ \begin {array}{c} 0\\ \noalign{\medskip}-\sin \left( \alpha \right) \alpha_{g}\\ \noalign{\medskip}\cos \left( \alpha \right) \alpha_{g}\end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{a:=<0,alpha_i,0>:
+alpha_i_vec:=MatrixVectorMultiply(R1,a);
+unassign('a');
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{alpha_i_vec := Vector[column](%id = 18446744074533657766)}{\[\displaystyle {\it alpha\_i\_vec}\, := \, \left[ \begin {array}{c} 0\\ \noalign{\medskip}\cos \left( \alpha \right) \alpha_{i}\\ \noalign{\medskip}\sin \left( \alpha \right) \alpha_{i}\end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{a:=<alpha_w,0,0>:
+alpha_w_vec:=MatrixVectorMultiply(R3,a);
+unassign('a');
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{alpha_w_vec := Vector[column](%id = 18446744074533650550)}{\[\displaystyle {\it alpha\_w\_vec}\, := \, \left[ \begin {array}{c} \cos \left( \beta \right) \alpha_{w}\\ \noalign{\medskip}\sin \left( \alpha \right) \sin \left( \beta \right) \alpha_{w}\\ \noalign{\medskip}-\cos \left( \alpha \right) \sin \left( \beta \right) \alpha_{w}\end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{CrossProduct(omega_g_vec,omega_i_vec):
+kruis_omega_g_omega_i:=simplify(%);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{kruis_omega_g_omega_i := Vector[column](%id = 18446744074533651870)}{\[\displaystyle {\it kruis\_omega\_g\_omega\_i}\, := \, \left[ \begin {array}{c} -\omega_{g}\,\omega_{i}\\ \noalign{\medskip}0\\ \noalign{\medskip}0\end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{CrossProduct(omega_g_vec,omega_w_vec):
+kruis_omega_g_omega_w:=simplify(%);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{kruis_omega_g_omega_w := Vector[column](%id = 18446744074533652590)}{\[\displaystyle {\it kruis\_omega\_g\_omega\_w}\, := \, \left[ \begin {array}{c} 0\\ \noalign{\medskip}-\cos \left( \alpha \right) \omega_{g}\,\cos \left( \beta \right) \omega_{w}\\ \noalign{\medskip}-\sin \left( \alpha \right) \omega_{g}\,\cos \left( \beta \right) \omega_{w}\end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{CrossProduct(omega_i_vec,omega_w_vec):
+kruis_omega_i_omega_w:=simplify(%);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{kruis_omega_i_omega_w := Vector[column](%id = 18446744074533654030)}{\[\displaystyle {\it kruis\_omega\_i\_omega\_w}\, := \, \left[ \begin {array}{c} \sin \left( \beta \right) \omega_{i}\,\omega_{w}\\ \noalign{\medskip}-\sin \left( \alpha \right) \omega_{i}\,\cos \left( \beta \right) \omega_{w}\\ \noalign{\medskip}\cos \left( \alpha \right) \omega_{i}\,\cos \left( \beta \right) \omega_{w}\end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{alpha_tot_vec:=alpha_g_vec+alpha_i_vec+alpha_w_vec+kruis_omega_g_omega_i+kruis_omega_g_omega_w+kruis_omega_i_omega_w;
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{alpha_tot_vec := Vector[column](%id = 18446744074533712590)}{\[\displaystyle {\it alpha\_tot\_vec}\, := \, \left[ \begin {array}{c} \cos \left( \beta \right) \alpha_{w}-\omega_{g}\,\omega_{i}+\sin \left( \beta \right) \omega_{i}\,\omega_{w}\\ \noalign{\medskip}-\sin \left( \alpha \right) \alpha_{g}+\cos \left( \alpha \right) \alpha_{i}+\sin \left( \alpha \right) \sin \left( \beta \right) \alpha_{w}-\cos \left( \alpha \right) \omega_{g}\,\cos \left( \beta \right) \omega_{w}-\sin \left( \alpha \right) \omega_{i}\,\cos \left( \beta \right) \omega_{w}\\ \noalign{\medskip}\cos \left( \alpha \right) \alpha_{g}+\sin \left( \alpha \right) \alpha_{i}-\cos \left( \alpha \right) \sin \left( \beta \right) \alpha_{w}-\sin \left( \alpha \right) \omega_{g}\,\cos \left( \beta \right) \omega_{w}+\cos \left( \alpha \right) \omega_{i}\,\cos \left( \beta \right) \omega_{w}\end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\subsection{\textbf{Vraag 2}}
+\begin{maplelatex}\begin{Maple Normal}{
+Bereken de ogenblikkelijke snelheid v\_c en de ogenblikkelijke versnelling a\_c van het punt C.}\end{Maple Normal}
+\end{maplelatex}
+\subsubsection{\textbf{\textit{V\_tot}}}
+\begin{maplelatex}\begin{Maple Normal}{
+De totale snelheid is de som van de snelheid van het punt A, de rotatiesnelheid van het punt C rond het punt A en de rotatiesnelheid van het punt C rond het punt B.}\end{Maple Normal}
+\end{maplelatex}
+\begin{maplelatex}\begin{Maple Normal}{
+Voor de snelheid van C is de rotatie van het wiel niet van belang.}\end{Maple Normal}
+\end{maplelatex}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{a:=<0,v_v,0>:
+v_A:=MatrixVectorMultiply(R1,a);
+unassign('a');
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{v_A := Vector[column](%id = 18446744074533707774)}{\[\displaystyle {\it v\_A}\, := \, \left[ \begin {array}{c} 0\\ \noalign{\medskip}\cos \left( \alpha \right) v_{v}\\ \noalign{\medskip}\sin \left( \alpha \right) v_{v}\end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{a:=<-l3*sin(beta)-l4*cos(beta)+l1,0,-l3*cos(beta)+l4*sin(beta)+l2>:
+rel_plaats_C_A:=MatrixVectorMultiply(R1,a);
+unassign('a');
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{rel_plaats_C_A := Vector[column](%id = 18446744074526778542)}{\[\displaystyle {\it rel\_plaats\_C\_A}\, := \, \left[ \begin {array}{c} -l_{3}\,\sin \left( \beta \right) -l_{4}\,\cos \left( \beta \right) +l_{1}\\ \noalign{\medskip}-\sin \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right) +l_{2} \right) \\ \noalign{\medskip}\cos \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right) +l_{2} \right) \end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{a:=<-l3*sin(beta)-l4*cos(beta),0,-l3*cos(beta)+l4*sin(beta)>:
+rel_plaats_C_B:=MatrixVectorMultiply(R1,a);
+unassign('a');
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{rel_plaats_C_B := Vector[column](%id = 18446744074526779982)}{\[\displaystyle {\it rel\_plaats\_C\_B}\, := \, \left[ \begin {array}{c} -l_{3}\,\sin \left( \beta \right) -l_{4}\,\cos \left( \beta \right) \\ \noalign{\medskip}-\sin \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) \\ \noalign{\medskip}\cos \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) \end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{CrossProduct(omega_g_vec,rel_plaats_C_A):
+kruis_omega_g_rel_plaats_C_A:=simplify(%);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{kruis_omega_g_rel_plaats_C_A := Vector[column](%id = 18446744074526781438)}{\[\displaystyle {\it kruis\_omega\_g\_rel\_plaats\_C\_A}\, := \, \left[ \begin {array}{c} 0\\ \noalign{\medskip}-\omega_{g}\,\cos \left( \alpha \right)  \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -l_{1} \right) \\ \noalign{\medskip}-\omega_{g}\,\sin \left( \alpha \right)  \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -l_{1} \right) \end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{CrossProduct(omega_i_vec,rel_plaats_C_B):
+kruis_omega_i_rel_plaats_C_B:=simplify(%);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{kruis_omega_i_rel_plaats_C_B := Vector[column](%id = 18446744074526782638)}{\[\displaystyle {\it kruis\_omega\_i\_rel\_plaats\_C\_B}\, := \, \left[ \begin {array}{c} \omega_{i}\, \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) \\ \noalign{\medskip}-\omega_{i}\,\sin \left( \alpha \right)  \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right) \\ \noalign{\medskip}\omega_{i}\,\cos \left( \alpha \right)  \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right) \end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{v_C:=v_A+kruis_omega_g_rel_plaats_C_A+kruis_omega_i_rel_plaats_C_B;
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{v_C := Vector[column](%id = 18446744074526784318)}{\[\displaystyle {\it v\_C}\, := \, \left[ \begin {array}{c} \omega_{i}\, \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) \\ \noalign{\medskip}\cos \left( \alpha \right) v_{v}-\omega_{g}\,\cos \left( \alpha \right)  \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -l_{1} \right) -\omega_{i}\,\sin \left( \alpha \right)  \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right) \\ \noalign{\medskip}\sin \left( \alpha \right) v_{v}-\omega_{g}\,\sin \left( \alpha \right)  \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -l_{1} \right) +\omega_{i}\,\cos \left( \alpha \right)  \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right) \end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\subsubsection{\textbf{\textit{A\_tot}}}
+\begin{maplelatex}\begin{Maple Normal}{
+De ogenblikkelijke versnelling is de afgeleide van de ogenblikkelijke snelheid. Hierbij moet er zeker rekening gehouden worden met het afzonderlijk afleiden van de leden van de kruisproducten.}\end{Maple Normal}
+\end{maplelatex}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{a_A:=<0,a_v*cos(alpha),a_v*sin(alpha)>;
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{a_A := Vector[column](%id = 18446744074526785894)}{\[\displaystyle {\it a\_A}\, := \, \left[ \begin {array}{c} 0\\ \noalign{\medskip}{\it a\_v}\,\cos \left( \alpha \right) \\ \noalign{\medskip}{\it a\_v}\,\sin \left( \alpha \right) \end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{d_omega_g:=alpha_g_vec;
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{d_omega_g := Vector[column](%id = 18446744074526786734)}{\[\displaystyle {\it d\_omega\_g}\, := \, \left[ \begin {array}{c} 0\\ \noalign{\medskip}-\sin \left( \alpha \right) \alpha_{g}\\ \noalign{\medskip}\cos \left( \alpha \right) \alpha_{g}\end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{alpha_i_vec+CrossProduct(omega_g_vec,omega_i_vec):
+d_omega_i:=simplify(%);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{d_omega_i := Vector[column](%id = 18446744074526787694)}{\[\displaystyle {\it d\_omega\_i}\, := \, \left[ \begin {array}{c} -\omega_{g}\,\omega_{i}\\ \noalign{\medskip}\cos \left( \alpha \right) \alpha_{i}\\ \noalign{\medskip}\sin \left( \alpha \right) \alpha_{i}\end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{kruis_d_omega_g_rel_plaats_C_A:=CrossProduct(d_omega_g,rel_plaats_C_A);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{kruis_d_omega_g_rel_plaats_C_A := Vector[column](%id = 18446744074526802758)}{\[\displaystyle {\it kruis\_d\_omega\_g\_rel\_plaats\_C\_A}\, := \, \left[ \begin {array}{c} 0\\ \noalign{\medskip}\cos \left( \alpha \right) \alpha_{g}\, \left( -l_{3}\,\sin \left( \beta \right) -l_{4}\,\cos \left( \beta \right) +l_{1} \right) \\ \noalign{\medskip}\sin \left( \alpha \right) \alpha_{g}\, \left( -l_{3}\,\sin \left( \beta \right) -l_{4}\,\cos \left( \beta \right) +l_{1} \right) \end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{CrossProduct(d_omega_i,rel_plaats_C_B):
+kruis_d_omega_i_rel_plaats_C_B:=simplify(%);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{kruis_d_omega_i_rel_plaats_C_B := Vector[column](%id = 18446744074526804438)}{\[\displaystyle {\it kruis\_d\_omega\_i\_rel\_plaats\_C\_B}\, := \, \left[ \begin {array}{c} \alpha_{i}\, \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) \\ \noalign{\medskip}\sin \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-\cos \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}-\sin \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\alpha_{i}-\cos \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\alpha_{i}\\ \noalign{\medskip}\sin \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-\cos \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}+\sin \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\alpha_{i}+\cos \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\alpha_{i}\end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{rel_snelh_C_A:=v_C-v_A:
+CrossProduct(omega_g_vec,rel_snelh_C_A):
+kruis_omega_g_rel_snelh_C_A:=simplify(%);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{kruis_omega_g_rel_snelh_C_A := Vector[column](%id = 18446744074526807094)}{\[\displaystyle {\it kruis\_omega\_g\_rel\_snelh\_C\_A}\, := \, \left[ \begin {array}{c} {\omega_{g}}^{2} \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -l_{1} \right) \\ \noalign{\medskip}\omega_{g}\,\omega_{i}\,\cos \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) \\ \noalign{\medskip}\omega_{g}\,\omega_{i}\,\sin \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) \end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{rel_plaats_B_A:=<-l1,0,l2>:
+v_B:=v_A+CrossProduct(omega_g_vec,rel_plaats_B_A):
+rel_snelh_C_B:=v_C-v_B:
+CrossProduct(omega_i_vec,rel_snelh_C_B):
+kruis_omega_i_rel_snelh_C_B:=simplify(%);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{kruis_omega_i_rel_snelh_C_B := Vector[column](%id = 18446744074526808894)}{\[\displaystyle {\it kruis\_omega\_i\_rel\_snelh\_C\_B}\, := \, \left[ \begin {array}{c} {\omega_{i}}^{2} \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right) \\ \noalign{\medskip}\omega_{i}\,\sin \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-\cos \left( \beta \right) l_{3}\,\omega_{i}+\sin \left( \alpha \right) \omega_{g}\,l_{2} \right) \\ \noalign{\medskip}-\omega_{i}\,\cos \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-\cos \left( \beta \right) l_{3}\,\omega_{i}+\sin \left( \alpha \right) \omega_{g}\,l_{2} \right) \end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{a_C:=a_A+kruis_d_omega_g_rel_plaats_C_A+kruis_omega_g_rel_snelh_C_A+kruis_d_omega_i_rel_plaats_C_B+kruis_omega_i_rel_snelh_C_B;
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{a_C := Vector[column](%id = 18446744074526825998)}{\[\displaystyle {\it a\_C}\, := \, \left[ \begin {array}{c} {\omega_{g}}^{2} \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -l_{1} \right) +\alpha_{i}\, \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) +{\omega_{i}}^{2} \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right) \\ \noalign{\medskip}{\it a\_v}\,\cos \left( \alpha \right) +\cos \left( \alpha \right) \alpha_{g}\, \left( -l_{3}\,\sin \left( \beta \right) -l_{4}\,\cos \left( \beta \right) +l_{1} \right) +\omega_{g}\,\omega_{i}\,\cos \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) +\sin \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-\cos \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}-\sin \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\alpha_{i}-\cos \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\alpha_{i}+\omega_{i}\,\sin \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-\cos \left( \beta \right) l_{3}\,\omega_{i}+\sin \left( \alpha \right) \omega_{g}\,l_{2} \right) \\ \noalign{\medskip}{\it a\_v}\,\sin \left( \alpha \right) +\sin \left( \alpha \right) \alpha_{g}\, \left( -l_{3}\,\sin \left( \beta \right) -l_{4}\,\cos \left( \beta \right) +l_{1} \right) +\omega_{g}\,\omega_{i}\,\sin \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) +\sin \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-\cos \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}+\sin \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\alpha_{i}+\cos \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\alpha_{i}-\omega_{i}\,\cos \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-\cos \left( \beta \right) l_{3}\,\omega_{i}+\sin \left( \alpha \right) \omega_{g}\,l_{2} \right) \end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\subsection{\textbf{Vraag 3}}
+\begin{maplegroup}
+\begin{Maple Normal}{
+Wat is de bijdrage van de corriolisversnelling in deze versnelling a\_c als je het x"y"z"-assenstelsel als hulpassenstelsel gebruikt om de beweging te beschrijven?}\end{Maple Normal}
+
+\begin{Maple Normal}{
+}\end{Maple Normal}
+\begin{Maple Normal}{
+> Ik neem omega\_g hier als omega en de rotatie van C rond B als relatieve snelheid}\end{Maple Normal}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{CrossProduct(omega_i_vec,rel_plaats_C_B):
+v_C_R:=simplify(%);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{v_C_R := Vector[column](%id = 18446744074526828774)}{\[\displaystyle {\it v\_C\_R}\, := \, \left[ \begin {array}{c} \omega_{i}\, \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) \\ \noalign{\medskip}-\omega_{i}\,\sin \left( \alpha \right)  \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right) \\ \noalign{\medskip}\omega_{i}\,\cos \left( \alpha \right)  \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right) \end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{alpha_corr:=-2*CrossProduct(omega_g_vec,v_C_R);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{alpha_corr := Vector[column](%id = 18446744074526829974)}{\[\displaystyle {\it alpha\_corr}\, := \, \left[ \begin {array}{c} 0\\ \noalign{\medskip}-2\,\omega_{g}\,\omega_{i}\,\cos \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) \\ \noalign{\medskip}-2\,\omega_{g}\,\omega_{i}\,\sin \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) \end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\subsection{\textbf{Vraag 4}}
+\begin{maplelatex}\begin{Maple Normal}{
+Bereken de ogenblikkelijke snelheid v\_d en de ogenblikkelijke versnelling a\_d van het punt D.}\end{Maple Normal}
+\end{maplelatex}
+\subsubsection{\textbf{\textit{V\_D}}}
+\begin{maplelatex}\begin{Maple Normal}{
+Voor de snelheid van D wordt een gelijkaardige methode als voor de snelheid van C in vraag 2 gebruikt.}\end{Maple Normal}
+\end{maplelatex}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{a:=<3/4*l4,0,1/4*l3>:
+rel_plaats_D_C:=MatrixVectorMultiply(R3,a):
+unassign('a');
+rel_plaats_D_A:=rel_plaats_D_C+rel_plaats_C_A:
+CrossProduct(omega_g_vec,rel_plaats_D_A):
+kruis_omega_g_rel_plaats_D_A:=simplify(%);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{kruis_omega_g_rel_plaats_D_A := Vector[column](%id = 18446744074526831790)}{\[\displaystyle {\it kruis\_omega\_g\_rel\_plaats\_D\_A}\, := \, \left[ \begin {array}{c} 0\\ \noalign{\medskip}-1/4\,\omega_{g}\,\cos \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right) \\ \noalign{\medskip}-1/4\,\omega_{g}\,\sin \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right) \end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{rel_plaats_D_B:=rel_plaats_D_C+rel_plaats_C_B:
+CrossProduct(omega_i_vec,rel_plaats_D_B):
+kruis_omega_i_rel_plaats_D_B:=simplify(%);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{kruis_omega_i_rel_plaats_D_B := Vector[column](%id = 18446744074526832990)}{\[\displaystyle {\it kruis\_omega\_i\_rel\_plaats\_D\_B}\, := \, \left[ \begin {array}{c} 1/4\,\omega_{i}\, \left( l_{4}\,\sin \left( \beta \right) -3\,l_{3}\,\cos \left( \beta \right)  \right) \\ \noalign{\medskip}-1/4\,\omega_{i}\,\sin \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right) \\ \noalign{\medskip}1/4\,\omega_{i}\,\cos \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right) \end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{v_D:=v_A+kruis_omega_g_rel_plaats_D_A+kruis_omega_i_rel_plaats_D_B;
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{v_D := Vector[column](%id = 18446744074526835166)}{\[\displaystyle {\it v\_D}\, := \, \left[ \begin {array}{c} 1/4\,\omega_{i}\, \left( l_{4}\,\sin \left( \beta \right) -3\,l_{3}\,\cos \left( \beta \right)  \right) \\ \noalign{\medskip}\cos \left( \alpha \right) v_{v}-1/4\,\omega_{g}\,\cos \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right) -1/4\,\omega_{i}\,\sin \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right) \\ \noalign{\medskip}\sin \left( \alpha \right) v_{v}-1/4\,\omega_{g}\,\sin \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right) +1/4\,\omega_{i}\,\cos \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right) \end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\subsubsection{\textbf{\textit{A\_D}}}
+\begin{maplelatex}\begin{Maple Normal}{
+Voor de versnelling van D wordt een gelijkaardige methode als voor de versnelling van C in vraag 2 gebruikt.}\end{Maple Normal}
+\end{maplelatex}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{CrossProduct(d_omega_g,rel_plaats_D_A):
+kruis_d_omega_g_rel_plaats_D_A:=simplify(%);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{kruis_d_omega_g_rel_plaats_D_A := Vector[column](%id = 18446744074526837206)}{\[\displaystyle {\it kruis\_d\_omega\_g\_rel\_plaats\_D\_A}\, := \, \left[ \begin {array}{c} 0\\ \noalign{\medskip}-1/4\,\alpha_{g}\,\cos \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right) \\ \noalign{\medskip}-1/4\,\alpha_{g}\,\sin \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right) \end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{rel_snelh_D_A:=v_D-v_A:
+CrossProduct(omega_g_vec,rel_snelh_D_A):
+kruis_omega_g_rel_snelh_D_A:=simplify(%);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{kruis_omega_g_rel_snelh_D_A := Vector[column](%id = 18446744074526838646)}{\[\displaystyle {\it kruis\_omega\_g\_rel\_snelh\_D\_A}\, := \, \left[ \begin {array}{c} 1/4\,{\omega_{g}}^{2} \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right) \\ \noalign{\medskip}1/4\,\cos \left( \alpha \right) \omega_{g}\,\omega_{i}\, \left( l_{4}\,\sin \left( \beta \right) -3\,l_{3}\,\cos \left( \beta \right)  \right) \\ \noalign{\medskip}1/4\,\sin \left( \alpha \right) \omega_{g}\,\omega_{i}\, \left( l_{4}\,\sin \left( \beta \right) -3\,l_{3}\,\cos \left( \beta \right)  \right) \end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{CrossProduct(d_omega_i,rel_plaats_D_B):
+kruis_d_omega_i_rel_plaats_D_B:=simplify(%);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{kruis_d_omega_i_rel_plaats_D_B := Vector[column](%id = 18446744074526840942)}{\[\displaystyle {\it kruis\_d\_omega\_i\_rel\_plaats\_D\_B}\, := \, \left[ \begin {array}{c} 1/4\,\alpha_{i}\, \left( l_{4}\,\sin \left( \beta \right) -3\,l_{3}\,\cos \left( \beta \right)  \right) \\ \noalign{\medskip}1/4\,\sin \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-3/4\,\cos \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}-3/4\,\sin \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\alpha_{i}-1/4\,\cos \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\alpha_{i}\\ \noalign{\medskip}1/4\,\sin \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-3/4\,\cos \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}+3/4\,\sin \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\alpha_{i}+1/4\,\cos \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\alpha_{i}\end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{rel_snelh_D_B:=v_D-v_B:
+CrossProduct(omega_i_vec,rel_snelh_D_B):
+kruis_omega_i_rel_snelh_D_B:=simplify(%);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{kruis_omega_i_rel_snelh_D_B := Vector[column](%id = 18446744073927658782)}{\[\displaystyle {\it kruis\_omega\_i\_rel\_snelh\_D\_B}\, := \, \left[ \begin {array}{c} 1/4\,{\omega_{i}}^{2} \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right) \\ \noalign{\medskip}1/4\,\omega_{i}\,\sin \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-3\,\cos \left( \beta \right) l_{3}\,\omega_{i}+4\,\sin \left( \alpha \right) \omega_{g}\,l_{2} \right) \\ \noalign{\medskip}-1/4\,\omega_{i}\,\cos \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-3\,\cos \left( \beta \right) l_{3}\,\omega_{i}+4\,\sin \left( \alpha \right) \omega_{g}\,l_{2} \right) \end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{a_D:=a_A+kruis_d_omega_g_rel_plaats_D_A+kruis_omega_g_rel_snelh_D_A+kruis_d_omega_i_rel_plaats_D_B+kruis_omega_i_rel_snelh_D_B;
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{a_D := Vector[column](%id = 18446744074533709934)}{\[\displaystyle {\it a\_D}\, := \, \left[ \begin {array}{c} 1/4\,{\omega_{g}}^{2} \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right) +1/4\,\alpha_{i}\, \left( l_{4}\,\sin \left( \beta \right) -3\,l_{3}\,\cos \left( \beta \right)  \right) +1/4\,{\omega_{i}}^{2} \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right) \\ \noalign{\medskip}{\it a\_v}\,\cos \left( \alpha \right) -1/4\,\alpha_{g}\,\cos \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right) +1/4\,\cos \left( \alpha \right) \omega_{g}\,\omega_{i}\, \left( l_{4}\,\sin \left( \beta \right) -3\,l_{3}\,\cos \left( \beta \right)  \right) +1/4\,\sin \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-3/4\,\cos \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}-3/4\,\sin \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\alpha_{i}-1/4\,\cos \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\alpha_{i}+1/4\,\omega_{i}\,\sin \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-3\,\cos \left( \beta \right) l_{3}\,\omega_{i}+4\,\sin \left( \alpha \right) \omega_{g}\,l_{2} \right) \\ \noalign{\medskip}{\it a\_v}\,\sin \left( \alpha \right) -1/4\,\alpha_{g}\,\sin \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right) +1/4\,\sin \left( \alpha \right) \omega_{g}\,\omega_{i}\, \left( l_{4}\,\sin \left( \beta \right) -3\,l_{3}\,\cos \left( \beta \right)  \right) +1/4\,\sin \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-3/4\,\cos \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}+3/4\,\sin \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\alpha_{i}+1/4\,\cos \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\alpha_{i}-1/4\,\omega_{i}\,\cos \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-3\,\cos \left( \beta \right) l_{3}\,\omega_{i}+4\,\sin \left( \alpha \right) \omega_{g}\,l_{2} \right) \end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\section{\textbf{Dynamica}}
+\subsection{\textbf{Vraag 1}}
+\subsubsection{\textbf{\textit{Landingsgestel}}}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{p_l:=m_l*v_D;
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{p_l := Vector[column](%id = 18446744074533707158)}{\[\displaystyle {\it p\_l}\, := \, \left[ \begin {array}{c} 1/4\,m_{l}\,\omega_{i}\, \left( l_{4}\,\sin \left( \beta \right) -3\,l_{3}\,\cos \left( \beta \right)  \right) \\ \noalign{\medskip}m_{l}\, \left( \cos \left( \alpha \right) v_{v}-1/4\,\omega_{g}\,\cos \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right) -1/4\,\omega_{i}\,\sin \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right)  \right) \\ \noalign{\medskip}m_{l}\, \left( \sin \left( \alpha \right) v_{v}-1/4\,\omega_{g}\,\sin \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right) +1/4\,\omega_{i}\,\cos \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right)  \right) \end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{d_p_l:=m_l*a_D;
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{d_p_l := Vector[column](%id = 18446744074533667294)}{\[\displaystyle {\it d\_p\_l}\, := \, \left[ \begin {array}{c} m_{l}\, \left( 1/4\,{\omega_{g}}^{2} \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right) +1/4\,\alpha_{i}\, \left( l_{4}\,\sin \left( \beta \right) -3\,l_{3}\,\cos \left( \beta \right)  \right) +1/4\,{\omega_{i}}^{2} \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right)  \right) \\ \noalign{\medskip}m_{l}\, \left( {\it a\_v}\,\cos \left( \alpha \right) -1/4\,\alpha_{g}\,\cos \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right) +1/4\,\cos \left( \alpha \right) \omega_{g}\,\omega_{i}\, \left( l_{4}\,\sin \left( \beta \right) -3\,l_{3}\,\cos \left( \beta \right)  \right) +1/4\,\sin \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-3/4\,\cos \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}-3/4\,\sin \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\alpha_{i}-1/4\,\cos \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\alpha_{i}+1/4\,\omega_{i}\,\sin \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-3\,\cos \left( \beta \right) l_{3}\,\omega_{i}+4\,\sin \left( \alpha \right) \omega_{g}\,l_{2} \right)  \right) \\ \noalign{\medskip}m_{l}\, \left( {\it a\_v}\,\sin \left( \alpha \right) -1/4\,\alpha_{g}\,\sin \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right) +1/4\,\sin \left( \alpha \right) \omega_{g}\,\omega_{i}\, \left( l_{4}\,\sin \left( \beta \right) -3\,l_{3}\,\cos \left( \beta \right)  \right) +1/4\,\sin \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-3/4\,\cos \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}+3/4\,\sin \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\alpha_{i}+1/4\,\cos \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\alpha_{i}-1/4\,\omega_{i}\,\cos \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-3\,\cos \left( \beta \right) l_{3}\,\omega_{i}+4\,\sin \left( \alpha \right) \omega_{g}\,l_{2} \right)  \right) \end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\subsubsection{\textbf{\textit{Wiel}}}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{p_w:=m_w*v_C;
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{p_w := Vector[column](%id = 18446744074533663318)}{\[\displaystyle {\it p\_w}\, := \, \left[ \begin {array}{c} m_{w}\,\omega_{i}\, \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) \\ \noalign{\medskip}m_{w}\, \left( \cos \left( \alpha \right) v_{v}-\omega_{g}\,\cos \left( \alpha \right)  \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -l_{1} \right) -\omega_{i}\,\sin \left( \alpha \right)  \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right)  \right) \\ \noalign{\medskip}m_{w}\, \left( \sin \left( \alpha \right) v_{v}-\omega_{g}\,\sin \left( \alpha \right)  \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -l_{1} \right) +\omega_{i}\,\cos \left( \alpha \right)  \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right)  \right) \end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{d_p_w:=m_w*a_C;
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{d_p_w := Vector[column](%id = 18446744074526787574)}{\[\displaystyle {\it d\_p\_w}\, := \, \left[ \begin {array}{c} m_{w}\, \left( {\omega_{g}}^{2} \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -l_{1} \right) +\alpha_{i}\, \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) +{\omega_{i}}^{2} \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right)  \right) \\ \noalign{\medskip}m_{w}\, \left( {\it a\_v}\,\cos \left( \alpha \right) +\cos \left( \alpha \right) \alpha_{g}\, \left( -l_{3}\,\sin \left( \beta \right) -l_{4}\,\cos \left( \beta \right) +l_{1} \right) +\omega_{g}\,\omega_{i}\,\cos \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) +\sin \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-\cos \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}-\sin \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\alpha_{i}-\cos \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\alpha_{i}+\omega_{i}\,\sin \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-\cos \left( \beta \right) l_{3}\,\omega_{i}+\sin \left( \alpha \right) \omega_{g}\,l_{2} \right)  \right) \\ \noalign{\medskip}m_{w}\, \left( {\it a\_v}\,\sin \left( \alpha \right) +\sin \left( \alpha \right) \alpha_{g}\, \left( -l_{3}\,\sin \left( \beta \right) -l_{4}\,\cos \left( \beta \right) +l_{1} \right) +\omega_{g}\,\omega_{i}\,\sin \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) +\sin \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-\cos \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}+\sin \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\alpha_{i}+\cos \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\alpha_{i}-\omega_{i}\,\cos \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-\cos \left( \beta \right) l_{3}\,\omega_{i}+\sin \left( \alpha \right) \omega_{g}\,l_{2} \right)  \right) \end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\subsection{\textbf{Vraag 2}}
+\subsubsection{\textbf{\textit{L\_l}}}
+\begin{maplelatex}\begin{Maple Normal}{
+}\end{Maple Normal}
+\end{maplelatex}
+\begin{maplelatex}\begin{Maple Normal}{
+Misschien extra term om impuls rond massacentrum D ipv rond punt C}\end{Maple Normal}
+\end{maplelatex}
+\begin{maplelatex}\begin{Maple Normal}{
+}\end{Maple Normal}
+\end{maplelatex}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{a:=<0,omega_i,0>:
+b:=MatrixVectorMultiply(R4,<0,0,omega_g>):
+omega_l_I:=a+b;
+unassign('a');unassign('b');
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{omega_l_I := Vector[column](%id = 18446744074526803358)}{\[\displaystyle {\it omega\_l\_I}\, := \, \left[ \begin {array}{c} -\sin \left( \beta \right) \omega_{g}\\ \noalign{\medskip}\omega_{i}\\ \noalign{\medskip}\cos \left( \beta \right) \omega_{g}\end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{L_l:=MatrixVectorMultiply(Il,omega_l_I);
+L_I_wereld:=MatrixVectorMultiply(R3,L_I);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{L_l := Vector[column](%id = 18446744074526804678)}{\[\displaystyle {\it L\_l}\, := \, \left[ \begin {array}{c} -{\it I\_l\_xx}\,\sin \left( \beta \right) \omega_{g}\\ \noalign{\medskip}{\it I\_l\_yy}\,\omega_{i}\\ \noalign{\medskip}{\it I\_l\_zz}\,\cos \left( \beta \right) \omega_{g}\end {array} \right] \]}
+\end{maplelatex}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{L_I_wereld := Matrix(%id = 18446744074526806374)}{\[\displaystyle {\it L\_I\_wereld}\, := \, \left[ \begin {array}{ccc} {\it L\_I}\,\cos \left( \beta \right) &0&{\it L\_I}\,\sin \left( \beta \right) \\ \noalign{\medskip}{\it L\_I}\,\sin \left( \alpha \right) \sin \left( \beta \right) &{\it L\_I}\,\cos \left( \alpha \right) &-{\it L\_I}\,\sin \left( \alpha \right) \cos \left( \beta \right) \\ \noalign{\medskip}-{\it L\_I}\,\cos \left( \alpha \right) \sin \left( \beta \right) &{\it L\_I}\,\sin \left( \alpha \right) &{\it L\_I}\,\cos \left( \alpha \right) \cos \left( \beta \right) \end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\subsubsection{\textbf{\textit{L\_w}}}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{a:=<-omega_w,0,0>;
+omega_w_I:=omega_l_I+a;
+unassign('a');
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{a := Vector[column](%id = 18446744074526807814)}{\[\displaystyle a\, := \, \left[ \begin {array}{c} -\omega_{w}\\ \noalign{\medskip}0\\ \noalign{\medskip}0\end {array} \right] \]}
+\end{maplelatex}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{omega_w_I := Vector[column](%id = 18446744074526808414)}{\[\displaystyle {\it omega\_w\_I}\, := \, \left[ \begin {array}{c} -\sin \left( \beta \right) \omega_{g}-\omega_{w}\\ \noalign{\medskip}\omega_{i}\\ \noalign{\medskip}\cos \left( \beta \right) \omega_{g}\end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{L_w:=MatrixVectorMultiply(Iw,omega_w_I);
+L_w_wereld:=MatrixVectorMultiply(R3,L_w);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{L_w := Vector[column](%id = 18446744074526809734)}{\[\displaystyle {\it L\_w}\, := \, \left[ \begin {array}{c} {\it I\_w\_xx}\, \left( -\sin \left( \beta \right) \omega_{g}-\omega_{w} \right) \\ \noalign{\medskip}{\it I\_w\_yy}\,\omega_{i}\\ \noalign{\medskip}{\it I\_w\_zz}\,\cos \left( \beta \right) \omega_{g}\end {array} \right] \]}
+\end{maplelatex}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{L_w_wereld := Vector[column](%id = 18446744074526825158)}{\[\displaystyle {\it L\_w\_wereld}\, := \, \left[ \begin {array}{c} \cos \left( \beta \right) {\it I\_w\_xx}\, \left( -\sin \left( \beta \right) \omega_{g}-\omega_{w} \right) +\sin \left( \beta \right) {\it I\_w\_zz}\,\cos \left( \beta \right) \omega_{g}\\ \noalign{\medskip}\sin \left( \alpha \right) \sin \left( \beta \right) {\it I\_w\_xx}\, \left( -\sin \left( \beta \right) \omega_{g}-\omega_{w} \right) +\cos \left( \alpha \right) {\it I\_w\_yy}\,\omega_{i}-\sin \left( \alpha \right)  \left( \cos \left( \beta \right)  \right) ^{2}{\it I\_w\_zz}\,\omega_{g}\\ \noalign{\medskip}-\cos \left( \alpha \right) \sin \left( \beta \right) {\it I\_w\_xx}\, \left( -\sin \left( \beta \right) \omega_{g}-\omega_{w} \right) +\sin \left( \alpha \right) {\it I\_w\_yy}\,\omega_{i}+\cos \left( \alpha \right)  \left( \cos \left( \beta \right)  \right) ^{2}{\it I\_w\_zz}\,\omega_{g}\end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\subsubsection{\textbf{\textit{D\_L\_l}}}
+\begin{maplelatex}\begin{Maple Normal}{
+Misschien extra term om impulsmoment te berekenen rond punt D ipv C}\end{Maple Normal}
+\end{maplelatex}
+\begin{maplelatex}\begin{Maple Normal}{
+}\end{Maple Normal}
+\end{maplelatex}
+\begin{maplelatex}\begin{Maple Normal}{
+}\end{Maple Normal}
+\end{maplelatex}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{a:=MatrixVectorMultiply(R4,<0,0,alpha_g>):
+b:=<0,alpha_i,0>:
+c:=CrossProduct(MatrixVectorMultiply(R4,<0,0,omega_g>),<0,omega_i,0>):
+d:=a+b+c:
+d_L_I_rel:=MatrixVectorMultiply(Il,d):
+d_L_I:=d_L_I_rel+CrossProduct(omega_l_I,L_l);
+d_L_I_wereld:=MatrixVectorMultiply(R3,d_L_I);
+unassign('a');unassign('b');unassign('c');
+
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{d_L_I := Vector[column](%id = 18446744074533712110)}{\[\displaystyle {\it d\_L\_I}\, := \, \left[ \begin {array}{c} {\it I\_l\_xx}\, \left( -\sin \left( \beta \right) \alpha_{g}-\cos \left( \beta \right) \omega_{g}\,\omega_{i} \right) +\omega_{i}\,{\it I\_l\_zz}\,\cos \left( \beta \right) \omega_{g}-\cos \left( \beta \right) \omega_{g}\,{\it I\_l\_yy}\,\omega_{i}\\ \noalign{\medskip}{\it I\_l\_yy}\,\alpha_{i}+\sin \left( \beta \right) {\omega_{g}}^{2}{\it I\_l\_zz}\,\cos \left( \beta \right) -\cos \left( \beta \right) {\omega_{g}}^{2}{\it I\_l\_xx}\,\sin \left( \beta \right) \\ \noalign{\medskip}{\it I\_l\_zz}\, \left( \cos \left( \beta \right) \alpha_{g}-\sin \left( \beta \right) \omega_{g}\,\omega_{i} \right) -\sin \left( \beta \right) \omega_{g}\,{\it I\_l\_yy}\,\omega_{i}+\omega_{i}\,{\it I\_l\_xx}\,\sin \left( \beta \right) \omega_{g}\end {array} \right] \]}
+\end{maplelatex}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{d_L_I_wereld := Vector[column](%id = 18446744074533666678)}{\[\displaystyle {\it d\_L\_I\_wereld}\, := \, \left[ \begin {array}{c} \cos \left( \beta \right)  \left( {\it I\_l\_xx}\, \left( -\sin \left( \beta \right) \alpha_{g}-\cos \left( \beta \right) \omega_{g}\,\omega_{i} \right) +\omega_{i}\,{\it I\_l\_zz}\,\cos \left( \beta \right) \omega_{g}-\cos \left( \beta \right) \omega_{g}\,{\it I\_l\_yy}\,\omega_{i} \right) +\sin \left( \beta \right)  \left( {\it I\_l\_zz}\, \left( \cos \left( \beta \right) \alpha_{g}-\sin \left( \beta \right) \omega_{g}\,\omega_{i} \right) -\sin \left( \beta \right) \omega_{g}\,{\it I\_l\_yy}\,\omega_{i}+\omega_{i}\,{\it I\_l\_xx}\,\sin \left( \beta \right) \omega_{g} \right) \\ \noalign{\medskip}\sin \left( \alpha \right) \sin \left( \beta \right)  \left( {\it I\_l\_xx}\, \left( -\sin \left( \beta \right) \alpha_{g}-\cos \left( \beta \right) \omega_{g}\,\omega_{i} \right) +\omega_{i}\,{\it I\_l\_zz}\,\cos \left( \beta \right) \omega_{g}-\cos \left( \beta \right) \omega_{g}\,{\it I\_l\_yy}\,\omega_{i} \right) +\cos \left( \alpha \right)  \left( {\it I\_l\_yy}\,\alpha_{i}+\sin \left( \beta \right) {\omega_{g}}^{2}{\it I\_l\_zz}\,\cos \left( \beta \right) -\cos \left( \beta \right) {\omega_{g}}^{2}{\it I\_l\_xx}\,\sin \left( \beta \right)  \right) -\sin \left( \alpha \right) \cos \left( \beta \right)  \left( {\it I\_l\_zz}\, \left( \cos \left( \beta \right) \alpha_{g}-\sin \left( \beta \right) \omega_{g}\,\omega_{i} \right) -\sin \left( \beta \right) \omega_{g}\,{\it I\_l\_yy}\,\omega_{i}+\omega_{i}\,{\it I\_l\_xx}\,\sin \left( \beta \right) \omega_{g} \right) \\ \noalign{\medskip}-\cos \left( \alpha \right) \sin \left( \beta \right)  \left( {\it I\_l\_xx}\, \left( -\sin \left( \beta \right) \alpha_{g}-\cos \left( \beta \right) \omega_{g}\,\omega_{i} \right) +\omega_{i}\,{\it I\_l\_zz}\,\cos \left( \beta \right) \omega_{g}-\cos \left( \beta \right) \omega_{g}\,{\it I\_l\_yy}\,\omega_{i} \right) +\sin \left( \alpha \right)  \left( {\it I\_l\_yy}\,\alpha_{i}+\sin \left( \beta \right) {\omega_{g}}^{2}{\it I\_l\_zz}\,\cos \left( \beta \right) -\cos \left( \beta \right) {\omega_{g}}^{2}{\it I\_l\_xx}\,\sin \left( \beta \right)  \right) +\cos \left( \alpha \right) \cos \left( \beta \right)  \left( {\it I\_l\_zz}\, \left( \cos \left( \beta \right) \alpha_{g}-\sin \left( \beta \right) \omega_{g}\,\omega_{i} \right) -\sin \left( \beta \right) \omega_{g}\,{\it I\_l\_yy}\,\omega_{i}+\omega_{i}\,{\it I\_l\_xx}\,\sin \left( \beta \right) \omega_{g} \right) \end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\subsubsection{\textbf{\textit{D\_L\_W}}}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{d;
+e:=CrossProduct(MatrixVectorMultiply(R4,<0,0,omega_g>),<-omega_w,0,0>):
+f:=CrossProduct(<0,omega_i,0>,<-omega_w,0,0>):
+g:=<alpha_w,0,0>:
+d_L_W_rel:=MatrixVectorMultiply(Iw,d+e+f+g):
+d_L_W:=d_L_W_rel+CrossProduct(omega_w_I,L_w):
+d_L_W_wereld:=MatrixVectorMultiply(R3,d_L_W);
+unassign('d');unassign('e');unassign('f');unassign('g');
+
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{Vector[column](%id = 18446744074533651030)}{\[\displaystyle  \left[ \begin {array}{c} -\sin \left( \beta \right) \alpha_{g}-\cos \left( \beta \right) \omega_{g}\,\omega_{i}\\ \noalign{\medskip}\alpha_{i}\\ \noalign{\medskip}\cos \left( \beta \right) \alpha_{g}-\sin \left( \beta \right) \omega_{g}\,\omega_{i}\end {array} \right] \]}
+\end{maplelatex}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{d_L_W_wereld := Vector[column](%id = 18446744074526780462)}{\[\displaystyle {\it d\_L\_W\_wereld}\, := \, \left[ \begin {array}{c} \cos \left( \beta \right)  \left( {\it I\_w\_xx}\, \left( -\sin \left( \beta \right) \alpha_{g}-\cos \left( \beta \right) \omega_{g}\,\omega_{i}+\alpha_{w} \right) +\omega_{i}\,{\it I\_w\_zz}\,\cos \left( \beta \right) \omega_{g}-\cos \left( \beta \right) \omega_{g}\,{\it I\_w\_yy}\,\omega_{i} \right) +\sin \left( \beta \right)  \left( {\it I\_w\_zz}\, \left( \cos \left( \beta \right) \alpha_{g}-\sin \left( \beta \right) \omega_{g}\,\omega_{i}+\omega_{i}\,\omega_{w} \right) + \left( -\sin \left( \beta \right) \omega_{g}-\omega_{w} \right) {\it I\_w\_yy}\,\omega_{i}-\omega_{i}\,{\it I\_w\_xx}\, \left( -\sin \left( \beta \right) \omega_{g}-\omega_{w} \right)  \right) \\ \noalign{\medskip}\sin \left( \alpha \right) \sin \left( \beta \right)  \left( {\it I\_w\_xx}\, \left( -\sin \left( \beta \right) \alpha_{g}-\cos \left( \beta \right) \omega_{g}\,\omega_{i}+\alpha_{w} \right) +\omega_{i}\,{\it I\_w\_zz}\,\cos \left( \beta \right) \omega_{g}-\cos \left( \beta \right) \omega_{g}\,{\it I\_w\_yy}\,\omega_{i} \right) +\cos \left( \alpha \right)  \left( {\it I\_w\_yy}\, \left( \alpha_{i}-\cos \left( \beta \right) \omega_{g}\,\omega_{w} \right) - \left( -\sin \left( \beta \right) \omega_{g}-\omega_{w} \right) {\it I\_w\_zz}\,\cos \left( \beta \right) \omega_{g}+\cos \left( \beta \right) \omega_{g}\,{\it I\_w\_xx}\, \left( -\sin \left( \beta \right) \omega_{g}-\omega_{w} \right)  \right) -\sin \left( \alpha \right) \cos \left( \beta \right)  \left( {\it I\_w\_zz}\, \left( \cos \left( \beta \right) \alpha_{g}-\sin \left( \beta \right) \omega_{g}\,\omega_{i}+\omega_{i}\,\omega_{w} \right) + \left( -\sin \left( \beta \right) \omega_{g}-\omega_{w} \right) {\it I\_w\_yy}\,\omega_{i}-\omega_{i}\,{\it I\_w\_xx}\, \left( -\sin \left( \beta \right) \omega_{g}-\omega_{w} \right)  \right) \\ \noalign{\medskip}-\cos \left( \alpha \right) \sin \left( \beta \right)  \left( {\it I\_w\_xx}\, \left( -\sin \left( \beta \right) \alpha_{g}-\cos \left( \beta \right) \omega_{g}\,\omega_{i}+\alpha_{w} \right) +\omega_{i}\,{\it I\_w\_zz}\,\cos \left( \beta \right) \omega_{g}-\cos \left( \beta \right) \omega_{g}\,{\it I\_w\_yy}\,\omega_{i} \right) +\sin \left( \alpha \right)  \left( {\it I\_w\_yy}\, \left( \alpha_{i}-\cos \left( \beta \right) \omega_{g}\,\omega_{w} \right) - \left( -\sin \left( \beta \right) \omega_{g}-\omega_{w} \right) {\it I\_w\_zz}\,\cos \left( \beta \right) \omega_{g}+\cos \left( \beta \right) \omega_{g}\,{\it I\_w\_xx}\, \left( -\sin \left( \beta \right) \omega_{g}-\omega_{w} \right)  \right) +\cos \left( \alpha \right) \cos \left( \beta \right)  \left( {\it I\_w\_zz}\, \left( \cos \left( \beta \right) \alpha_{g}-\sin \left( \beta \right) \omega_{g}\,\omega_{i}+\omega_{i}\,\omega_{w} \right) + \left( -\sin \left( \beta \right) \omega_{g}-\omega_{w} \right) {\it I\_w\_yy}\,\omega_{i}-\omega_{i}\,{\it I\_w\_xx}\, \left( -\sin \left( \beta \right) \omega_{g}-\omega_{w} \right)  \right) \end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\subsection{\textbf{Vraag 3}}
+\begin{maplelatex}\begin{Maple Normal}{
+Om de kracht op de vleugel te berekenen gaan we eerst het wiel vrijmaken en zo naar het landingsgestel gaan. Al deze krachten zijn te berekenen.}\end{Maple Normal}
+\end{maplelatex}
+\begin{maplegroup}
+\begin{Maple Normal}{
+We beginnen met het vrijmaken van het wiel. Op het wiel spelen er twee krachten, het gewicht en de reactiekracht omwillen van het landingsgestel. De reactiekracht is dus gelijk aan het verschil van de afgeleide van de impuls en het gewicht.}\end{Maple Normal}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{G__w:=<0,0,-g*m_w>;
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{G__w := Vector[column](%id = 18446744074526782398)}{\[\displaystyle G_{w}\, := \, \left[ \begin {array}{c} 0\\ \noalign{\medskip}0\\ \noalign{\medskip}-gm_{w}\end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{R__wl:=d_p_w-G__w;
+R__lw:=-R__wl:
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{R__wl := Vector[column](%id = 18446744074533711734)}{\[\displaystyle R_{{\it wl}}\, := \, \left[ \begin {array}{c} m_{w}\, \left( {\omega_{g}}^{2} \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -l_{1} \right) +\alpha_{i}\, \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) +{\omega_{i}}^{2} \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right)  \right) \\ \noalign{\medskip}m_{w}\, \left( {\it a\_v}\,\cos \left( \alpha \right) +\cos \left( \alpha \right) \alpha_{g}\, \left( -l_{3}\,\sin \left( \beta \right) -l_{4}\,\cos \left( \beta \right) +l_{1} \right) +\omega_{g}\,\omega_{i}\,\cos \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) +\sin \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-\cos \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}-\sin \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\alpha_{i}-\cos \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\alpha_{i}+\omega_{i}\,\sin \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-\cos \left( \beta \right) l_{3}\,\omega_{i}+\sin \left( \alpha \right) \omega_{g}\,l_{2} \right)  \right) \\ \noalign{\medskip}m_{w}\, \left( {\it a\_v}\,\sin \left( \alpha \right) +\sin \left( \alpha \right) \alpha_{g}\, \left( -l_{3}\,\sin \left( \beta \right) -l_{4}\,\cos \left( \beta \right) +l_{1} \right) +\omega_{g}\,\omega_{i}\,\sin \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) +\sin \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-\cos \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}+\sin \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\alpha_{i}+\cos \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\alpha_{i}-\omega_{i}\,\cos \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-\cos \left( \beta \right) l_{3}\,\omega_{i}+\sin \left( \alpha \right) \omega_{g}\,l_{2} \right)  \right) +gm_{w}\end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{Maple Normal}{
+Op het landingsgestel spelen er 3 krachten, namelijk het gewicht van het landigsgestel, de reactiekracht door het wiel (tegengesteld aan de reactiekracht van het landingsgestel op het wiel hierboven bepaald) en de reactiekracht op het landingsgestel omwille van de vleugel.}\end{Maple Normal}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{G__l:=<0,0,-g*m_l>;
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{G__l := Vector[column](%id = 18446744074533700062)}{\[\displaystyle G_{l}\, := \, \left[ \begin {array}{c} 0\\ \noalign{\medskip}0\\ \noalign{\medskip}-gm_{l}\end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{F__lv:=d_p_l-G__l+R__wl;
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{F__lv := Vector[column](%id = 18446744074533652470)}{\[\displaystyle F_{{\it lv}}\, := \, \left[ \begin {array}{c} m_{l}\, \left( 1/4\,{\omega_{g}}^{2} \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right) +1/4\,\alpha_{i}\, \left( l_{4}\,\sin \left( \beta \right) -3\,l_{3}\,\cos \left( \beta \right)  \right) +1/4\,{\omega_{i}}^{2} \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right)  \right) +m_{w}\, \left( {\omega_{g}}^{2} \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -l_{1} \right) +\alpha_{i}\, \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) +{\omega_{i}}^{2} \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right)  \right) \\ \noalign{\medskip}m_{l}\, \left( {\it a\_v}\,\cos \left( \alpha \right) -1/4\,\alpha_{g}\,\cos \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right) +1/4\,\cos \left( \alpha \right) \omega_{g}\,\omega_{i}\, \left( l_{4}\,\sin \left( \beta \right) -3\,l_{3}\,\cos \left( \beta \right)  \right) +1/4\,\sin \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-3/4\,\cos \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}-3/4\,\sin \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\alpha_{i}-1/4\,\cos \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\alpha_{i}+1/4\,\omega_{i}\,\sin \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-3\,\cos \left( \beta \right) l_{3}\,\omega_{i}+4\,\sin \left( \alpha \right) \omega_{g}\,l_{2} \right)  \right) +m_{w}\, \left( {\it a\_v}\,\cos \left( \alpha \right) +\cos \left( \alpha \right) \alpha_{g}\, \left( -l_{3}\,\sin \left( \beta \right) -l_{4}\,\cos \left( \beta \right) +l_{1} \right) +\omega_{g}\,\omega_{i}\,\cos \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) +\sin \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-\cos \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}-\sin \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\alpha_{i}-\cos \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\alpha_{i}+\omega_{i}\,\sin \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-\cos \left( \beta \right) l_{3}\,\omega_{i}+\sin \left( \alpha \right) \omega_{g}\,l_{2} \right)  \right) \\ \noalign{\medskip}m_{l}\, \left( {\it a\_v}\,\sin \left( \alpha \right) -1/4\,\alpha_{g}\,\sin \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right) +1/4\,\sin \left( \alpha \right) \omega_{g}\,\omega_{i}\, \left( l_{4}\,\sin \left( \beta \right) -3\,l_{3}\,\cos \left( \beta \right)  \right) +1/4\,\sin \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-3/4\,\cos \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}+3/4\,\sin \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\alpha_{i}+1/4\,\cos \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\alpha_{i}-1/4\,\omega_{i}\,\cos \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-3\,\cos \left( \beta \right) l_{3}\,\omega_{i}+4\,\sin \left( \alpha \right) \omega_{g}\,l_{2} \right)  \right) +gm_{l}+m_{w}\, \left( {\it a\_v}\,\sin \left( \alpha \right) +\sin \left( \alpha \right) \alpha_{g}\, \left( -l_{3}\,\sin \left( \beta \right) -l_{4}\,\cos \left( \beta \right) +l_{1} \right) +\omega_{g}\,\omega_{i}\,\sin \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) +\sin \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-\cos \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}+\sin \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\alpha_{i}+\cos \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\alpha_{i}-\omega_{i}\,\cos \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-\cos \left( \beta \right) l_{3}\,\omega_{i}+\sin \left( \alpha \right) \omega_{g}\,l_{2} \right)  \right) +gm_{w}\end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{Maple Normal}{
+De kracht van het landingsgestel op de vleugel is gelijk en tegengesteld aan de kracht van de vleugel op het landingsgestel.}\end{Maple Normal}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{F__B:=-F__lv;
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{F__B := Vector[column](%id = 18446744074533710174)}{\[\displaystyle F_{B}\, := \, \left[ \begin {array}{c} -m_{l}\, \left( 1/4\,{\omega_{g}}^{2} \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right) +1/4\,\alpha_{i}\, \left( l_{4}\,\sin \left( \beta \right) -3\,l_{3}\,\cos \left( \beta \right)  \right) +1/4\,{\omega_{i}}^{2} \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right)  \right) -m_{w}\, \left( {\omega_{g}}^{2} \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -l_{1} \right) +\alpha_{i}\, \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) +{\omega_{i}}^{2} \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right)  \right) \\ \noalign{\medskip}-m_{l}\, \left( {\it a\_v}\,\cos \left( \alpha \right) -1/4\,\alpha_{g}\,\cos \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right) +1/4\,\cos \left( \alpha \right) \omega_{g}\,\omega_{i}\, \left( l_{4}\,\sin \left( \beta \right) -3\,l_{3}\,\cos \left( \beta \right)  \right) +1/4\,\sin \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-3/4\,\cos \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}-3/4\,\sin \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\alpha_{i}-1/4\,\cos \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\alpha_{i}+1/4\,\omega_{i}\,\sin \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-3\,\cos \left( \beta \right) l_{3}\,\omega_{i}+4\,\sin \left( \alpha \right) \omega_{g}\,l_{2} \right)  \right) -m_{w}\, \left( {\it a\_v}\,\cos \left( \alpha \right) +\cos \left( \alpha \right) \alpha_{g}\, \left( -l_{3}\,\sin \left( \beta \right) -l_{4}\,\cos \left( \beta \right) +l_{1} \right) +\omega_{g}\,\omega_{i}\,\cos \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) +\sin \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-\cos \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}-\sin \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\alpha_{i}-\cos \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\alpha_{i}+\omega_{i}\,\sin \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-\cos \left( \beta \right) l_{3}\,\omega_{i}+\sin \left( \alpha \right) \omega_{g}\,l_{2} \right)  \right) \\ \noalign{\medskip}-m_{l}\, \left( {\it a\_v}\,\sin \left( \alpha \right) -1/4\,\alpha_{g}\,\sin \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right) +1/4\,\sin \left( \alpha \right) \omega_{g}\,\omega_{i}\, \left( l_{4}\,\sin \left( \beta \right) -3\,l_{3}\,\cos \left( \beta \right)  \right) +1/4\,\sin \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-3/4\,\cos \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}+3/4\,\sin \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\alpha_{i}+1/4\,\cos \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\alpha_{i}-1/4\,\omega_{i}\,\cos \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-3\,\cos \left( \beta \right) l_{3}\,\omega_{i}+4\,\sin \left( \alpha \right) \omega_{g}\,l_{2} \right)  \right) -gm_{l}-m_{w}\, \left( {\it a\_v}\,\sin \left( \alpha \right) +\sin \left( \alpha \right) \alpha_{g}\, \left( -l_{3}\,\sin \left( \beta \right) -l_{4}\,\cos \left( \beta \right) +l_{1} \right) +\omega_{g}\,\omega_{i}\,\sin \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) +\sin \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-\cos \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}+\sin \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\alpha_{i}+\cos \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\alpha_{i}-\omega_{i}\,\cos \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-\cos \left( \beta \right) l_{3}\,\omega_{i}+\sin \left( \alpha \right) \omega_{g}\,l_{2} \right)  \right) -gm_{w}\end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\subsection{\textbf{Vraag 4}}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{M__wl:=d_L_W_wereld:
+}{}
+\end{mapleinput}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{M__lw:=-M__wl:
+}{}
+\end{mapleinput}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{a:=CrossProduct(-rel_plaats_D_C,R__lw):
+}{}
+\end{mapleinput}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{b:=CrossProduct(-rel_plaats_D_B,F__lv):
+}{}
+\end{mapleinput}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{M__lv:=d_L_l_wereld-a-b-M__lw:
+}{}
+\end{mapleinput}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{M__vl:=-M__lv;
+unassign('a');unassign('b');
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{M__vl := -d_L_l_wereld-Vector[column](%id = 18446744074533651270)}{\[\displaystyle M_{{\it vl}}\, := \,-{\it d\_L\_l\_wereld}- \left[ \begin {array}{c} - \left( -3/4\,\sin \left( \beta \right) \sin \left( \alpha \right) l_{4}+1/4\,\cos \left( \beta \right) \sin \left( \alpha \right) l_{3} \right)  \left( -m_{w}\, \left( {\it a\_v}\,\sin \left( \alpha \right) +\sin \left( \alpha \right) \alpha_{g}\, \left( -l_{3}\,\sin \left( \beta \right) -l_{4}\,\cos \left( \beta \right) +l_{1} \right) +\omega_{g}\,\omega_{i}\,\sin \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) +\sin \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-\cos \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}+\sin \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\alpha_{i}+\cos \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\alpha_{i}-\omega_{i}\,\cos \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-\cos \left( \beta \right) l_{3}\,\omega_{i}+\sin \left( \alpha \right) \omega_{g}\,l_{2} \right)  \right) -gm_{w} \right) - \left( 3/4\,\sin \left( \beta \right) \cos \left( \alpha \right) l_{4}-1/4\,\cos \left( \beta \right) \cos \left( \alpha \right) l_{3} \right) m_{w}\, \left( {\it a\_v}\,\cos \left( \alpha \right) +\cos \left( \alpha \right) \alpha_{g}\, \left( -l_{3}\,\sin \left( \beta \right) -l_{4}\,\cos \left( \beta \right) +l_{1} \right) +\omega_{g}\,\omega_{i}\,\cos \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) +\sin \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-\cos \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}-\sin \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\alpha_{i}-\cos \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\alpha_{i}+\omega_{i}\,\sin \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-\cos \left( \beta \right) l_{3}\,\omega_{i}+\sin \left( \alpha \right) \omega_{g}\,l_{2} \right)  \right) - \left( -3/4\,\sin \left( \beta \right) \sin \left( \alpha \right) l_{4}+1/4\,\cos \left( \beta \right) \sin \left( \alpha \right) l_{3}+\sin \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right)  \right)  \left( m_{l}\, \left( {\it a\_v}\,\sin \left( \alpha \right) -1/4\,\alpha_{g}\,\sin \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right) +1/4\,\sin \left( \alpha \right) \omega_{g}\,\omega_{i}\, \left( l_{4}\,\sin \left( \beta \right) -3\,l_{3}\,\cos \left( \beta \right)  \right) +1/4\,\sin \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-3/4\,\cos \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}+3/4\,\sin \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\alpha_{i}+1/4\,\cos \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\alpha_{i}-1/4\,\omega_{i}\,\cos \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-3\,\cos \left( \beta \right) l_{3}\,\omega_{i}+4\,\sin \left( \alpha \right) \omega_{g}\,l_{2} \right)  \right) +gm_{l}+m_{w}\, \left( {\it a\_v}\,\sin \left( \alpha \right) +\sin \left( \alpha \right) \alpha_{g}\, \left( -l_{3}\,\sin \left( \beta \right) -l_{4}\,\cos \left( \beta \right) +l_{1} \right) +\omega_{g}\,\omega_{i}\,\sin \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) +\sin \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-\cos \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}+\sin \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\alpha_{i}+\cos \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\alpha_{i}-\omega_{i}\,\cos \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-\cos \left( \beta \right) l_{3}\,\omega_{i}+\sin \left( \alpha \right) \omega_{g}\,l_{2} \right)  \right) +gm_{w} \right) + \left( 3/4\,\sin \left( \beta \right) \cos \left( \alpha \right) l_{4}-1/4\,\cos \left( \beta \right) \cos \left( \alpha \right) l_{3}-\cos \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right)  \right)  \left( m_{l}\, \left( {\it a\_v}\,\cos \left( \alpha \right) -1/4\,\alpha_{g}\,\cos \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right) +1/4\,\cos \left( \alpha \right) \omega_{g}\,\omega_{i}\, \left( l_{4}\,\sin \left( \beta \right) -3\,l_{3}\,\cos \left( \beta \right)  \right) +1/4\,\sin \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-3/4\,\cos \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}-3/4\,\sin \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\alpha_{i}-1/4\,\cos \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\alpha_{i}+1/4\,\omega_{i}\,\sin \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-3\,\cos \left( \beta \right) l_{3}\,\omega_{i}+4\,\sin \left( \alpha \right) \omega_{g}\,l_{2} \right)  \right) +m_{w}\, \left( {\it a\_v}\,\cos \left( \alpha \right) +\cos \left( \alpha \right) \alpha_{g}\, \left( -l_{3}\,\sin \left( \beta \right) -l_{4}\,\cos \left( \beta \right) +l_{1} \right) +\omega_{g}\,\omega_{i}\,\cos \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) +\sin \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-\cos \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}-\sin \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\alpha_{i}-\cos \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\alpha_{i}+\omega_{i}\,\sin \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-\cos \left( \beta \right) l_{3}\,\omega_{i}+\sin \left( \alpha \right) \omega_{g}\,l_{2} \right)  \right)  \right) +\cos \left( \beta \right)  \left( {\it I\_w\_xx}\, \left( -\sin \left( \beta \right) \alpha_{g}-\cos \left( \beta \right) \omega_{g}\,\omega_{i}+\alpha_{w} \right) +\omega_{i}\,{\it I\_w\_zz}\,\cos \left( \beta \right) \omega_{g}-\cos \left( \beta \right) \omega_{g}\,{\it I\_w\_yy}\,\omega_{i} \right) +\sin \left( \beta \right)  \left( {\it I\_w\_zz}\, \left( \cos \left( \beta \right) \alpha_{g}-\sin \left( \beta \right) \omega_{g}\,\omega_{i}+\omega_{i}\,\omega_{w} \right) + \left( -\sin \left( \beta \right) \omega_{g}-\omega_{w} \right) {\it I\_w\_yy}\,\omega_{i}-\omega_{i}\,{\it I\_w\_xx}\, \left( -\sin \left( \beta \right) \omega_{g}-\omega_{w} \right)  \right) \\ \noalign{\medskip} \left( -3/4\,l_{4}\,\cos \left( \beta \right) -1/4\,l_{3}\,\sin \left( \beta \right)  \right)  \left( -m_{w}\, \left( {\it a\_v}\,\sin \left( \alpha \right) +\sin \left( \alpha \right) \alpha_{g}\, \left( -l_{3}\,\sin \left( \beta \right) -l_{4}\,\cos \left( \beta \right) +l_{1} \right) +\omega_{g}\,\omega_{i}\,\sin \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) +\sin \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-\cos \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}+\sin \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\alpha_{i}+\cos \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\alpha_{i}-\omega_{i}\,\cos \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-\cos \left( \beta \right) l_{3}\,\omega_{i}+\sin \left( \alpha \right) \omega_{g}\,l_{2} \right)  \right) -gm_{w} \right) + \left( 3/4\,\sin \left( \beta \right) \cos \left( \alpha \right) l_{4}-1/4\,\cos \left( \beta \right) \cos \left( \alpha \right) l_{3} \right) m_{w}\, \left( {\omega_{g}}^{2} \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -l_{1} \right) +\alpha_{i}\, \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) +{\omega_{i}}^{2} \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right)  \right) + \left( 1/4\,l_{4}\,\cos \left( \beta \right) +3/4\,l_{3}\,\sin \left( \beta \right)  \right)  \left( m_{l}\, \left( {\it a\_v}\,\sin \left( \alpha \right) -1/4\,\alpha_{g}\,\sin \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right) +1/4\,\sin \left( \alpha \right) \omega_{g}\,\omega_{i}\, \left( l_{4}\,\sin \left( \beta \right) -3\,l_{3}\,\cos \left( \beta \right)  \right) +1/4\,\sin \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-3/4\,\cos \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}+3/4\,\sin \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\alpha_{i}+1/4\,\cos \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\alpha_{i}-1/4\,\omega_{i}\,\cos \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-3\,\cos \left( \beta \right) l_{3}\,\omega_{i}+4\,\sin \left( \alpha \right) \omega_{g}\,l_{2} \right)  \right) +gm_{l}+m_{w}\, \left( {\it a\_v}\,\sin \left( \alpha \right) +\sin \left( \alpha \right) \alpha_{g}\, \left( -l_{3}\,\sin \left( \beta \right) -l_{4}\,\cos \left( \beta \right) +l_{1} \right) +\omega_{g}\,\omega_{i}\,\sin \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) +\sin \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-\cos \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}+\sin \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\alpha_{i}+\cos \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\alpha_{i}-\omega_{i}\,\cos \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-\cos \left( \beta \right) l_{3}\,\omega_{i}+\sin \left( \alpha \right) \omega_{g}\,l_{2} \right)  \right) +gm_{w} \right) - \left( 3/4\,\sin \left( \beta \right) \cos \left( \alpha \right) l_{4}-1/4\,\cos \left( \beta \right) \cos \left( \alpha \right) l_{3}-\cos \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right)  \right)  \left( m_{l}\, \left( 1/4\,{\omega_{g}}^{2} \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right) +1/4\,\alpha_{i}\, \left( l_{4}\,\sin \left( \beta \right) -3\,l_{3}\,\cos \left( \beta \right)  \right) +1/4\,{\omega_{i}}^{2} \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right)  \right) +m_{w}\, \left( {\omega_{g}}^{2} \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -l_{1} \right) +\alpha_{i}\, \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) +{\omega_{i}}^{2} \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right)  \right)  \right) +\sin \left( \alpha \right) \sin \left( \beta \right)  \left( {\it I\_w\_xx}\, \left( -\sin \left( \beta \right) \alpha_{g}-\cos \left( \beta \right) \omega_{g}\,\omega_{i}+\alpha_{w} \right) +\omega_{i}\,{\it I\_w\_zz}\,\cos \left( \beta \right) \omega_{g}-\cos \left( \beta \right) \omega_{g}\,{\it I\_w\_yy}\,\omega_{i} \right) +\cos \left( \alpha \right)  \left( {\it I\_w\_yy}\, \left( \alpha_{i}-\cos \left( \beta \right) \omega_{g}\,\omega_{w} \right) - \left( -\sin \left( \beta \right) \omega_{g}-\omega_{w} \right) {\it I\_w\_zz}\,\cos \left( \beta \right) \omega_{g}+\cos \left( \beta \right) \omega_{g}\,{\it I\_w\_xx}\, \left( -\sin \left( \beta \right) \omega_{g}-\omega_{w} \right)  \right) -\sin \left( \alpha \right) \cos \left( \beta \right)  \left( {\it I\_w\_zz}\, \left( \cos \left( \beta \right) \alpha_{g}-\sin \left( \beta \right) \omega_{g}\,\omega_{i}+\omega_{i}\,\omega_{w} \right) + \left( -\sin \left( \beta \right) \omega_{g}-\omega_{w} \right) {\it I\_w\_yy}\,\omega_{i}-\omega_{i}\,{\it I\_w\_xx}\, \left( -\sin \left( \beta \right) \omega_{g}-\omega_{w} \right)  \right) \\ \noalign{\medskip} \left( -3/4\,l_{4}\,\cos \left( \beta \right) -1/4\,l_{3}\,\sin \left( \beta \right)  \right) m_{w}\, \left( {\it a\_v}\,\cos \left( \alpha \right) +\cos \left( \alpha \right) \alpha_{g}\, \left( -l_{3}\,\sin \left( \beta \right) -l_{4}\,\cos \left( \beta \right) +l_{1} \right) +\omega_{g}\,\omega_{i}\,\cos \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) +\sin \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-\cos \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}-\sin \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\alpha_{i}-\cos \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\alpha_{i}+\omega_{i}\,\sin \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-\cos \left( \beta \right) l_{3}\,\omega_{i}+\sin \left( \alpha \right) \omega_{g}\,l_{2} \right)  \right) - \left( -3/4\,\sin \left( \beta \right) \sin \left( \alpha \right) l_{4}+1/4\,\cos \left( \beta \right) \sin \left( \alpha \right) l_{3} \right) m_{w}\, \left( {\omega_{g}}^{2} \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -l_{1} \right) +\alpha_{i}\, \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) +{\omega_{i}}^{2} \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right)  \right) - \left( 1/4\,l_{4}\,\cos \left( \beta \right) +3/4\,l_{3}\,\sin \left( \beta \right)  \right)  \left( m_{l}\, \left( {\it a\_v}\,\cos \left( \alpha \right) -1/4\,\alpha_{g}\,\cos \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right) +1/4\,\cos \left( \alpha \right) \omega_{g}\,\omega_{i}\, \left( l_{4}\,\sin \left( \beta \right) -3\,l_{3}\,\cos \left( \beta \right)  \right) +1/4\,\sin \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-3/4\,\cos \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}-3/4\,\sin \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\alpha_{i}-1/4\,\cos \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\alpha_{i}+1/4\,\omega_{i}\,\sin \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-3\,\cos \left( \beta \right) l_{3}\,\omega_{i}+4\,\sin \left( \alpha \right) \omega_{g}\,l_{2} \right)  \right) +m_{w}\, \left( {\it a\_v}\,\cos \left( \alpha \right) +\cos \left( \alpha \right) \alpha_{g}\, \left( -l_{3}\,\sin \left( \beta \right) -l_{4}\,\cos \left( \beta \right) +l_{1} \right) +\omega_{g}\,\omega_{i}\,\cos \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) +\sin \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-\cos \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}-\sin \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\alpha_{i}-\cos \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\alpha_{i}+\omega_{i}\,\sin \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-\cos \left( \beta \right) l_{3}\,\omega_{i}+\sin \left( \alpha \right) \omega_{g}\,l_{2} \right)  \right)  \right) + \left( -3/4\,\sin \left( \beta \right) \sin \left( \alpha \right) l_{4}+1/4\,\cos \left( \beta \right) \sin \left( \alpha \right) l_{3}+\sin \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right)  \right)  \left( m_{l}\, \left( 1/4\,{\omega_{g}}^{2} \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right) +1/4\,\alpha_{i}\, \left( l_{4}\,\sin \left( \beta \right) -3\,l_{3}\,\cos \left( \beta \right)  \right) +1/4\,{\omega_{i}}^{2} \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right)  \right) +m_{w}\, \left( {\omega_{g}}^{2} \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -l_{1} \right) +\alpha_{i}\, \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) +{\omega_{i}}^{2} \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right)  \right)  \right) -\cos \left( \alpha \right) \sin \left( \beta \right)  \left( {\it I\_w\_xx}\, \left( -\sin \left( \beta \right) \alpha_{g}-\cos \left( \beta \right) \omega_{g}\,\omega_{i}+\alpha_{w} \right) +\omega_{i}\,{\it I\_w\_zz}\,\cos \left( \beta \right) \omega_{g}-\cos \left( \beta \right) \omega_{g}\,{\it I\_w\_yy}\,\omega_{i} \right) +\sin \left( \alpha \right)  \left( {\it I\_w\_yy}\, \left( \alpha_{i}-\cos \left( \beta \right) \omega_{g}\,\omega_{w} \right) - \left( -\sin \left( \beta \right) \omega_{g}-\omega_{w} \right) {\it I\_w\_zz}\,\cos \left( \beta \right) \omega_{g}+\cos \left( \beta \right) \omega_{g}\,{\it I\_w\_xx}\, \left( -\sin \left( \beta \right) \omega_{g}-\omega_{w} \right)  \right) +\cos \left( \alpha \right) \cos \left( \beta \right)  \left( {\it I\_w\_zz}\, \left( \cos \left( \beta \right) \alpha_{g}-\sin \left( \beta \right) \omega_{g}\,\omega_{i}+\omega_{i}\,\omega_{w} \right) + \left( -\sin \left( \beta \right) \omega_{g}-\omega_{w} \right) {\it I\_w\_yy}\,\omega_{i}-\omega_{i}\,{\it I\_w\_xx}\, \left( -\sin \left( \beta \right) \omega_{g}-\omega_{w} \right)  \right) \end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\subsection{\textbf{Vraag 5}}
+\begin{maplelatex}\begin{Maple Normal}{
+Dit is het moment dat door de vleugel wordt geleverd op het landingsgestel.}\end{Maple Normal}
+\end{maplelatex}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{M__lv;
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{d_L_l_wereld+Vector[column](%id = 18446744074533669094)}{\[\displaystyle {\it d\_L\_l\_wereld}+ \left[ \begin {array}{c} - \left( -3/4\,\sin \left( \beta \right) \sin \left( \alpha \right) l_{4}+1/4\,\cos \left( \beta \right) \sin \left( \alpha \right) l_{3} \right)  \left( -m_{w}\, \left( {\it a\_v}\,\sin \left( \alpha \right) +\sin \left( \alpha \right) \alpha_{g}\, \left( -l_{3}\,\sin \left( \beta \right) -l_{4}\,\cos \left( \beta \right) +l_{1} \right) +\omega_{g}\,\omega_{i}\,\sin \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) +\sin \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-\cos \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}+\sin \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\alpha_{i}+\cos \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\alpha_{i}-\omega_{i}\,\cos \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-\cos \left( \beta \right) l_{3}\,\omega_{i}+\sin \left( \alpha \right) \omega_{g}\,l_{2} \right)  \right) -gm_{w} \right) - \left( 3/4\,\sin \left( \beta \right) \cos \left( \alpha \right) l_{4}-1/4\,\cos \left( \beta \right) \cos \left( \alpha \right) l_{3} \right) m_{w}\, \left( {\it a\_v}\,\cos \left( \alpha \right) +\cos \left( \alpha \right) \alpha_{g}\, \left( -l_{3}\,\sin \left( \beta \right) -l_{4}\,\cos \left( \beta \right) +l_{1} \right) +\omega_{g}\,\omega_{i}\,\cos \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) +\sin \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-\cos \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}-\sin \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\alpha_{i}-\cos \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\alpha_{i}+\omega_{i}\,\sin \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-\cos \left( \beta \right) l_{3}\,\omega_{i}+\sin \left( \alpha \right) \omega_{g}\,l_{2} \right)  \right) - \left( -3/4\,\sin \left( \beta \right) \sin \left( \alpha \right) l_{4}+1/4\,\cos \left( \beta \right) \sin \left( \alpha \right) l_{3}+\sin \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right)  \right)  \left( m_{l}\, \left( {\it a\_v}\,\sin \left( \alpha \right) -1/4\,\alpha_{g}\,\sin \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right) +1/4\,\sin \left( \alpha \right) \omega_{g}\,\omega_{i}\, \left( l_{4}\,\sin \left( \beta \right) -3\,l_{3}\,\cos \left( \beta \right)  \right) +1/4\,\sin \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-3/4\,\cos \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}+3/4\,\sin \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\alpha_{i}+1/4\,\cos \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\alpha_{i}-1/4\,\omega_{i}\,\cos \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-3\,\cos \left( \beta \right) l_{3}\,\omega_{i}+4\,\sin \left( \alpha \right) \omega_{g}\,l_{2} \right)  \right) +gm_{l}+m_{w}\, \left( {\it a\_v}\,\sin \left( \alpha \right) +\sin \left( \alpha \right) \alpha_{g}\, \left( -l_{3}\,\sin \left( \beta \right) -l_{4}\,\cos \left( \beta \right) +l_{1} \right) +\omega_{g}\,\omega_{i}\,\sin \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) +\sin \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-\cos \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}+\sin \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\alpha_{i}+\cos \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\alpha_{i}-\omega_{i}\,\cos \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-\cos \left( \beta \right) l_{3}\,\omega_{i}+\sin \left( \alpha \right) \omega_{g}\,l_{2} \right)  \right) +gm_{w} \right) + \left( 3/4\,\sin \left( \beta \right) \cos \left( \alpha \right) l_{4}-1/4\,\cos \left( \beta \right) \cos \left( \alpha \right) l_{3}-\cos \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right)  \right)  \left( m_{l}\, \left( {\it a\_v}\,\cos \left( \alpha \right) -1/4\,\alpha_{g}\,\cos \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right) +1/4\,\cos \left( \alpha \right) \omega_{g}\,\omega_{i}\, \left( l_{4}\,\sin \left( \beta \right) -3\,l_{3}\,\cos \left( \beta \right)  \right) +1/4\,\sin \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-3/4\,\cos \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}-3/4\,\sin \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\alpha_{i}-1/4\,\cos \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\alpha_{i}+1/4\,\omega_{i}\,\sin \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-3\,\cos \left( \beta \right) l_{3}\,\omega_{i}+4\,\sin \left( \alpha \right) \omega_{g}\,l_{2} \right)  \right) +m_{w}\, \left( {\it a\_v}\,\cos \left( \alpha \right) +\cos \left( \alpha \right) \alpha_{g}\, \left( -l_{3}\,\sin \left( \beta \right) -l_{4}\,\cos \left( \beta \right) +l_{1} \right) +\omega_{g}\,\omega_{i}\,\cos \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) +\sin \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-\cos \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}-\sin \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\alpha_{i}-\cos \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\alpha_{i}+\omega_{i}\,\sin \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-\cos \left( \beta \right) l_{3}\,\omega_{i}+\sin \left( \alpha \right) \omega_{g}\,l_{2} \right)  \right)  \right) +\cos \left( \beta \right)  \left( {\it I\_w\_xx}\, \left( -\sin \left( \beta \right) \alpha_{g}-\cos \left( \beta \right) \omega_{g}\,\omega_{i}+\alpha_{w} \right) +\omega_{i}\,{\it I\_w\_zz}\,\cos \left( \beta \right) \omega_{g}-\cos \left( \beta \right) \omega_{g}\,{\it I\_w\_yy}\,\omega_{i} \right) +\sin \left( \beta \right)  \left( {\it I\_w\_zz}\, \left( \cos \left( \beta \right) \alpha_{g}-\sin \left( \beta \right) \omega_{g}\,\omega_{i}+\omega_{i}\,\omega_{w} \right) + \left( -\sin \left( \beta \right) \omega_{g}-\omega_{w} \right) {\it I\_w\_yy}\,\omega_{i}-\omega_{i}\,{\it I\_w\_xx}\, \left( -\sin \left( \beta \right) \omega_{g}-\omega_{w} \right)  \right) \\ \noalign{\medskip} \left( -3/4\,l_{4}\,\cos \left( \beta \right) -1/4\,l_{3}\,\sin \left( \beta \right)  \right)  \left( -m_{w}\, \left( {\it a\_v}\,\sin \left( \alpha \right) +\sin \left( \alpha \right) \alpha_{g}\, \left( -l_{3}\,\sin \left( \beta \right) -l_{4}\,\cos \left( \beta \right) +l_{1} \right) +\omega_{g}\,\omega_{i}\,\sin \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) +\sin \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-\cos \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}+\sin \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\alpha_{i}+\cos \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\alpha_{i}-\omega_{i}\,\cos \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-\cos \left( \beta \right) l_{3}\,\omega_{i}+\sin \left( \alpha \right) \omega_{g}\,l_{2} \right)  \right) -gm_{w} \right) + \left( 3/4\,\sin \left( \beta \right) \cos \left( \alpha \right) l_{4}-1/4\,\cos \left( \beta \right) \cos \left( \alpha \right) l_{3} \right) m_{w}\, \left( {\omega_{g}}^{2} \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -l_{1} \right) +\alpha_{i}\, \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) +{\omega_{i}}^{2} \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right)  \right) + \left( 1/4\,l_{4}\,\cos \left( \beta \right) +3/4\,l_{3}\,\sin \left( \beta \right)  \right)  \left( m_{l}\, \left( {\it a\_v}\,\sin \left( \alpha \right) -1/4\,\alpha_{g}\,\sin \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right) +1/4\,\sin \left( \alpha \right) \omega_{g}\,\omega_{i}\, \left( l_{4}\,\sin \left( \beta \right) -3\,l_{3}\,\cos \left( \beta \right)  \right) +1/4\,\sin \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-3/4\,\cos \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}+3/4\,\sin \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\alpha_{i}+1/4\,\cos \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\alpha_{i}-1/4\,\omega_{i}\,\cos \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-3\,\cos \left( \beta \right) l_{3}\,\omega_{i}+4\,\sin \left( \alpha \right) \omega_{g}\,l_{2} \right)  \right) +gm_{l}+m_{w}\, \left( {\it a\_v}\,\sin \left( \alpha \right) +\sin \left( \alpha \right) \alpha_{g}\, \left( -l_{3}\,\sin \left( \beta \right) -l_{4}\,\cos \left( \beta \right) +l_{1} \right) +\omega_{g}\,\omega_{i}\,\sin \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) +\sin \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-\cos \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}+\sin \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\alpha_{i}+\cos \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\alpha_{i}-\omega_{i}\,\cos \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-\cos \left( \beta \right) l_{3}\,\omega_{i}+\sin \left( \alpha \right) \omega_{g}\,l_{2} \right)  \right) +gm_{w} \right) - \left( 3/4\,\sin \left( \beta \right) \cos \left( \alpha \right) l_{4}-1/4\,\cos \left( \beta \right) \cos \left( \alpha \right) l_{3}-\cos \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right)  \right)  \left( m_{l}\, \left( 1/4\,{\omega_{g}}^{2} \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right) +1/4\,\alpha_{i}\, \left( l_{4}\,\sin \left( \beta \right) -3\,l_{3}\,\cos \left( \beta \right)  \right) +1/4\,{\omega_{i}}^{2} \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right)  \right) +m_{w}\, \left( {\omega_{g}}^{2} \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -l_{1} \right) +\alpha_{i}\, \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) +{\omega_{i}}^{2} \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right)  \right)  \right) +\sin \left( \alpha \right) \sin \left( \beta \right)  \left( {\it I\_w\_xx}\, \left( -\sin \left( \beta \right) \alpha_{g}-\cos \left( \beta \right) \omega_{g}\,\omega_{i}+\alpha_{w} \right) +\omega_{i}\,{\it I\_w\_zz}\,\cos \left( \beta \right) \omega_{g}-\cos \left( \beta \right) \omega_{g}\,{\it I\_w\_yy}\,\omega_{i} \right) +\cos \left( \alpha \right)  \left( {\it I\_w\_yy}\, \left( \alpha_{i}-\cos \left( \beta \right) \omega_{g}\,\omega_{w} \right) - \left( -\sin \left( \beta \right) \omega_{g}-\omega_{w} \right) {\it I\_w\_zz}\,\cos \left( \beta \right) \omega_{g}+\cos \left( \beta \right) \omega_{g}\,{\it I\_w\_xx}\, \left( -\sin \left( \beta \right) \omega_{g}-\omega_{w} \right)  \right) -\sin \left( \alpha \right) \cos \left( \beta \right)  \left( {\it I\_w\_zz}\, \left( \cos \left( \beta \right) \alpha_{g}-\sin \left( \beta \right) \omega_{g}\,\omega_{i}+\omega_{i}\,\omega_{w} \right) + \left( -\sin \left( \beta \right) \omega_{g}-\omega_{w} \right) {\it I\_w\_yy}\,\omega_{i}-\omega_{i}\,{\it I\_w\_xx}\, \left( -\sin \left( \beta \right) \omega_{g}-\omega_{w} \right)  \right) \\ \noalign{\medskip} \left( -3/4\,l_{4}\,\cos \left( \beta \right) -1/4\,l_{3}\,\sin \left( \beta \right)  \right) m_{w}\, \left( {\it a\_v}\,\cos \left( \alpha \right) +\cos \left( \alpha \right) \alpha_{g}\, \left( -l_{3}\,\sin \left( \beta \right) -l_{4}\,\cos \left( \beta \right) +l_{1} \right) +\omega_{g}\,\omega_{i}\,\cos \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) +\sin \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-\cos \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}-\sin \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\alpha_{i}-\cos \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\alpha_{i}+\omega_{i}\,\sin \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-\cos \left( \beta \right) l_{3}\,\omega_{i}+\sin \left( \alpha \right) \omega_{g}\,l_{2} \right)  \right) - \left( -3/4\,\sin \left( \beta \right) \sin \left( \alpha \right) l_{4}+1/4\,\cos \left( \beta \right) \sin \left( \alpha \right) l_{3} \right) m_{w}\, \left( {\omega_{g}}^{2} \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -l_{1} \right) +\alpha_{i}\, \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) +{\omega_{i}}^{2} \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right)  \right) - \left( 1/4\,l_{4}\,\cos \left( \beta \right) +3/4\,l_{3}\,\sin \left( \beta \right)  \right)  \left( m_{l}\, \left( {\it a\_v}\,\cos \left( \alpha \right) -1/4\,\alpha_{g}\,\cos \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right) +1/4\,\cos \left( \alpha \right) \omega_{g}\,\omega_{i}\, \left( l_{4}\,\sin \left( \beta \right) -3\,l_{3}\,\cos \left( \beta \right)  \right) +1/4\,\sin \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-3/4\,\cos \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}-3/4\,\sin \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\alpha_{i}-1/4\,\cos \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\alpha_{i}+1/4\,\omega_{i}\,\sin \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-3\,\cos \left( \beta \right) l_{3}\,\omega_{i}+4\,\sin \left( \alpha \right) \omega_{g}\,l_{2} \right)  \right) +m_{w}\, \left( {\it a\_v}\,\cos \left( \alpha \right) +\cos \left( \alpha \right) \alpha_{g}\, \left( -l_{3}\,\sin \left( \beta \right) -l_{4}\,\cos \left( \beta \right) +l_{1} \right) +\omega_{g}\,\omega_{i}\,\cos \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) +\sin \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-\cos \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}-\sin \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\alpha_{i}-\cos \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\alpha_{i}+\omega_{i}\,\sin \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-\cos \left( \beta \right) l_{3}\,\omega_{i}+\sin \left( \alpha \right) \omega_{g}\,l_{2} \right)  \right)  \right) + \left( -3/4\,\sin \left( \beta \right) \sin \left( \alpha \right) l_{4}+1/4\,\cos \left( \beta \right) \sin \left( \alpha \right) l_{3}+\sin \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right)  \right)  \left( m_{l}\, \left( 1/4\,{\omega_{g}}^{2} \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right) +1/4\,\alpha_{i}\, \left( l_{4}\,\sin \left( \beta \right) -3\,l_{3}\,\cos \left( \beta \right)  \right) +1/4\,{\omega_{i}}^{2} \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right)  \right) +m_{w}\, \left( {\omega_{g}}^{2} \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -l_{1} \right) +\alpha_{i}\, \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) +{\omega_{i}}^{2} \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right)  \right)  \right) -\cos \left( \alpha \right) \sin \left( \beta \right)  \left( {\it I\_w\_xx}\, \left( -\sin \left( \beta \right) \alpha_{g}-\cos \left( \beta \right) \omega_{g}\,\omega_{i}+\alpha_{w} \right) +\omega_{i}\,{\it I\_w\_zz}\,\cos \left( \beta \right) \omega_{g}-\cos \left( \beta \right) \omega_{g}\,{\it I\_w\_yy}\,\omega_{i} \right) +\sin \left( \alpha \right)  \left( {\it I\_w\_yy}\, \left( \alpha_{i}-\cos \left( \beta \right) \omega_{g}\,\omega_{w} \right) - \left( -\sin \left( \beta \right) \omega_{g}-\omega_{w} \right) {\it I\_w\_zz}\,\cos \left( \beta \right) \omega_{g}+\cos \left( \beta \right) \omega_{g}\,{\it I\_w\_xx}\, \left( -\sin \left( \beta \right) \omega_{g}-\omega_{w} \right)  \right) +\cos \left( \alpha \right) \cos \left( \beta \right)  \left( {\it I\_w\_zz}\, \left( \cos \left( \beta \right) \alpha_{g}-\sin \left( \beta \right) \omega_{g}\,\omega_{i}+\omega_{i}\,\omega_{w} \right) + \left( -\sin \left( \beta \right) \omega_{g}-\omega_{w} \right) {\it I\_w\_yy}\,\omega_{i}-\omega_{i}\,{\it I\_w\_xx}\, \left( -\sin \left( \beta \right) \omega_{g}-\omega_{w} \right)  \right) \end {array} \right] \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{}{}
+\end{mapleinput}
+\end{maplegroup}
+\end{document}

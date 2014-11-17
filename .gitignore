@@ -107,3 +107,8 @@ sympy-plots-for-*.tex/
 
 # xindy
 *.xdy
+
+
+Bewerking_latex.pdf
+*.sty
+*.def
