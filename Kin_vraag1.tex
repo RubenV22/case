@@ -2,7 +2,7 @@
 Om de ogenblikkelijke totale rotatiesnelheidsvector $\overrightarrow{\omega}_{w}$ te bepalen worden de drie afzonderlijke rotatiesnelheidsvectoren uitgedrukt in het wereldassenstelsel en vervolgens opgeteld.
 \begin{equation*}
 \begin{split}
-\overrightarrow{\omega_{w}}
+\overrightarrow{\omega_{tot}}
 &=\overrightarrow{\omega_{g}}+\overrightarrow{\omega_{i}}+\overrightarrow{\omega_{w}}
 %&=R^{x'y'z' \rightarrow xyz}\,\overrightarrow{\omega}_{g}'+R^{x'y'z' \rightarrow xyz}\,\overrightarrow{\omega}_{i}'+R^{x'''y'''z''' \rightarrow xyz}\,\overrightarrow{\omega}_{w}'''
 \end{split}
@@ -82,7 +82,7 @@ Deze termen worden nu afzonderlijk bepaald.
 
 De ogenblikkelijke rotatievector wordt dus weergegeven door door de volgende vergelijking.
 \begin{equation*}
-\overrightarrow{\omega_{w}}=
+\overrightarrow{\omega_{tot}}=
 \begin{bmatrix}
 	-\cos(\beta)\,\omega_{w}\\
 	\cos(\alpha)\,\omega_{i} - \sin(\alpha)(\omega_{g}+\sin{\beta}\,\omega_{w})\\
@@ -94,7 +94,7 @@ De ogenblikkelijke rotatievector wordt dus weergegeven door door de volgende ver
 De totale rotatieversnellingsvector is de afgeleide van de rotatiesnelheidsvector naar de tijd. Hierbij moeten er termen ge\"introduceerd worden die de rotatie van de snelheidsvectoren weergeven.
 
 \begin{equation*}
-\frac{d\overrightarrow{\omega}}{dt}=\overrightarrow{\alpha_{g}}+\overrightarrow{\alpha_{w}}+\overrightarrow{\alpha_{i}}+\overrightarrow{\omega_{g}}\times\overrightarrow{\omega_{i}}+\overrightarrow{\omega_{g}}\times\overrightarrow{\omega_{w}}+\overrightarrow{\omega_{i}}\times\overrightarrow{\omega_{w}}
+\overrightarrow{\alpha_{tot}}=\frac{d\overrightarrow{\omega_{tot}}}{dt}=\overrightarrow{\alpha_{g}}+\overrightarrow{\alpha_{w}}+\overrightarrow{\alpha_{i}}+\overrightarrow{\omega_{g}}\times\overrightarrow{\omega_{i}}+\overrightarrow{\omega_{g}}\times\overrightarrow{\omega_{w}}+\overrightarrow{\omega_{i}}\times\overrightarrow{\omega_{w}}
 \end{equation*}
 
 Al deze termen worden nu afzonderlijk bepaald.
@@ -204,7 +204,7 @@ Al deze termen worden nu afzonderlijk bepaald.
 De totale ogenblikkelijke rotatieversnellingsvector wordt dus door de volgende formule gegeven.
 
 \begin{equation*}
-\frac{d\overrightarrow{\omega}}{dt}
+\overrightarrow{\alpha_{tot}}=\frac{d\overrightarrow{\omega_{tot}}}{dt}
 =	\begin{bmatrix}
 \cos(\beta)\alpha_{w}-\omega_{g}\omega_{i}+\sin(\beta)\omega_{i}\omega_{w}\\
 -\sin(\alpha)\alpha_{g}+\cos(\alpha)\alpha_{i}+\sin(\alpha)\sin(\beta)\alpha_{w}-\cos(\alpha)\cos(\beta)\omega_{g}\omega_{w}-\sin(\alpha)\sin(\beta)\omega_{i}\omega_{w}\\
