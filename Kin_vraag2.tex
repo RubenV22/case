@@ -7,6 +7,7 @@ De snelheid van C kan beschouwd worden als de som van de relatieve snelheid van 
 
 Deze termen worden afzonderlijk bepaald.
 
+%v_A
 \begin{equation*}
 \begin{split}
 \overrightarrow{v_{A}}
@@ -24,6 +25,7 @@ v_v\sin(\alpha)\
 \end{split}
 \end{equation*}
 
+%rel plaats C-A
 \begin{equation*}
 \begin{split}
 \overrightarrow{r_{C}}-\overrightarrow{r_{A}}
@@ -46,13 +48,137 @@ r_{CAz}\
 \end{split}
 \end{equation*}
 
+%kruis omega_g en rel_plaats C-A
 \begin{equation*}
 \begin{split}
 \overrightarrow{\omega_{g}}\times(\overrightarrow{r_{C}}-\overrightarrow{r_{A}})
 &=	\begin{vmatrix}
-\overrightarrow{e_{x}} & \overrightarrow{e_{y}} & \overrightarrow{e_{z}}\\
-\omega_{gx} & \omega_{gy} & \omega_{gz}\\
-r_{CAx} & r_{CAy} & r_{Caz}\
-\end{vmatrix}
+	\overrightarrow{e_{x}} & \overrightarrow{e_{y}} & \overrightarrow{e_{z}}\\
+	\omega_{gx} & \omega_{gy} & \omega_{gz}\\
+	r_{CAx} & r_{CAy} & r_{CAz}\
+	\end{vmatrix}
+&=	\begin{bmatrix}
+	0\\
+	-\omega_{g}\,\cos\left( \alpha \right)  \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -l_{1} \right)\\
+	-\omega_{g}\,\sin \left( \alpha \right)  \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -l_{1} \right)\
+\end{bmatrix}
+\end{split}
+\end{equation*}
+
+%rel plaats C-B
+\begin{equation*}
+\begin{split}
+\overrightarrow{r_{C}}-\overrightarrow{r_{B}}
+&=	\begin{bmatrix}
+	r_{CBx}\\
+	r_{CBy}\\
+	r_{CBz}\
+	\end{bmatrix}
+&=	R^{x'y'z' \rightarrow xyz}
+	\begin{bmatrix}
+	-l_{3}\sin(\beta)-l_{4}\cos(\beta)\\
+	0\\
+	-l_{3}\cos(\beta)+l_{4}\sin(\beta)\
+	\end{bmatrix}
+&=	\begin{bmatrix}
+-l_{3}\,\sin \left( \beta \right) -l_{4}\,\cos \left( \beta \right) \\
+-\sin \left( \alpha\right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin\left( \beta \right)  \right) \\
+\cos \left( \alpha\right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin\left( \beta \right)  \right)\
+\end{bmatrix}
+\end{split}
+\end{equation*}
+
+% kruis omega_i en rel plaats C-B
+\begin{equation*}
+\begin{split}
+\overrightarrow{\omega_{i}}\times(\overrightarrow{r_{C}}-\overrightarrow{r_{B}})
+&=	\begin{vmatrix}
+	\overrightarrow{e_{x}} & \overrightarrow{e_{y}} & \overrightarrow{e_{z}}\\
+	\omega_{ix} & \omega_{iy} & \omega_{iz}\\
+	r_{CBx} & r_{CBy} & r_{CBz}\
+	\end{vmatrix}
+&=	\begin{bmatrix}
+\omega_{i}\, \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta\right)  \right) \\
+-\omega_{i}\,\sin \left( \alpha \right)  \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) \right) \\
+\omega_{i}\,\cos \left( \alpha \right) \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta\right)  \right) \
+\end{bmatrix}
+\end{split}
+\end{equation*}
+
+De totale snelheid wordt dus gegeven door de volgende gelijkheid.
+
+\begin{equation*}
+\overrightarrow{v_{C}}=
+\begin{bmatrix}
+\omega_{i}\, \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta\right)  \right) \\
+
+\cos \left( \alpha \right) v_{v}-\omega_{g}\,\cos\left( \alpha \right)  \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -l_{1} \right) -\omega_{i}\,\sin \left( \alpha \right)  \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos\left( \beta \right)  \right) \\
+
+\sin \left( \alpha\right) v_{v}-\omega_{g}\,\sin \left( \alpha \right)  \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -l_{1}\right) +\omega_{i}\,\cos \left( \alpha \right)  \left( l_{3}\,\sin\left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right)\
+\end{bmatrix}
+\end{equation*}
+
+\subsubsection{De ogenblikkelijke versnelling}
+De ogenblikkelijke versnelling is de afgeleide van de ogenblikkelijke snelheid. Hierbij moet er zeker rekening gehouden worden met het afzonderlijk afleiden van de leden van de kruisproducten.
+
+\begin{equation*}
+\begin{split}
+\overrightarrow{a_{C}}&=\frac{d\overrightarrow{v_{c}}}{dt}
+&=	\overrightarrow{a_{A}} + \frac{d\overrightarrow{\omega_{g}}}{dt}\times(\overrightarrow{r_{C}}-\overrightarrow{r_{A}}) + \overrightarrow{\omega_{g}}\times(\overrightarrow{v_{C}}-\overrightarrow{v_{A}}) + \frac{d\overrightarrow{\omega_i}}{dt}\times(\overrightarrow{r_{c}}-\overrightarrow{r_{B}})+\overrightarrow{\omega_{i}}\times(\overrightarrow{v_{C}}-\overrightarrow{v_{B}})
+\end{split}
+\end{equation*}
+
+Al deze termen worden opnieuw apart berekend.
+
+%a_A
+\begin{equation*}
+\begin{split}
+\overrightarrow{a_{A}}
+&=R^{x'y'z' \rightarrow xyz}
+	\begin{bmatrix}
+	0\\
+	a_v\\
+	0
+	\end{bmatrix}
+&=	\begin{bmatrix}
+	0\\
+	a_v\cos(\alpha)\\
+	a_v\sin(\alpha)\
+	\end{bmatrix}
+\end{split}
+\end{equation*}
+
+%d_omega_g
+\begin{equation*}
+\begin{split}
+\frac{d\overrightarrow{\omega_g}}{dt}&=\alpha{g}
+&=	R^{x'y'z' \rightarrow xyz}
+	\begin{bmatrix}
+	0\\
+	0\\
+	\alpha_{g}\
+	\end{bmatrix}
+&=	\begin{bmatrix}
+	0\\
+	-\sin(\alpha)\alpha_{g}\\
+	\cos(\alpha)\alpha_{g}\
+	\end{bmatrix}
+\end{split}
+\end{equation*}
+
+%kruis d_omega_g en rel plaats C-A
+\begin{equation*}
+\begin{split}
+\frac{d\overrightarrow{\omega_{g}}}{dt}\times(\overrightarrow{r_{C}}-\overrightarrow{r_{A}})
+&=	\begin{vmatrix}
+	\overrightarrow{e_{x}} & \overrightarrow{e_{y}} & \overrightarrow{e_{z}}\\
+	\frac{d\overrightarrow{\omega_g}}{dt}_{x} & \frac{d\overrightarrow{\omega_g}}{dt}_{y} & \frac{d\overrightarrow{\omega_g}}{dt}_{z}\\
+	r_{CAx} & r_{CAy} & r_{CAz}\
+	\end{vmatrix}
+&=	\begin{bmatrix}
+	0\\
+	\cos \left( \alpha\right) \alpha_{g}\, \left( -l_{3}\,\sin \left( \beta \right) -l_{4}\,\cos \left( \beta \right) +l_{1} \right) \\
+	\sin\left( \alpha \right) \alpha_{g}\, \left( -l_{3}\,\sin \left( \beta\right) -l_{4}\,\cos \left( \beta \right) +l_{1} \right)\
+\end{bmatrix}
 \end{split}
 \end{equation*}
