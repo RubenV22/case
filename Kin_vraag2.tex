@@ -151,13 +151,13 @@ Al deze termen worden opnieuw apart berekend.
 %d_omega_g
 \begin{equation*}
 \begin{split}
-\frac{d\overrightarrow{\omega_g}}{dt}&=\alpha{g}
-&=	R^{x'y'z' \rightarrow xyz}
-	\begin{bmatrix}
-	0\\
-	0\\
-	\alpha_{g}\
-	\end{bmatrix}
+\frac{d\overrightarrow{\omega_g}}{dt}&=\alpha_{g}
+%&=	R^{x'y'z' \rightarrow xyz}
+%	\begin{bmatrix}
+%	0\\
+%	0\\
+%	\alpha_{g}\
+%	\end{bmatrix}
 &=	\begin{bmatrix}
 	0\\
 	-\sin(\alpha)\alpha_{g}\\
@@ -179,6 +179,143 @@ Al deze termen worden opnieuw apart berekend.
 	0\\
 	\cos \left( \alpha\right) \alpha_{g}\, \left( -l_{3}\,\sin \left( \beta \right) -l_{4}\,\cos \left( \beta \right) +l_{1} \right) \\
 	\sin\left( \alpha \right) \alpha_{g}\, \left( -l_{3}\,\sin \left( \beta\right) -l_{4}\,\cos \left( \beta \right) +l_{1} \right)\
+\end{bmatrix}
+\end{split}
+\end{equation*}
+
+%rel snelh C-A
+\begin{equation*}
+\begin{split}
+\overrightarrow{v_{C}}-\overrightarrow{v_{A}}
+&=	\begin{bmatrix}
+v_{CAx}\\
+v_{CAy}\\
+v_{CAz}\
+\end{bmatrix}
+&=	\begin{bmatrix}
+\omega_{i}\, \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) \\
+%
+-\omega_{g}\,\cos \left( \alpha \right)  \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -l_{1} \right) -\omega_{i}\,\sin \left( \alpha \right)  \left( l_{3}\,\sin\left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right) \\
+%
+-\omega_{g}\,\sin \left( \alpha \right)  \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -l_{1} \right) +\omega_{i}\,\cos \left( \alpha \right)  \left( l_{3}\,\sin\left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right)\
+\end{bmatrix}
+\end{split}
+\end{equation*}
+
+%kruis omega_g - rel plaats C-A
+\begin{equation*}
+\begin{split}
+\overrightarrow{\omega_{g}}\times(\overrightarrow{v_{C}}-\overrightarrow{v_{A}})
+&=	\begin{vmatrix}
+	\overrightarrow{e_{x}} & \overrightarrow{e_{y}} & \overrightarrow{e_{z}}\\
+	\omega_{gx} & \omega_{gy} & \omega_{gz}\\
+	v_{CAx} & v_{CAy} & v_{CAz}\
+	\end{vmatrix}
+&=	\begin{bmatrix}
+{\omega_{g}}^{2} \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -l_{1} \right) \\
+%
+\omega_{g}\,\omega_{i}\,\cos \left( \alpha\right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin\left( \beta \right)  \right) \\
+%
+\omega_{g}\,\omega_{i}\,\sin \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta\right) +l_{4}\,\sin \left( \beta \right)  \right)\
+\end{bmatrix}
+\end{split}
+\end{equation*}
+
+%d_omega_i
+\begin{equation*}
+\begin{split}
+\frac{d\overrightarrow{\omega_i}}{dt}
+&=	\overrightarrow{\alpha_{i}}+\overrightarrow{\omega_{g}}\times\overrightarrow{\omega_{i}}
+&=	\begin{bmatrix}
+	-\omega_{g}\,\omega_{i}\\
+	\cos \left( \alpha \right) \alpha_{i}\\
+	\sin \left( \alpha \right) \alpha_{i}\
+\end{bmatrix}
+\end{split}
+\end{equation*}
+
+%kruis d_omega_i - rel_plaats C-B
+\begin{equation*}
+\begin{split}
+\frac{d\overrightarrow{\omega_i}}{dt}\times(\overrightarrow{r_{c}}-\overrightarrow{r_{B}})
+&=	\begin{vmatrix}
+	\overrightarrow{e_{x}} & \overrightarrow{e_{y}} & \overrightarrow{e_{z}}\\
+	\frac{d\overrightarrow{\omega_i}}{dt}_{x} & \frac{d\overrightarrow{\omega_i}}{dt}_{y} & \frac{d\overrightarrow{\omega_i}}{dt}_{z}\\
+	r_{CBx} & r_{CBy} & r_{CBz}\
+	\end{vmatrix}
+&=	\begin{bmatrix}
+	\alpha_{i}\, \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) \\
+	%
+	\sin \left( \beta \right) \cos \left( \alpha\right) l_{4}\,\omega_{g}\,\omega_{i}-\cos \left( \beta \right) \cos\left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}\cdots\\
+	\cdots-\sin \left( \beta\right) \sin \left( \alpha \right) l_{3}\,\alpha_{i}-\cos \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\alpha_{i}\\
+	%
+	\sin \left( \beta \right) \sin \left( \alpha\right) l_{4}\,\omega_{g}\,\omega_{i}-\cos \left( \beta \right) \sin\left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i} \cdots\\
+	\cdots +\sin \left( \beta\right) \cos \left( \alpha \right) l_{3}\,\alpha_{i}+\cos \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\alpha_{i}\
+\end{bmatrix}
+\end{split}
+\end{equation*}
+
+%v_B
+\begin{equation*}
+\begin{split}
+\overrightarrow{v_{B}}=\overrightarrow{v_{A}}+\overrightarrow{\omega_{g}}\times(\overrightarrow{r_{B}}-\overrightarrow{r_{A}})
+&=	\begin{bmatrix}
+	-\sin \left( \alpha \right) \omega_{g}\,l_{2}\\
+	\cos \left( \alpha \right) v_{v}-\cos \left( \alpha \right) \omega_{g}\,l_{1}\\
+	\sin \left( \alpha \right) v_{v}-\sin \left( \alpha \right) \omega_{g}\,l_{1}\
+	\end{bmatrix}
+\end{split}
+\end{equation*}
+
+%rel snelh C-B
+\begin{equation*}
+\begin{split}
+\overrightarrow{v_{C}}-\overrightarrow{v_{B}}
+&=	\begin{bmatrix}
+	\omega_{i}\, \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) +\sin \left( \alpha \right) \omega_{g}\,l_{2}\\
+	%
+	-\omega_{g}\,\cos\left( \alpha \right)  \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -l_{1} \right) -\omega_{i}\,\sin \left( \alpha \right)  \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos\left( \beta \right)  \right) +\cos \left( \alpha \right) \omega_{g}\,l_{1}\\
+	%
+	-\omega_{g}\,\sin \left( \alpha \right) \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta\right) -l_{1} \right) +\omega_{i}\,\cos \left( \alpha \right) \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta\right)  \right) +\sin \left( \alpha \right) \omega_{g}\,l_{1}\
+	\end{bmatrix}
+\end{split}
+\end{equation*}
+
+%kruis omega_i - rel snelh C-B
+\begin{equation*}
+\begin{split}
+\overrightarrow{\omega_{i}}\times(\overrightarrow{v_{C}}-\overrightarrow{v_{B}})
+&=	\begin{vmatrix}
+	\overrightarrow{e_{x}} & \overrightarrow{e_{y}} & \overrightarrow{e_{z}}\\
+	\omega_{ix} & \omega_{iy} & \omega_{iz}\\
+	v_{CBx} & v_{CBy} & v_{CBz}\
+	\end{vmatrix}
+&=	\begin{bmatrix}
+	{\omega_{i}}^{2} \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right) \\
+	%
+	-\omega_{i}\,\sin \left( \alpha \right)  \left( \cos \left( \beta \right) l_{3}\,\omega_{i}-\sin \left( \beta \right) l_{4}\,\omega_{i}-\sin \left( \alpha \right) \omega_{g}\,l_{2}\right) \\
+	%
+	\omega_{i}\,\cos \left( \alpha \right) \left( \cos \left( \beta \right) l_{3}\,\omega_{i}-\sin \left( \beta\right) l_{4}\,\omega_{i}-\sin \left( \alpha \right) \omega_{g}\,l_{2} \right) \
+\end{bmatrix}
+\end{split}
+\end{equation*}
+
+Dit wordt nu allemaal opgeteld.
+
+\begin{equation*}
+\begin{split}
+\overrightarrow{a_{A}}
+&=	\begin{bmatrix}
+{\omega_{g}}^{2} \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -l_{1} \right) +\alpha_{i}\, \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right)\cdots\\
+\dots +{\omega_{i}}^{2} \left( l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right) \\
+%
+a_{v}\,\cos \left( \alpha \right) +\cos\left( \alpha \right) \alpha_{g}\, \left( -l_{3}\,\sin \left( \beta\right) -l_{4}\,\cos \left( \beta \right) +l_{1} \right) +\omega_{g}\,\omega_{i}\,\cos \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right)\cdots\\
+\cdots +\sin \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-\cos \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}-\sin \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\alpha_{i}-\cos \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\alpha_{i}\cdots\\
+\cdots-\omega_{i}\,\sin \left( \alpha \right)  \left( \cos\left( \beta \right) l_{3}\,\omega_{i}-\sin \left( \beta \right) l_{4}\,\omega_{i}-\sin \left( \alpha \right) \omega_{g}\,l_{2} \right) \\
+%
+a_{v}\,\sin \left( \alpha \right) +\sin\left( \alpha \right) \alpha_{g}\, \left( -l_{3}\,\sin \left( \beta\right) -l_{4}\,\cos \left( \beta \right) +l_{1} \right) +\omega_{g}\,\omega_{i}\,\sin \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right)\cdots\\
+\cdots +\sin \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-\cos \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}+\sin \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\alpha_{i}+\cos \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\alpha_{i}\cdots\\
+\cdots+\omega_{i}\,\cos \left( \alpha \right)  \left( \cos\left( \beta \right) l_{3}\,\omega_{i}-\sin \left( \beta \right) l_{4}\,\omega_{i}-\sin \left( \alpha \right) \omega_{g}\,l_{2} \right) \
 \end{bmatrix}
 \end{split}
 \end{equation*}
