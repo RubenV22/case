@@ -1,0 +1,101 @@
+\subsubsection{Ogenblikkelijke snelheid}
+Voor het berekenen van de snelheid van D wordt een gelijkaardige methode gebruikt als voor de snelheid van C. Aangezien D zich niet op het wiel bevindt, heeft de rotatie van het wiel nog steeds geen invloed op de snelheid.
+
+\begin{equation*}
+\overrightarrow{v_{D}}=\overrightarrow{v_{A}}+\overrightarrow{\omega_{g}}\times(\overrightarrow{r_{D}}-\overrightarrow{r_{A}})+\overrightarrow{\omega_{i}}\times(\overrightarrow{r_{D}}-\overrightarrow{r_{B}})
+\end{equation*}
+
+%rel plaats D-A
+\begin{equation*}
+\begin{split}
+\overrightarrow{r_{D}}-\overrightarrow{r_{A}}
+&=	(\overrightarrow{r_{D}}-\overrightarrow{r_{C}}) + 		(\overrightarrow{r_{C}}-\overrightarrow{r_{A}})\\
+&=	R^{x'''y'''z''' \rightarrow xyz}
+	\begin{bmatrix}
+	\frac{3}{4}l_{4}\\
+	0\\
+	\frac{1}{4}l_{3}\
+	\end{bmatrix}
+	+\begin{bmatrix}
+	r_{CAx}\\
+	r_{CAy}\\
+	r_{CAz}\
+	\end{bmatrix}\\
+&=	\begin{bmatrix}
+	-1/4\,l_{4}\,\cos \left( \beta \right) -3/4\,l_{3}\,\sin \left( \beta \right) +l_{1}\\
+	3/4\,\sin \left( \beta \right) \sin \left( \alpha \right) l_{4}-1/4\,\cos\left( \beta \right) \sin \left( \alpha \right) l_{3}-\sin \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin\left( \beta \right) +l_{2} \right) \\
+	-3/4\,\sin\left( \beta \right) \cos \left( \alpha \right) l_{4}+1/4\,\cos\left( \beta \right) \cos \left( \alpha \right) l_{3}+\cos \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin\left( \beta \right) +l_{2} \right) \
+	\end{bmatrix}
+\end{split}
+\end{equation*}
+
+%kruis omega_g - rel plaats D-A
+\begin{equation*}
+\begin{split}
+\overrightarrow{\omega_{g}}\times(\overrightarrow{r_{D}}-\overrightarrow{r_{A}})
+&=	\begin{vmatrix}
+	\overrightarrow{e_{x}} & \overrightarrow{e_{y}} & \overrightarrow{e_{z}}\\
+	\omega_{gx} & \omega_{gy} & \omega_{gz}\\
+	v_{DAx} & v_{DAy} & v_{DAz}\
+	\end{vmatrix}
+&=	\begin{bmatrix}
+	0\\
+	-1/4\,\omega_{g}\,\cos\left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right) \\
+	-1/4\,\omega_{g}\,\sin \left( \alpha \right)  \left( 3\,l_{3}\,\sin\left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1}\right) \
+	\end{bmatrix}
+\end{split}
+\end{equation*}
+
+%rel plaats D-B
+\begin{equation*}
+\begin{split}
+\overrightarrow{r_{D}}-\overrightarrow{r_{B}}
+&=	(\overrightarrow{r_{D}}-\overrightarrow{r_{C}}) + 		(\overrightarrow{r_{C}}-\overrightarrow{r_{B}})\\
+&=	\begin{bmatrix}
+	-1/4\,l_{4}\,\cos \left( \beta \right) -3/4\,l_{3}\,\sin \left( \beta \right) \\
+	3/4\,\sin\left( \beta \right) \sin \left( \alpha \right) l_{4}-1/4\,\cos\left( \beta \right) \sin \left( \alpha \right) l_{3}-\sin \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin\left( \beta \right)  \right) \\
+	-3/4\,\sin \left( \beta \right) \cos \left( \alpha \right) l_{4}+1/4\,\cos \left( \beta\right) \cos \left( \alpha \right) l_{3}+\cos \left( \alpha \right) \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta\right)  \right) \	
+	\end{bmatrix}
+\end{split}
+\end{equation*}
+
+%kruis omega_i - rel plaats D-B
+\begin{equation*}
+\begin{split}
+\overrightarrow{\omega_{i}}\times(\overrightarrow{r_{D}}-\overrightarrow{r_{B}})
+&=	\begin{vmatrix}
+	\overrightarrow{e_{x}} & \overrightarrow{e_{y}} & \overrightarrow{e_{z}}\\
+	\omega_{ix} & \omega_{iy} & \omega_{iz}\\
+	v_{DBx} & v_{DBy} & v_{DBz}\
+	\end{vmatrix}
+&=	\begin{bmatrix}
+	-1/4\,\omega_{i}\, \left( 3\,l_{3}\,\cos\left( \beta \right) -l_{4}\,\sin \left( \beta \right)  \right) \\
+	1/4\,\omega_{i}\,\sin \left( \alpha \right) \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta\right)  \right) \\
+	1/4\,\omega_{i}\,\cos \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right) \
+	\end{bmatrix}
+\end{split}
+\end{equation*}
+
+De totale snelheid van D wordt dus door de volgende gelijkheid gegeven.
+\begin{equation*}
+\begin{split}
+\overrightarrow{a_{D}}
+&=	\begin{bmatrix}
+	-1/4\,\omega_{i}\, \left( 3\,l_{3}\,\cos\left( \beta \right) -l_{4}\,\sin \left( \beta \right)  \right) \\
+	\cos \left( \alpha \right) v_{v}-1/4\,\omega_{g}\,\cos \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta\right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right) -1/4\,\omega_{i}\,\sin \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right) \\
+	\sin \left( \alpha \right) v_{v}-1/4\,\omega_{g}\,\sin \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta\right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right) +1/4\,\omega_{i}\,\cos \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right) \
+	\end{bmatrix}
+\end{split}
+\end{equation*}
+
+\subsubsection{Ogenblikkelijke versnelling}
+Ook voor de ogenblikkelijke versnelling van D wordt een gelijkaardige methode gebruikt als voor C.
+
+\begin{equation*}
+\begin{split}
+\overrightarrow{a_{D}}&=\frac{d\overrightarrow{v_{D}}}{dt}
+&=	\overrightarrow{a_{A}} + \frac{d\overrightarrow{\omega_{g}}}{dt}\times(\overrightarrow{r_{D}}-\overrightarrow{r_{A}}) + \overrightarrow{\omega_{g}}\times(\overrightarrow{v_{D}}-\overrightarrow{v_{A}}) + \frac{d\overrightarrow{\omega_i}}{dt}\times(\overrightarrow{r_{D}}-\overrightarrow{r_{B}})+\overrightarrow{\omega_{i}}\times(\overrightarrow{v_{D}}-\overrightarrow{v_{B}})
+\end{split}
+\end{equation*}
+
+Opnieuw worden al deze termen afzonderlijk uitgerekend.

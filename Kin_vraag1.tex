@@ -71,7 +71,7 @@ Deze termen worden nu afzonderlijk bepaald.
       -\omega_{w}\\
       0\\
       0\
-      \end{bmatrix}
+      \end{bmatrix}\\
 &=    \begin{bmatrix}
       -\cos(\beta)\,\omega_{w}\\
       -\sin(\alpha)\sin(\beta)\,\omega_{w}\\
@@ -83,11 +83,11 @@ Deze termen worden nu afzonderlijk bepaald.
 De ogenblikkelijke rotatievector wordt dus weergegeven door door de volgende vergelijking.
 \begin{equation*}
 \overrightarrow{\omega_{tot}}=
-\begin{bmatrix}
+	\begin{bmatrix}
 	-\cos(\beta)\,\omega_{w}\\
 	\cos(\alpha)\,\omega_{i} - \sin(\alpha)(\omega_{g}+\sin{\beta}\,\omega_{w})\\
 	\sin(\alpha)\,\omega_{i} + \cos(\alpha)(\omega_{g}+\sin{\beta}\,\omega_{w})\
-\end{bmatrix}
+	\end{bmatrix}
 \end{equation*}
 
 \subsubsection{Ogenblikkelijke totale rotatieversnellingsvector}
@@ -163,7 +163,7 @@ Al deze termen worden nu afzonderlijk bepaald.
 	-\omega_{i}\omega_{g}\\
 	0\\
 	0\
-\end{bmatrix}
+	\end{bmatrix}
 \end{split}
 \end{equation*}
 
@@ -204,10 +204,12 @@ Al deze termen worden nu afzonderlijk bepaald.
 De totale ogenblikkelijke rotatieversnellingsvector wordt dus door de volgende formule gegeven.
 
 \begin{equation*}
-\overrightarrow{\alpha_{tot}}=\frac{d\overrightarrow{\omega_{tot}}}{dt}
-=	\begin{bmatrix}
-\cos(\beta)\alpha_{w}-\omega_{g}\omega_{i}+\sin(\beta)\omega_{i}\omega_{w}\\
--\sin(\alpha)\alpha_{g}+\cos(\alpha)\alpha_{i}+\sin(\alpha)\sin(\beta)\alpha_{w}-\cos(\alpha)\cos(\beta)\omega_{g}\omega_{w}-\sin(\alpha)\sin(\beta)\omega_{i}\omega_{w}\\
-\cos(\alpha)\alpha_{g}+\sin(\alpha)\alpha_{i}-\cos(\alpha)\sin(\beta)\alpha_{w}-\sin(\alpha)\cos(\beta)\omega_{g}\omega_{w}+\cos(\alpha)\cos(\beta)\omega_{i}\omega_{w}\
-\end{bmatrix}
+\begin{split}
+\overrightarrow{\alpha_{tot}}&=\frac{d\overrightarrow{\omega_{tot}}}{dt}\\
+&=	\begin{bmatrix}
+	\cos(\beta)\alpha_{w}-\omega_{g}\omega_{i}+\sin(\beta)\omega_{i}\omega_{w}\\
+	-\sin(\alpha)\alpha_{g}+\cos(\alpha)\alpha_{i}+\sin(\alpha)\sin(\beta)\alpha_{w}-\cos(\alpha)\cos(\beta)\omega_{g}\omega_{w}-\sin(\alpha)\sin(\beta)\omega_{i}\omega_{w}\\
+	\cos(\alpha)\alpha_{g}+\sin(\alpha)\alpha_{i}-\cos(\alpha)\sin(\beta)\alpha_{w}-\sin(\alpha)\cos(\beta)\omega_{g}\omega_{w}+\cos(\alpha)\cos(\beta)\omega_{i}\omega_{w}\
+	\end{bmatrix}
+\end{split}
 \end{equation*}
