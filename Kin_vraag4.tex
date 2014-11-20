@@ -23,7 +23,9 @@ Voor het berekenen van de snelheid van D wordt een gelijkaardige methode gebruik
 	\end{bmatrix}\\
 &=	\begin{bmatrix}
 	-1/4\,l_{4}\,\cos \left( \beta \right) -3/4\,l_{3}\,\sin \left( \beta \right) +l_{1}\\
+	%
 	3/4\,\sin \left( \beta \right) \sin \left( \alpha \right) l_{4}-1/4\,\cos\left( \beta \right) \sin \left( \alpha \right) l_{3}-\sin \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin\left( \beta \right) +l_{2} \right) \\
+	%
 	-3/4\,\sin\left( \beta \right) \cos \left( \alpha \right) l_{4}+1/4\,\cos\left( \beta \right) \cos \left( \alpha \right) l_{3}+\cos \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin\left( \beta \right) +l_{2} \right) \
 	\end{bmatrix}
 \end{split}
@@ -40,7 +42,9 @@ Voor het berekenen van de snelheid van D wordt een gelijkaardige methode gebruik
 	\end{vmatrix}
 &=	\begin{bmatrix}
 	0\\
+	%
 	-1/4\,\omega_{g}\,\cos\left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right) \\
+	%
 	-1/4\,\omega_{g}\,\sin \left( \alpha \right)  \left( 3\,l_{3}\,\sin\left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1}\right) \
 	\end{bmatrix}
 \end{split}
@@ -53,7 +57,9 @@ Voor het berekenen van de snelheid van D wordt een gelijkaardige methode gebruik
 &=	(\overrightarrow{r_{D}}-\overrightarrow{r_{C}}) + 		(\overrightarrow{r_{C}}-\overrightarrow{r_{B}})\\
 &=	\begin{bmatrix}
 	-1/4\,l_{4}\,\cos \left( \beta \right) -3/4\,l_{3}\,\sin \left( \beta \right) \\
+	%
 	3/4\,\sin\left( \beta \right) \sin \left( \alpha \right) l_{4}-1/4\,\cos\left( \beta \right) \sin \left( \alpha \right) l_{3}-\sin \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin\left( \beta \right)  \right) \\
+	%
 	-3/4\,\sin \left( \beta \right) \cos \left( \alpha \right) l_{4}+1/4\,\cos \left( \beta\right) \cos \left( \alpha \right) l_{3}+\cos \left( \alpha \right) \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta\right)  \right) \	
 	\end{bmatrix}
 \end{split}
@@ -70,7 +76,9 @@ Voor het berekenen van de snelheid van D wordt een gelijkaardige methode gebruik
 	\end{vmatrix}
 &=	\begin{bmatrix}
 	-1/4\,\omega_{i}\, \left( 3\,l_{3}\,\cos\left( \beta \right) -l_{4}\,\sin \left( \beta \right)  \right) \\
+	%
 	1/4\,\omega_{i}\,\sin \left( \alpha \right) \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta\right)  \right) \\
+	%
 	1/4\,\omega_{i}\,\cos \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right) \
 	\end{bmatrix}
 \end{split}
@@ -82,7 +90,9 @@ De totale snelheid van D wordt dus door de volgende gelijkheid gegeven.
 \overrightarrow{v_{D}}
 &=	\begin{bmatrix}
 	-1/4\,\omega_{i}\, \left( 3\,l_{3}\,\cos\left( \beta \right) -l_{4}\,\sin \left( \beta \right)  \right) \\
+	%
 	\cos \left( \alpha \right) v_{v}-1/4\,\omega_{g}\,\cos \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta\right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right) -1/4\,\omega_{i}\,\sin \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right) \\
+	%
 	\sin \left( \alpha \right) v_{v}-1/4\,\omega_{g}\,\sin \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta\right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right) +1/4\,\omega_{i}\,\cos \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right) \
 	\end{bmatrix}
 \end{split}
@@ -99,3 +109,115 @@ Ook voor de ogenblikkelijke versnelling van D wordt een gelijkaardige methode ge
 \end{equation*}
 
 Opnieuw worden al deze termen afzonderlijk uitgerekend.
+
+%a_A
+\begin{equation*}
+\begin{split}
+\overrightarrow{a_{A}}
+&=	\begin{bmatrix}
+	0\\
+	a_v\cos(\alpha)\\
+	a_v\sin(\alpha)\
+	\end{bmatrix}
+\end{split}
+\end{equation*}
+
+%kruis d_omega_g - rel plaats D-B
+\begin{equation*}
+\begin{split}
+\frac{d\overrightarrow{\omega_{g}}}{dt}\times(\overrightarrow{r_{D}}-\overrightarrow{r_{A}})
+&=	\begin{vmatrix}
+	\overrightarrow{e_{x}} & \overrightarrow{e_{y}} & \overrightarrow{e_{z}}\\
+	\frac{d\overrightarrow{\omega_g}}{dt}_{x} & \frac{d\overrightarrow{\omega_g}}{dt}_{y} & \frac{d\overrightarrow{\omega_g}}{dt}_{z}\\
+	r_{DAx} & r_{DAy} & r_{DAz}\
+	\end{vmatrix}
+&=	\begin{bmatrix}
+	0\\
+	%
+	-1/4\,\alpha_{g}\,\cos\left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right) \\
+	%
+	-1/4\,\alpha_{g}\,\sin \left( \alpha \right)  \left( 3\,l_{3}\,\sin\left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1}\right) \
+	\end{bmatrix}
+\end{split}
+\end{equation*}
+
+%kruis omega_g - rel snelh D-B
+\begin{equation*}
+\begin{split}
+\overrightarrow{\omega_{g}}\times(\overrightarrow{v_{D}}-\overrightarrow{v_{A}})
+&=	\begin{vmatrix}
+	\overrightarrow{e_{x}} & \overrightarrow{e_{y}} & \overrightarrow{e_{z}}\\
+	\omega_{gx} & \omega_{gy} & \omega_{gz}\\
+	v_{DAx} & v_{DAy} & v_{DAz}\
+	\end{vmatrix}
+&=	\begin{bmatrix}
+	1/4\,{\omega_{g}}^{2} \left( 3\,l_{3}\,\sin\left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1}\right) \\
+	%
+	1/4\,\cos \left( \alpha \right) \omega_{g}\,\omega_{i}\, \left( l_{4}\,\sin \left( \beta \right) -3\,l_{3}\,\cos \left( \beta \right)  \right) \\
+	%
+	1/4\,\sin\left( \alpha \right) \omega_{g}\,\omega_{i}\, \left( l_{4}\,\sin\left( \beta \right) -3\,l_{3}\,\cos \left( \beta \right)  \right) \
+	\end{bmatrix}
+\end{split}
+\end{equation*}
+
+%kruis d_omega_i - rel plaats D-B
+\begin{equation*}
+\begin{split}
+\frac{d\overrightarrow{\omega_i}}{dt}\times(\overrightarrow{r_{D}}-\overrightarrow{r_{B}})
+&=	\begin{vmatrix}
+	\overrightarrow{e_{x}} & \overrightarrow{e_{y}} & \overrightarrow{e_{z}}\\
+	\frac{d\overrightarrow{\omega_i}}{dt}_{x} & \frac{d\overrightarrow{\omega_i}}{dt}_{y} & \frac{d\overrightarrow{\omega_i}}{dt}_{z}\\
+	r_{DBx} & r_{DBy} & r_{DBz}\
+	\end{vmatrix}\\
+&=	\begin{bmatrix}
+	1/4\,\alpha_{i}\, \left( l_{4}\,\sin \left( \beta \right) -3\,l_{3}\,\cos \left( \beta \right)  \right) \\
+	%
+	1/4\,\sin \left( \beta \right) \cos \left( \alpha\right) l_{4}\,\omega_{g}\,\omega_{i}-3/4\,\cos \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}\cdots\\
+	\cdots-3/4\,\sin\left( \beta \right) \sin \left( \alpha \right) l_{3}\,\alpha_{i}-1/4\,\cos \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\alpha_{i}\\
+	%
+	1/4\,\sin \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-3/4\,\cos \left( \beta\right) \sin \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}\cdots\\
+	\cdots+3/4\,\sin \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\alpha_{i}+1/4\,\cos \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\alpha_{i}\
+	\end{bmatrix}
+\end{split}
+\end{equation*}
+
+%kruis omega_i - rel snelh D-B
+\begin{equation*}
+\begin{split}
+\overrightarrow{\omega_{i}}\times(\overrightarrow{v_{D}}-\overrightarrow{v_{B}})
+&=	\begin{vmatrix}
+	\overrightarrow{e_{x}} & \overrightarrow{e_{y}} & \overrightarrow{e_{z}}\\
+	\omega_{ix} & \omega_{iy} & \omega_{iz}\\
+	v_{DBx} & v_{DBy} & v_{DBz}\
+	\end{vmatrix}
+&=	\begin{bmatrix}
+	1/4\,{\omega_{i}}^{2} \left( 3\,l_{3}\,\sin\left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right) \\
+	%
+	1/4\,\omega_{i}\,\sin \left( \alpha \right) \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-3\,\cos \left( \beta \right) l_{3}\,\omega_{i}+4\,\sin \left( \alpha \right) \omega_{g}\,l_{2} \right) \\
+	%
+	-1/4\,\omega_{i}\,\cos \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-3\,\cos \left( \beta \right) l_{3}\,\omega_{i}+4\,\sin \left( \alpha\right) \omega_{g}\,l_{2} \right) \
+	\end{bmatrix}
+\end{split}
+\end{equation*}
+
+Dit wordt allemaal opgeteld.
+
+\begin{equation*}
+\begin{split}
+\overrightarrow{a_{D}}
+&=	\begin{bmatrix}
+1/4\,{\omega_{g}}^{2} \left( 3\,l_{3}\,\sin\left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1}\right) +1/4\,\alpha_{i}\, \left( l_{4}\,\sin \left( \beta \right) -3\,l_{3}\,\cos \left( \beta \right)  \right)\cdots\\
+\cdots +1/4\,{\omega_{i}}^{2}\left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta\right)  \right) \\
+%
+a_{v}\,\cos \left( \alpha\right) -1/4\,\alpha_{g}\,\cos \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right)\cdots\\
+\cdots +1/4\,\cos \left( \alpha \right) \omega_{g}\,\omega_{i}\,\left( l_{4}\,\sin \left( \beta \right) -3\,l_{3}\,\cos \left( \beta\right)  \right) +1/4\,\sin \left( \beta \right) \cos \left( \alpha\right) l_{4}\,\omega_{g}\,\omega_{i}\cdots\\
+\cdots-3/4\,\cos \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}-3/4\,\sin\left( \beta \right) \sin \left( \alpha \right) l_{3}\,\alpha_{i}\cdots\\
+\cdots-1/4\,\cos \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\alpha_{i}+1/4\,\omega_{i}\,\sin \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-3\,\cos \left( \beta \right) l_{3}\,\omega_{i}+4\,\sin \left( \alpha \right) \omega_{g}\,l_{2} \right) \\
+%
+a_{v}\,\sin \left( \alpha \right) -1/4\,\alpha_{g}\,\sin \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right)\cdots\\
+\cdots +1/4\,\sin \left( \alpha \right) \omega_{g}\,\omega_{i}\, \left( l_{4}\,\sin \left( \beta \right) -3\,l_{3}\,\cos \left( \beta \right) \right) +1/4\,\sin \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}\cdots\\
+\cdots-3/4\,\cos \left( \beta \right) \sin\left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}+3/4\,\sin \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\alpha_{i}\cdots\\
++1/4\,\cos\left( \beta \right) \cos \left( \alpha \right) l_{4}\,\alpha_{i}-1/4\,\omega_{i}\,\cos \left( \alpha \right)  \left( \sin \left( \beta\right) l_{4}\,\omega_{i}-3\,\cos \left( \beta \right) l_{3}\,\omega_{i}+4\,\sin \left( \alpha \right) \omega_{g}\,l_{2} \right) \
+\end{bmatrix}
+\end{split}
+\end{equation*}
