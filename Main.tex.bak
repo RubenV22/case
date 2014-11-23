@@ -1,0 +1,53 @@
+\documentclass[a4paper,11pt,fleqn]{article}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage[dutch]{babel}
+
+\hyphenation{gegeven}
+\hyphenation{kruisproducten}
+\hyphenation{zeker}
+
+\begin{document}
+
+%Titelblad
+\input{./Titelblad.tex}
+
+%Transformatiematrices
+\section{Transformatiematrices}
+\input{./Transformatiematrices.tex}
+
+%\newpage
+%Deel kinematica
+\section{Kinematica}
+
+\subsection{Vraag 1}
+\input{./Kin_vraag1.tex}
+
+\subsection{Vraag 2}
+\input{./Kin_vraag2.tex}
+
+\subsection{Vraag 3}
+\input{./Kin_vraag3.tex}
+
+\subsection{Vraag 4}
+\input{./Kin_vraag4.tex}
+
+\newpage
+%Deel dynamica
+\section{Dynamica}
+
+\subsection{Vraag 1}
+\input{./Dyn_vraag1.tex}
+
+\subsection{Vraag 2}
+\input{./Dyn_vraag2.tex}
+
+\subsection{Vraag 3}
+\input{./Dyn_vraag3.tex}
+
+\subsection{Vraag 4}
+\input{./Dyn_vraag4.tex}
+
+\subsection{Vraag 5}
+\input{./Dyn_vraag5.tex}
+\end{document}

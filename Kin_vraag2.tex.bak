@@ -316,13 +316,11 @@ Dit wordt nu allemaal opgeteld.
 	%
 	a_{v}\,\cos \left( \alpha \right) +\cos\left( \alpha \right) \alpha_{g}\, \left( -l_{3}\,\sin \left( \beta\right) -l_{4}\,\cos \left( \beta \right) +l_{1} \right) +\omega_{g}\,\omega_{i}\,\cos \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right)\cdots\\
 	\cdots +\sin \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-\cos \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}-\sin \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\alpha_{i}-\cos \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\alpha_{i}\cdots\\
-	\cdots+\sin \left( \alpha \right) {\omega_{i}}^{2} \left( -l_{3}\,\cos
- \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right)\\
+	\cdots-\omega_{i}\,\sin \left( \alpha \right)  \left( \cos\left( \beta \right) l_{3}\,\omega_{i}-\sin \left( \beta \right) l_{4}\,\omega_{i}-\sin \left( \alpha \right) \omega_{g}\,l_{2} \right) \\
 	%
 	a_{v}\,\sin \left( \alpha \right) +\sin\left( \alpha \right) \alpha_{g}\, \left( -l_{3}\,\sin \left( \beta\right) -l_{4}\,\cos \left( \beta \right) +l_{1} \right) +\omega_{g}\,\omega_{i}\,\sin \left( \alpha \right)  \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right)\cdots\\
 	\cdots +\sin \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-\cos \left( \beta \right) \sin \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}+\sin \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\alpha_{i}+\cos \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\alpha_{i}\cdots\\
-	\cdots-\cos\left( \alpha \right) {\omega_{i}}^{2} \left( -l_{3}\,\cos \left( 
-\beta \right) +l_{4}\,\sin \left( \beta \right)  \right)\
+	\cdots+\omega_{i}\,\cos \left( \alpha \right)  \left( \cos\left( \beta \right) l_{3}\,\omega_{i}-\sin \left( \beta \right) l_{4}\,\omega_{i}-\sin \left( \alpha \right) \omega_{g}\,l_{2} \right) \
 	\end{bmatrix}
 \end{split}
 \end{equation*}
