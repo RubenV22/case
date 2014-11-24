@@ -1,5 +1,6 @@
 \subsubsection{Ogenblikkelijke impulsmomentvector landingsgestel}
-De impulsvector is gedefinieerd als het product van de inertiematrix met de rotatievector. Aangezien de inertiematrix uitgedrukt is in het $x'''y'''z'''$-assenstelsel, moet de rotatievector ook in dit assenstelsel uitgedrukt worden. Ten slotte wordt deze vector nog getransformeerd naar het wereldassenstelsel om de gevraagde impulsmomentvector te bekomen.
+De impulsvector is gedefinieerd als het product van de inertiematrix met de rotatievector. Aangezien de inertiematrix uitgedrukt is in het $x'''y'''z'''$-assenstelsel, moet de rotatievector ook in dit assenstelsel uitgedrukt worden. Het prduct van deze matrix en de vector worden genomen en wordt de stelling van Steiner toegepast.
+Ten slotte wordt het resultaat nog getransformeerd naar het wereldassenstelsel om de gevraagde impulsmomentvector te bekomen.
 \begin{equation*}
 \begin{split}
 \overrightarrow{\omega}_{l,I}
@@ -135,6 +136,11 @@ I\_w\_yy}\,\omega_{i}\\
 \end{align*}
 
 \subsubsection{Verandering impulsmomentvector landingsgestel}
+De verandering van de impulsmomentvector wordt gegeven door de volgende formule. 
+\begin{equation*}
+\frac{d\overrightarrow{L_{l}}}{dt}=\left(\frac{d\overrightarrow{L_{l}}}{dt}\right)_{rel}+\overrightarrow{\Omega}_{l,I}\times \overrightarrow{L_{l}}
+\end{equation*}
+Het resultaat van deze bewerking wordt getransformeerd naar het wereldassenstelsel om de gevraagde impulsmomentvector te bekomen.
 
 \begin{align*}
 \left(\frac{dL_{l}}{dt}\right)_{rel}&=I_{l}\,\left(R^{x''y''z'' \rightarrow x'''y'''z'''}\,\begin{bmatrix}
@@ -265,9 +271,13 @@ l\_4}\,m_{l}\, \left( -l_{4}\,{\omega_{i}}^{2}+l_{3}\,\alpha_{i}
 \end{align*}
 
 \subsubsection{Verandering impulsmomentvector wiel}
+De verandering van het impulsmoment wordt gegeven door de volgende formule. Dit resultaat wordt dan getransformeerd naar het wereldassenstelsel.
+\begin{equation*}
+\frac{d\overrightarrow{L_{w}}}{dt} = \left(\frac{d\overrightarrow{L_{w}}}{dt}\right)_{rel}+\overrightarrow{\Omega}_{w,I}\times\overrightarrow{L_{w}}
+\end{equation*}
 
 \begin{align*}
-\left(\frac{dL_{w}}{dt}\right)_{rel}&=I_{w}\,\left[\left(R^{x''y''z'' \rightarrow x'''y'''z'''}\,\begin{bmatrix}
+\left(\frac{d\overrightarrow{L_{w}}}{dt}\right)_{rel}&=I_{w}\,\left[\left(R^{x''y''z'' \rightarrow x'''y'''z'''}\,\begin{bmatrix}
 0\\
 0\\
 \alpha_{g}\
@@ -327,7 +337,7 @@ I\_w\_xx}-{\it I\_w\_zz} \right) \\
 
 \begin{equation*}
 \begin{split}
-\overrightarrow{\omega}_{w,I}\times L_{w}&=\begin{bmatrix}
+\overrightarrow{\Omega}_{w,I}\times L_{w}&=\begin{bmatrix}
 -\cos \left( \beta \right) \omega_{g}\,
 \omega_{i}\, \left( {\it I\_w\_yy}-{\it I\_w\_zz} \right) 
 \\ 
@@ -345,7 +355,7 @@ I\_w\_xx}-{\it I\_w\_zz} \right) \\
 
 \begin{equation*}
 \begin{split}
-&\frac{dL_{w}}{dt}=\left(\frac{dL_{w}}{dt}\right)_{rel}+\overrightarrow{\omega}_{w,I}\times L_{w}\\
+&\frac{d\overrightarrow{L_{w}}}{dt}=\left(\frac{d\overrightarrow{L_{w}}}{dt}\right)_{rel}+\overrightarrow{\Omega}_{w,I}\times L_{w}\\
 &=\begin{bmatrix}
 -\omega_{g}\,\omega_{i}\, \left( {\it 
 I\_w\_xx}+{\it I\_w\_yy}-{\it I\_w\_zz} \right) \cos \left( \beta
