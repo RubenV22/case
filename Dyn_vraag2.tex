@@ -1,4 +1,5 @@
 \subsubsection{Ogenblikkelijke impulsmomentvector landingsgestel}
+De impulsvector is gedefinieerd als het product van de inertiematrix met de rotatievector. Aangezien de inertiematrix uitgedrukt is in het $x'''y'''z'''$-assenstelsel, moet de rotatievector ook in dit assenstelsel uitgedrukt worden. Ten slotte wordt deze vector nog getransformeerd naar het wereldassenstelsel om de gevraagde impulsmomentvector te bekomen.
 \begin{equation*}
 \begin{split}
 \overrightarrow{\omega}_{l,I}
@@ -38,7 +39,7 @@ L_{l}&=I_{l}\,\overrightarrow{\omega}_{l,I}&=
 \end{equation*}
 
 \begin{align*}
-&L_{l,wereld}=R^{x'''y'''z''' \rightarrow xyz}\,L_{I}+\overrightarrow{r_{DC}}\times \left(m_{l}\,\overrightarrow{v_{C}}\right)\\
+&L_{l,wereld}=R^{x'''y'''z''' \rightarrow xyz}\,\left(L_{I}+\overrightarrow{r_{DC}}\times \left(m_{l}\,\overrightarrow{v_{C}}\right)\right)\\
 &=
 \begin{bmatrix}
 3/4\,{\it l\_3}\,m_{l}\, \left( \omega_{g}\,
@@ -77,6 +78,7 @@ I\_l\_xx} \right) \omega_{g}+{\it l\_4}\,m_{l}\,v_{v} \right) \cos
 \end{align*}
 
 \subsubsection{Ogenblikkelijke impulsmomentvector wiel}
+Voor de berekening van de impulsmomentvector van het wiel wordt een gelijkaaridge redenering gevolgd als bij het landingsgestel. Eerst wordt alles uitgedrukt in het $x'''y'''z'''$-assenstelsel. Het product van de inertiematrix en de rotatievector wordt genomen en vervolgesn wordt dit resultaat terug naar het wereldassenstelsel geconverteerd.
 \begin{equation*}
 \begin{split}
 \overrightarrow{\omega}_{w,I}
