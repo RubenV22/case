@@ -1,9 +1,9 @@
 \subsubsection{Ogenblikkelijke snelheid}
-Voor het berekenen van de snelheid van D wordt een gelijkaardige methode gebruikt als voor de snelheid van C. Aangezien D zich niet op het wiel bevindt, heeft de rotatie van het wiel nog steeds geen invloed op de snelheid.
+Voor het berekenen van de snelheid van D wordt een gelijkaardige methode gebruikt als voor de snelheid van C in deel \ref{snelh_c}. Aangezien D zich niet op het wiel bevindt, heeft de rotatie van het wiel nog steeds geen invloed op de snelheid. De beweging kan dus opnieuw beschreven worden als de som van de translatiesnelheid van het vliegtuig, de rotatiesnelheid rond A en de rotatiesnelheid rond B.
 
-\begin{equation*}
+\begin{equation} \label{eq:snelh_d}
 \overrightarrow{v_{D}}=\overrightarrow{v_{A}}+\overrightarrow{\omega_{g}}\times(\overrightarrow{r_{D}}-\overrightarrow{r_{A}})+\overrightarrow{\omega_{i}}\times(\overrightarrow{r_{D}}-\overrightarrow{r_{B}})
-\end{equation*}
+\end{equation}
 
 %rel plaats D-A
 \begin{equation*}
@@ -77,7 +77,7 @@ Voor het berekenen van de snelheid van D wordt een gelijkaardige methode gebruik
 &=	\begin{bmatrix}
 	-1/4\,\omega_{i}\, \left( 3\,l_{3}\,\cos\left( \beta \right) -l_{4}\,\sin \left( \beta \right)  \right) \\
 	%
-	1/4\,\omega_{i}\,\sin \left( \alpha \right) \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta\right)  \right) \\
+	-1/4\,\omega_{i}\,\sin \left( \alpha \right) \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta\right)  \right) \\
 	%
 	1/4\,\omega_{i}\,\cos \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right)  \right) \
 	\end{bmatrix}
@@ -99,14 +99,14 @@ De totale snelheid van D wordt dus door de volgende gelijkheid gegeven.
 \end{equation*}
 
 \subsubsection{Ogenblikkelijke versnelling}
-Ook voor de ogenblikkelijke versnelling van D wordt een gelijkaardige methode gebruikt als voor C.
+Ook voor de ogenblikkelijke versnelling van D wordt een gelijkaardige methode gebruikt als voor C in deel \ref{versn_c}. De vergelijking die hierboven werdt berekend (vgl. \ref{eq:snelh_d}) wordt afgeleid naar de tijd..
 
-\begin{equation*}
+\begin{equation}
 \begin{split}
 \overrightarrow{a_{D}}&=\frac{d\overrightarrow{v_{D}}}{dt}
 &=	\overrightarrow{a_{A}} + \frac{d\overrightarrow{\omega_{g}}}{dt}\times(\overrightarrow{r_{D}}-\overrightarrow{r_{A}}) + \overrightarrow{\omega_{g}}\times(\overrightarrow{v_{D}}-\overrightarrow{v_{A}}) + \frac{d\overrightarrow{\omega_i}}{dt}\times(\overrightarrow{r_{D}}-\overrightarrow{r_{B}})+\overrightarrow{\omega_{i}}\times(\overrightarrow{v_{D}}-\overrightarrow{v_{B}})
 \end{split}
-\end{equation*}
+\end{equation}
 
 Opnieuw worden al deze termen afzonderlijk uitgerekend.
 
@@ -171,9 +171,11 @@ Opnieuw worden al deze termen afzonderlijk uitgerekend.
 	\end{vmatrix}\\
 &=	\begin{bmatrix}
 	1/4\,\alpha_{i}\, \left( l_{4}\,\sin \left( \beta \right) -3\,l_{3}\,\cos \left( \beta \right)  \right) \\
+	\\
 	%
 	1/4\,\sin \left( \beta \right) \cos \left( \alpha\right) l_{4}\,\omega_{g}\,\omega_{i}-3/4\,\cos \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}\cdots\\
 	\cdots-3/4\,\sin\left( \beta \right) \sin \left( \alpha \right) l_{3}\,\alpha_{i}-1/4\,\cos \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\alpha_{i}\\
+	\\
 	%
 	1/4\,\sin \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}-3/4\,\cos \left( \beta\right) \sin \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}\cdots\\
 	\cdots+3/4\,\sin \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\alpha_{i}+1/4\,\cos \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\alpha_{i}\
@@ -208,11 +210,13 @@ Dit wordt allemaal opgeteld.
 &=	\begin{bmatrix}
 1/4\,{\omega_{g}}^{2} \left( 3\,l_{3}\,\sin\left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1}\right) +1/4\,\alpha_{i}\, \left( l_{4}\,\sin \left( \beta \right) -3\,l_{3}\,\cos \left( \beta \right)  \right)\cdots\\
 \cdots +1/4\,{\omega_{i}}^{2}\left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta\right)  \right) \\
+\\
 %
 a_{v}\,\cos \left( \alpha\right) -1/4\,\alpha_{g}\,\cos \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right)\cdots\\
 \cdots +1/4\,\cos \left( \alpha \right) \omega_{g}\,\omega_{i}\,\left( l_{4}\,\sin \left( \beta \right) -3\,l_{3}\,\cos \left( \beta\right)  \right) +1/4\,\sin \left( \beta \right) \cos \left( \alpha\right) l_{4}\,\omega_{g}\,\omega_{i}\cdots\\
 \cdots-3/4\,\cos \left( \beta \right) \cos \left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}-3/4\,\sin\left( \beta \right) \sin \left( \alpha \right) l_{3}\,\alpha_{i}\cdots\\
 \cdots-1/4\,\cos \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\alpha_{i}+1/4\,\omega_{i}\,\sin \left( \alpha \right)  \left( \sin \left( \beta \right) l_{4}\,\omega_{i}-3\,\cos \left( \beta \right) l_{3}\,\omega_{i}+4\,\sin \left( \alpha \right) \omega_{g}\,l_{2} \right) \\
+\\
 %
 a_{v}\,\sin \left( \alpha \right) -1/4\,\alpha_{g}\,\sin \left( \alpha \right)  \left( 3\,l_{3}\,\sin \left( \beta \right) +l_{4}\,\cos \left( \beta \right) -4\,l_{1} \right)\cdots\\
 \cdots +1/4\,\sin \left( \alpha \right) \omega_{g}\,\omega_{i}\, \left( l_{4}\,\sin \left( \beta \right) -3\,l_{3}\,\cos \left( \beta \right) \right) +1/4\,\sin \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\omega_{g}\,\omega_{i}\cdots\\
