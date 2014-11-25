@@ -1,5 +1,5 @@
 \subsubsection{De ogenblikkelijke snelheid}
-De snelheid van C kan beschouwd worden als de som van de relatieve snelheid van het punt C in het $x'y'z'$-assenstelsel en de snelheid van dat assenstelsel. In dit assenstelsel kan de beweging van C beschouwd worden als een som van rotaties, nl. een rotatie rond het punt A door $\overrightarrow{\omega_{g}}$ en een rotatie rond het punt B door $\overrightarrow{\omega_{i}}$
+De snelheid van C kan beschouwd worden als de som van de relatieve snelheid van het punt C in het $x'y'z'$-assenstelsel en de snelheid van dat assenstelsel. De snelheid van dit assenstelsel is de translatiesnelheid van het vliegtuig. In dit assenstelsel kan de beweging van C beschouwd worden als een som van rotaties, nl. een rotatie rond het punt A door $\overrightarrow{\omega_{g}}$ en een rotatie rond het punt B door $\overrightarrow{\omega_{i}}$
 
 \begin{equation*}
 \overrightarrow{v_{C}}=\overrightarrow{v_{A}}+\overrightarrow{\omega_{g}}\times(\overrightarrow{r_{C}}-\overrightarrow{r_{A}})+\overrightarrow{\omega_{i}}\times(\overrightarrow{r_{C}}-\overrightarrow{r_{B}})
@@ -119,7 +119,7 @@ De totale snelheid wordt dus gegeven door de volgende gelijkheid.
 \end{equation*}
 
 \subsubsection{De ogenblikkelijke versnelling}
-De ogenblikkelijke versnelling is de afgeleide van de ogenblikkelijke snelheid. Hierbij moet er zeker rekening gehouden worden met het afzonderlijk afleiden van de leden van de kruisproducten.
+De ogenblikkelijke versnelling is de afgeleide van de ogenblikkelijke snelheid. Hierbij moet er rekening gehouden worden met het afzonderlijk afleiden van de leden van de kruisproducten. Ook bij het afleiden van de rotatiesnelheidsvectoren mogen de termen die de verandering van de richting weergeven niet vergeten worden.
 
 \begin{equation*}
 \begin{split}
@@ -245,9 +245,11 @@ Al deze termen worden opnieuw apart berekend.
 	\end{vmatrix}\\
 &=	\begin{bmatrix}
 	\alpha_{i}\, \left( -l_{3}\,\cos \left( \beta \right) +l_{4}\,\sin \left( \beta \right)  \right) \\
+	\\
 	%
 	\sin \left( \beta \right) \cos \left( \alpha\right) l_{4}\,\omega_{g}\,\omega_{i}-\cos \left( \beta \right) \cos\left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i}\cdots\\
 	\cdots-\sin \left( \beta\right) \sin \left( \alpha \right) l_{3}\,\alpha_{i}-\cos \left( \beta \right) \sin \left( \alpha \right) l_{4}\,\alpha_{i}\\
+	\\
 	%
 	\sin \left( \beta \right) \sin \left( \alpha\right) l_{4}\,\omega_{g}\,\omega_{i}-\cos \left( \beta \right) \sin\left( \alpha \right) l_{3}\,\omega_{g}\,\omega_{i} \cdots\\
 	\cdots +\sin \left( \beta\right) \cos \left( \alpha \right) l_{3}\,\alpha_{i}+\cos \left( \beta \right) \cos \left( \alpha \right) l_{4}\,\alpha_{i}\
