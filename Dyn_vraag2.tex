@@ -1,5 +1,5 @@
 \subsubsection{Ogenblikkelijke impulsmomentvector landingsgestel}
-De impulsvector is gedefinieerd als het product van de inertiematrix met de rotatievector. Aangezien de inertiematrix uitgedrukt is in het $x'''y'''z'''$-assenstelsel, moet de rotatievector ook in dit assenstelsel uitgedrukt worden. Het prduct van deze matrix en de vector worden genomen en wordt de stelling van Steiner toegepast.
+De impulsvector rond het massacentrum is gedefinieerd als het product van de inertiematrix met de rotatievector. Aangezien de inertiematrix uitgedrukt is in het $x'''y'''z'''$-assenstelsel, moet de rotatievector ook in dit assenstelsel uitgedrukt worden. 
 Ten slotte wordt het resultaat nog getransformeerd naar het wereldassenstelsel om de gevraagde impulsmomentvector te bekomen.
 \begin{equation*}
 \begin{split}
@@ -40,46 +40,24 @@ L_{l}&=I_{l}\,\overrightarrow{\omega}_{l,I}&=
 \end{equation*}
 
 \begin{align*}
-&L_{l,wereld}=R^{x'''y'''z''' \rightarrow xyz}\,\left(L_{I}+\overrightarrow{r_{DC}}\times \left(m_{l}\,\overrightarrow{v_{C}}\right)\right)\\
+&L_{l,wereld}=R^{x'''y'''z''' \rightarrow xyz}\,\L_{l}\\
 &=
 \begin{bmatrix}
-3/4\,{\it l\_3}\,m_{l}\, \left( \omega_{g}\,
-\cos \left( \beta \right) l_{4}+\omega_{g}\,\sin \left( \beta \right) 
-l_{3}-l_{1}\,\omega_{g}-v_{v} \right) \cos \left( \alpha \right) +1/4
-\, \left( 4\,\omega_{g}\, \left( {\it I\_l\_zz}-{\it I\_l\_xx}
- \right) \sin \left( \beta \right) +3\,{\it l\_3}\,\omega_{i}\,\sin
- \left( \alpha \right) l_{4}\,m_{l} \right) \cos \left( \beta \right) 
-+3/4\,\sin \left( \beta \right) \sin \left( \alpha \right) {\it l\_3}
-\,l_{3}\,m_{l}\,\omega_{i}\\ 
-%
-1/4\, \left( 4\,\omega_
-{g}\, \left( {\it I\_l\_xx}-{\it I\_l\_zz} \right)  \left( \cos
- \left( \beta \right)  \right) ^{2}+{\it l\_4}\,\omega_{g}\,\cos
- \left( \beta \right) l_{4}\,m_{l}+{\it l\_4}\,\omega_{g}\,\sin
- \left( \beta \right) l_{3}\,m_{l}-{\it l\_4}\, \left( l_{1}\,\omega_{
-g}+v_{v} \right) m_{l}-4\,{\it I\_l\_xx}\,\omega_{g} \right) \sin
- \left( \alpha \right) -3/4\, \left( m_{l}\, \left( 1/3\,\cos \left( 
-\alpha \right) {\it l\_4}\,l_{4}+{\it l\_3}\,l_{3} \right) \cos
- \left( \beta \right) + \left( 1/3\,{\it l\_4}\,\sin \left( \beta
- \right) l_{3}\,m_{l}-4/3\,{\it I\_l\_yy} \right) \cos \left( \alpha
- \right) -\sin \left( \beta \right) {\it l\_3}\,l_{4}\,m_{l} \right) 
-\omega_{i}\\ 
-%
-1/4\, \left( 4\,\omega_{g}\, \left( {
-\it I\_l\_zz}-{\it I\_l\_xx} \right)  \left( \cos \left( \beta
- \right)  \right) ^{2}-{\it l\_4}\,\omega_{g}\,\cos \left( \beta
- \right) l_{4}\,m_{l}-{\it l\_4}\,\omega_{g}\,\sin \left( \beta
- \right) l_{3}\,m_{l}+ \left( {\it l\_4}\,l_{1}\,m_{l}+4\,{\it 
-I\_l\_xx} \right) \omega_{g}+{\it l\_4}\,m_{l}\,v_{v} \right) \cos
- \left( \alpha \right) -1/4\,\omega_{i}\,\sin \left( \alpha \right) 
- \left( {\it l\_4}\,\cos \left( \beta \right) l_{4}\,m_{l}+{\it l\_4}
-\,\sin \left( \beta \right) l_{3}\,m_{l}-4\,{\it I\_l\_yy} \right) 
-\
+-\cos \left( \beta \right){\it I\_l\_xx}\,\sin \left( \beta \right) \omega_{g}+\sin \left( \beta \right) {\it 
+I\_l\_zz}\,\cos \left( \beta \right) \omega_{g}
+\\ 
+-\sin \left( \alpha \right)  \left( \sin \left( \beta \right)  \right) 
+^{2}{\it I\_l\_xx}\,\omega_{g}+\cos \left( \alpha \right) {\it 
+I\_l\_yy}\,\omega_{i}-\sin \left( \alpha \right)  \left( \cos \left( 
+\beta \right)  \right) ^{2}{\it I\_l\_zz}\,\omega_{g}
+\\ 
+\cos \left( \alpha \right)  \left( \sin \left( \beta \right)  \right) ^{2}{\it I\_l\_xx}\,\omega_{g}+\sin \left( \alpha \right) {\it I\_l\_yy}\,\omega_{i}+\cos \left( \alpha \right) \left( \cos \left( \beta \right)  \right) ^{2}{\it I\_l\_zz}\,\omega_
+{g}
 \end{bmatrix}
 \end{align*}
 
 \subsubsection{Ogenblikkelijke impulsmomentvector wiel}
-Voor de berekening van de impulsmomentvector van het wiel wordt een gelijkaaridge redenering gevolgd als bij het landingsgestel. Eerst wordt alles uitgedrukt in het $x'''y'''z'''$-assenstelsel. Het product van de inertiematrix en de rotatievector wordt genomen en vervolgesn wordt dit resultaat terug naar het wereldassenstelsel geconverteerd.
+Voor de berekening van de impulsmomentvector van het wiel wordt een gelijkaardige redenering gevolgd als bij het landingsgestel. Eerst wordt alles uitgedrukt in het $x'''y'''z'''$-assenstelsel. Het product van de inertiematrix en de rotatievector wordt genomen en vervolgens wordt dit resultaat terug naar het wereldassenstelsel geconverteerd.
 \begin{equation*}
 \begin{split}
 \overrightarrow{\omega}_{w,I}
@@ -116,22 +94,14 @@ I\_w\_yy}\,\omega_{i}\\
 \begin{align*}
 &L_{w,wereld}=R^{x'''y'''z''' \rightarrow xyz}\,L_{w}\\
 &=\begin{bmatrix}
-- \left( \omega_{g}\, \left( {\it I\_w\_xx}-
-{\it I\_w\_zz} \right) \sin \left( \beta \right) +{\it I\_w\_xx}\,
-\omega_{w} \right) \cos \left( \beta \right) \\ 
-%
- \left( \omega_{g}\, \left( {\it I\_w\_xx}-{\it I\_w\_zz} \right) 
- \left( \cos \left( \beta \right)  \right) ^{2}-{\it I\_w\_xx}\,
- \left( \sin \left( \beta \right) \omega_{w}+\omega_{g} \right) 
- \right) \sin \left( \alpha \right) +\cos \left( \alpha \right) {\it 
-I\_w\_yy}\,\omega_{i}\\ 
-%
- \left( -\omega_{g}\,
- \left( {\it I\_w\_xx}-{\it I\_w\_zz} \right)  \left( \cos \left( 
-\beta \right)  \right) ^{2}+{\it I\_w\_xx}\, \left( \sin \left( \beta
- \right) \omega_{w}+\omega_{g} \right)  \right) \cos \left( \alpha
- \right) +\sin \left( \alpha \right) {\it I\_w\_yy}\,\omega_{i}
-\
+-\cos \left( \beta \right)  \left( {\it I\_w\_xx}\,\sin \left( \beta \right) \omega_{g}-\sin \left( \beta\right) {\it I\_w\_zz}\,\omega_{g}+{\it I\_w\_xx}\,\omega_{w}
+\right)
+\\ 
+{\it I\_w\_xx}\, \left( \cos \left( \beta \right)  \right) ^{2}\sin \left( \alpha \right) \omega_{g}-\sin\left( \alpha \right)  \left( \cos \left( \beta \right)  \right) ^{2}
+{\it I\_w\_zz}\,\omega_{g}-{\it I\_w\_xx}\,\sin \left( \beta \right) \sin \left( \alpha \right) \omega_{w}-{\it I\_w\_xx}\,\sin \left( \alpha \right) \omega_{g}+\cos \left( \alpha \right) {\it I\_w\_yy}\,\omega_{i}
+\\ 
+-{\it I\_w\_xx}\, \left( \cos \left( \beta \right)  \right) ^{2}\cos \left( \alpha \right) \omega_{g}+\cos\left( \alpha \right)  \left( \cos \left( \beta \right)  \right) ^{2}
+{\it I\_w\_zz}\,\omega_{g}+{\it I\_w\_xx}\,\sin \left( \beta \right) \cos \left( \alpha \right) \omega_{w}+{\it I\_w\_xx}\,\cos \left( \alpha \right) \omega_{g}+\sin \left( \alpha \right) {\it I\_w\_yy}\,\omega_{i}\
 \end{bmatrix}
 \end{align*}
 
@@ -213,60 +183,46 @@ I\_l\_xx}+{\it I\_l\_yy}-{\it I\_l\_zz} \right) \cos \left( \beta
 \begin{align*}
 &\frac{dL_{l,wereld}}{dt}=R^{x'''y'''z''' \rightarrow xyz}\,\frac{dL_{l}}{dt}\\
 &=\begin{bmatrix}
-2\,\omega_{g}\,\omega_{i}\, \left( {\it 
-I\_l\_zz}-{\it I\_l\_xx} \right)  \left( \cos \left( \beta \right) 
- \right) ^{2}+1/4\, \left( 3\,{\it l\_3}\,m_{l}\, \left( 2\,l_{3}\,
-\omega_{g}\,\omega_{i}+l_{4}\,\alpha_{g} \right) \cos \left( \alpha
- \right) +4\,\alpha_{g}\, \left( {\it I\_l\_zz}-{\it I\_l\_xx}
- \right) \sin \left( \beta \right) +3\,\sin \left( \alpha \right) {
-\it l\_3}\,m_{l}\, \left( l_{3}\,{\omega_{i}}^{2}+l_{4}\,\alpha_{i}
- \right)  \right) \cos \left( \beta \right) -3/4\,{\it l\_3}\,m_{l}\,
- \left(  \left( 2\,l_{4}\,\omega_{g}\,\omega_{i}-l_{3}\,\alpha_{g}
- \right) \sin \left( \beta \right) +l_{1}\,\alpha_{g}+{\it a\_v}
- \right) \cos \left( \alpha \right) +3/4\,\sin \left( \alpha \right) {
-\it l\_3}\,m_{l}\, \left( -l_{4}\,{\omega_{i}}^{2}+l_{3}\,\alpha_{i}
- \right) \sin \left( \beta \right) -\omega_{g}\,\omega_{i}\, \left( {
-\it I\_l\_yy}+{\it I\_l\_zz}-{\it I\_l\_xx} \right) 
+\cos \left( \beta \right)  \left( {\it 
+I\_l\_xx}\, \left( -\sin \left( \beta \right) \alpha_{g}-\cos \left( 
+\beta \right) \omega_{g}\,\omega_{i} \right) +\omega_{i}\,{\it 
+I\_l\_zz}\,\cos \left( \beta \right) \omega_{g}-\cos \left( \beta
+ \right) \omega_{g}\,{\it I\_l\_yy}\,\omega_{i} \right) +\sin \left( 
+\beta \right)  \left( {\it I\_l\_zz}\, \left( \cos \left( \beta
+ \right) \alpha_{g}-\sin \left( \beta \right) \omega_{g}\,\omega_{i}
+ \right) -\sin \left( \beta \right) \omega_{g}\,{\it I\_l\_yy}\,\omega
+_{i}+\omega_{i}\,{\it I\_l\_xx}\,\sin \left( \beta \right) \omega_{g}
+ \right) 
 \\ 
-%
-\alpha_{g}\,\sin \left( \alpha \right)  \left( {
-\it I\_l\_xx}-{\it I\_l\_zz} \right)  \left( \cos \left( \beta
- \right)  \right) ^{2}+1/4\, \left(  \left( -8\,\omega_{g}\,\omega_{i}
-\, \left( {\it I\_l\_xx}-{\it I\_l\_zz} \right) \sin \left( \beta
- \right) +{\it l\_4}\,m_{l}\, \left( 2\,l_{3}\,\omega_{g}\,\omega_{i}+
-l_{4}\,\alpha_{g} \right)  \right) \sin \left( \alpha \right) -4\,{
-\omega_{g}}^{2}\cos \left( \alpha \right)  \left( {\it I\_l\_xx}-{\it 
-I\_l\_zz} \right) \sin \left( \beta \right) - \left( {\it l\_4}\,
- \left( l_{3}\,{\omega_{i}}^{2}+l_{4}\,\alpha_{i} \right) \cos \left( 
-\alpha \right) +3\,{\it l\_3}\, \left( -l_{4}\,{\omega_{g}}^{2}-l_{4}
-\,{\omega_{i}}^{2}+l_{3}\,\alpha_{i} \right)  \right) m_{l} \right) 
-\cos \left( \beta \right) +1/4\, \left( {\it l\_4}\,m_{l}\, \left( -2
-\,l_{4}\,\omega_{g}\,\omega_{i}+l_{3}\,\alpha_{g} \right) \sin \left( 
-\beta \right) -{\it l\_4}\, \left( l_{1}\,\alpha_{g}+{\it a\_v}
- \right) m_{l}-4\,{\it I\_l\_xx}\,\alpha_{g} \right) \sin \left( 
-\alpha \right) -1/4\,m_{l}\, \left( {\it l\_4}\, \left( -l_{4}\,{
-\omega_{i}}^{2}+l_{3}\,\alpha_{i} \right) \cos \left( \alpha \right) -
-3\,{\it l\_3}\, \left( l_{3}\,{\omega_{g}}^{2}+l_{3}\,{\omega_{i}}^{2}
-+l_{4}\,\alpha_{i} \right)  \right) \sin \left( \beta \right) -3/4\,{
-\it l\_3}\,l_{1}\,m_{l}\,{\omega_{g}}^{2}+{\it I\_l\_yy}\,\cos \left( 
-\alpha \right) \alpha_{i}\\ 
-%
-1/4\, \left( 4\,\alpha_{
-g}\, \left( {\it I\_l\_zz}-{\it I\_l\_xx} \right)  \left( \cos \left( 
-\beta \right)  \right) ^{2}+ \left( -8\,\omega_{g}\,\omega_{i}\,
- \left( {\it I\_l\_zz}-{\it I\_l\_xx} \right) \sin \left( \beta
- \right) -{\it l\_4}\,m_{l}\, \left( 2\,l_{3}\,\omega_{g}\,\omega_{i}+
-l_{4}\,\alpha_{g} \right)  \right) \cos \left( \beta \right) -{\it 
-l\_4}\,m_{l}\, \left( -2\,l_{4}\,\omega_{g}\,\omega_{i}+l_{3}\,\alpha_
-{g} \right) \sin \left( \beta \right) +{\it l\_4}\, \left( l_{1}\,
-\alpha_{g}+{\it a\_v} \right) m_{l}+4\,{\it I\_l\_xx}\,\alpha_{g}
- \right) \cos \left( \alpha \right) + \left(  \left( {\omega_{g}}^{2}
- \left( {\it I\_l\_zz}-{\it I\_l\_xx} \right) \sin \left( \beta
- \right) -1/4\,{\it l\_4}\,m_{l}\, \left( l_{3}\,{\omega_{i}}^{2}+l_{4
-}\,\alpha_{i} \right)  \right) \cos \left( \beta \right) -1/4\,{\it 
-l\_4}\,m_{l}\, \left( -l_{4}\,{\omega_{i}}^{2}+l_{3}\,\alpha_{i}
- \right) \sin \left( \beta \right) +{\it I\_l\_yy}\,\alpha_{i}
- \right) \sin \left( \alpha \right) \
+\sin \left( \alpha \right) \sin \left( 
+\beta \right)  \left( {\it I\_l\_xx}\, \left( -\sin \left( \beta
+ \right) \alpha_{g}-\cos \left( \beta \right) \omega_{g}\,\omega_{i}
+ \right) +\omega_{i}\,{\it I\_l\_zz}\,\cos \left( \beta \right) \omega
+_{g}-\cos \left( \beta \right) \omega_{g}\,{\it I\_l\_yy}\,\omega_{i}
+ \right) +\cos \left( \alpha \right)  \left( {\it I\_l\_yy}\,\alpha_{i
+}+\sin \left( \beta \right) {\omega_{g}}^{2}{\it I\_l\_zz}\,\cos
+ \left( \beta \right) -\cos \left( \beta \right) {\omega_{g}}^{2}{\it 
+I\_l\_xx}\,\sin \left( \beta \right)  \right) -\sin \left( \alpha
+ \right) \cos \left( \beta \right)  \left( {\it I\_l\_zz}\, \left( 
+\cos \left( \beta \right) \alpha_{g}-\sin \left( \beta \right) \omega_
+{g}\,\omega_{i} \right) -\sin \left( \beta \right) \omega_{g}\,{\it 
+I\_l\_yy}\,\omega_{i}+\omega_{i}\,{\it I\_l\_xx}\,\sin \left( \beta
+ \right) \omega_{g} \right) 
+\\ 
+-\cos \left( \alpha
+ \right) \sin \left( \beta \right)  \left( {\it I\_l\_xx}\, \left( -
+\sin \left( \beta \right) \alpha_{g}-\cos \left( \beta \right) \omega_
+{g}\,\omega_{i} \right) +\omega_{i}\,{\it I\_l\_zz}\,\cos \left( \beta
+ \right) \omega_{g}-\cos \left( \beta \right) \omega_{g}\,{\it 
+I\_l\_yy}\,\omega_{i} \right) +\sin \left( \alpha \right)  \left( {
+\it I\_l\_yy}\,\alpha_{i}+\sin \left( \beta \right) {\omega_{g}}^{2}{
+\it I\_l\_zz}\,\cos \left( \beta \right) -\cos \left( \beta \right) {
+\omega_{g}}^{2}{\it I\_l\_xx}\,\sin \left( \beta \right)  \right) +
+\cos \left( \alpha \right) \cos \left( \beta \right)  \left( {\it 
+I\_l\_zz}\, \left( \cos \left( \beta \right) \alpha_{g}-\sin \left( 
+\beta \right) \omega_{g}\,\omega_{i} \right) -\sin \left( \beta
+ \right) \omega_{g}\,{\it I\_l\_yy}\,\omega_{i}+\omega_{i}\,{\it 
+I\_l\_xx}\,\sin \left( \beta \right) \omega_{g} \right)\
 \end{bmatrix}
 \end{align*}
 
@@ -303,7 +259,7 @@ De verandering van het impulsmoment wordt gegeven door de volgende formule. Dit 
 0\\
 \omega_{g}\
 \end{bmatrix}\right)\times\begin{bmatrix}
--\omega_{g}\\
+-\omega_{w}\\
 0\\
 0\
 \end{bmatrix}+\begin{bmatrix}
@@ -321,34 +277,36 @@ De verandering van het impulsmoment wordt gegeven door de volgende formule. Dit 
 \end{bmatrix}
 \right]\\
 &=\begin{bmatrix}
--\cos \left( \beta \right) \omega_{g}\,
-\omega_{i}\, \left( {\it I\_w\_yy}-{\it I\_w\_zz} \right) 
+{\it I\_w\_xx}\, \left( -\sin \left( \beta
+ \right) \alpha_{g}-\cos \left( \beta \right) \omega_{g}\,\omega_{i}+
+\alpha_{w} \right) 
 \\ 
-%
-- \left( \sin \left( \beta \right) \omega_{g}+
-\omega_{w} \right) \cos \left( \beta \right) \omega_{g}\, \left( {\it 
-I\_w\_xx}-{\it I\_w\_zz} \right) \\ 
-%
- \left( \sin
- \left( \beta \right) \omega_{g}+\omega_{w} \right) \omega_{i}\,
- \left( -{\it I\_w\_yy}+{\it I\_w\_xx} \right) \
+{\it I\_w\_yy}\, \left( \alpha
+_{i}-\cos \left( \beta \right) \omega_{g}\,\omega_{w} \right) 
+\\ 
+{\it I\_w\_zz}\, \left( \cos \left( \beta
+ \right) \alpha_{g}-\sin \left( \beta \right) \omega_{g}\,\omega_{i}+
+\omega_{i}\,\omega_{w} \right) \ 
 \end{bmatrix}
 \end{align*}
 
 \begin{equation*}
 \begin{split}
 \overrightarrow{\Omega}_{w,I}\times L_{w}&=\begin{bmatrix}
--\cos \left( \beta \right) \omega_{g}\,
-\omega_{i}\, \left( {\it I\_w\_yy}-{\it I\_w\_zz} \right) 
+\omega_{i}\,{\it I\_w\_zz}\,\cos \left( 
+\beta \right) \omega_{g}-\cos \left( \beta \right) \omega_{g}\,{\it 
+I\_w\_yy}\,\omega_{i}
 \\ 
-%
-- \left( \sin \left( \beta \right) \omega_{g}+
-\omega_{w} \right) \cos \left( \beta \right) \omega_{g}\, \left( {\it 
-I\_w\_xx}-{\it I\_w\_zz} \right) \\ 
-%
- \left( \sin
- \left( \beta \right) \omega_{g}+\omega_{w} \right) \omega_{i}\,
- \left( -{\it I\_w\_yy}+{\it I\_w\_xx} \right) \
+- \left( -\sin \left( \beta
+ \right) \omega_{g}-\omega_{w} \right) {\it I\_w\_zz}\,\cos \left( 
+\beta \right) \omega_{g}+\cos \left( \beta \right) \omega_{g}\,{\it 
+I\_w\_xx}\, \left( -\sin \left( \beta \right) \omega_{g}-\omega_{w}
+ \right) 
+\\ 
+\left( -\sin \left( \beta \right) 
+\omega_{g}-\omega_{w} \right) {\it I\_w\_yy}\,\omega_{i}-\omega_{i}\,{
+\it I\_w\_xx}\, \left( -\sin \left( \beta \right) \omega_{g}-\omega_{w
+} \right) \
 \end{bmatrix}
 \end{split}
 \end{equation*}
@@ -357,22 +315,20 @@ I\_w\_xx}-{\it I\_w\_zz} \right) \\
 \begin{split}
 &\frac{d\overrightarrow{L_{w}}}{dt}=\left(\frac{d\overrightarrow{L_{w}}}{dt}\right)_{rel}+\overrightarrow{\Omega}_{w,I}\times L_{w}\\
 &=\begin{bmatrix}
--\omega_{g}\,\omega_{i}\, \left( {\it 
-I\_w\_xx}+{\it I\_w\_yy}-{\it I\_w\_zz} \right) \cos \left( \beta
- \right) -{\it I\_w\_xx}\, \left( \sin \left( \beta \right) \alpha_{g}
--\alpha_{w} \right) \\ 
-%
-- \left( \omega_{g}\, \left( 
-{\it I\_w\_xx}-{\it I\_w\_zz} \right) \sin \left( \beta \right) +
-\omega_{w}\, \left( {\it I\_w\_xx}+{\it I\_w\_yy}-{\it I\_w\_zz}
- \right)  \right) \omega_{g}\,\cos \left( \beta \right) +{\it I\_w\_yy
-}\,\alpha_{i}\\ 
-%
-\omega_{g}\,\omega_{i}\, \left( {
-\it I\_w\_xx}-{\it I\_w\_yy}-{\it I\_w\_zz} \right) \sin \left( \beta
- \right) +{\it I\_w\_zz}\,\cos \left( \beta \right) \alpha_{g}+\omega_
-{i}\,\omega_{w}\, \left( {\it I\_w\_xx}-{\it I\_w\_yy}+{\it I\_w\_zz}
- \right) \
+\omega_{i}\,{\it I\_w\_zz
+}\,\cos \left( \beta \right) \omega_{g}-\cos \left( \beta \right) 
+\omega_{g}\,{\it I\_w\_yy}\,\omega_{i}
+\\ 
+- \left( -
+\sin \left( \beta \right) \omega_{g}-\omega_{w} \right) {\it I\_w\_zz}
+\,\cos \left( \beta \right) \omega_{g}+\cos \left( \beta \right) 
+\omega_{g}\,{\it I\_w\_xx}\, \left( -\sin \left( \beta \right) \omega_
+{g}-\omega_{w} \right) 
+\\ 
+ \left( -\sin \left( \beta
+ \right) \omega_{g}-\omega_{w} \right) {\it I\_w\_yy}\,\omega_{i}-
+\omega_{i}\,{\it I\_w\_xx}\, \left( -\sin \left( \beta \right) \omega_
+{g}-\omega_{w} \right) \ 
 \end{bmatrix}
 \end{split}
 \end{equation*}
@@ -382,42 +338,62 @@ I\_w\_xx}+{\it I\_w\_yy}-{\it I\_w\_zz} \right) \cos \left( \beta
 \begin{split}
 &\frac{dL_{w,wereld}}{dt}=R^{x'''y'''z''' \rightarrow xyz}\,\frac{dL_{w}}{dt}\\
 &=\begin{bmatrix}
--2\,\omega_{g}\,\omega_{i}\, \left( {\it 
-I\_w\_xx}-{\it I\_w\_zz} \right)  \left( \cos \left( \beta \right) 
- \right) ^{2}+ \left( -\alpha_{g}\, \left( {\it I\_w\_xx}-{\it 
-I\_w\_zz} \right) \sin \left( \beta \right) +{\it I\_w\_xx}\,\alpha_{w
-} \right) \cos \left( \beta \right) +\omega_{i}\, \left( \omega_{w}\,
- \left( {\it I\_w\_xx}-{\it I\_w\_yy}+{\it I\_w\_zz} \right) \sin
- \left( \beta \right) +\omega_{g}\, \left( {\it I\_w\_xx}-{\it 
-I\_w\_yy}-{\it I\_w\_zz} \right)  \right) \\ 
-%
-\sin
- \left( \alpha \right) \alpha_{g}\, \left( {\it I\_w\_xx}-{\it 
-I\_w\_zz} \right)  \left( \cos \left( \beta \right)  \right) ^{2}+
- \left( - \left( 2\,\omega_{g}\, \left( {\it I\_w\_xx}-{\it I\_w\_zz}
- \right) \sin \left( \beta \right) +\omega_{w}\, \left( {\it I\_w\_xx}
--{\it I\_w\_yy}+{\it I\_w\_zz} \right)  \right) \omega_{i}\,\sin
- \left( \alpha \right) -\omega_{g}\, \left( \omega_{g}\, \left( {\it 
-I\_w\_xx}-{\it I\_w\_zz} \right) \sin \left( \beta \right) +\omega_{w}
-\, \left( {\it I\_w\_xx}+{\it I\_w\_yy}-{\it I\_w\_zz} \right) 
- \right) \cos \left( \alpha \right)  \right) \cos \left( \beta
- \right) +{\it I\_w\_xx}\, \left( \sin \left( \beta \right) \alpha_{w}
--\alpha_{g} \right) \sin \left( \alpha \right) +{\it I\_w\_yy}\,\cos
- \left( \alpha \right) \alpha_{i}\\ 
- %
- -\cos \left( 
-\alpha \right) \alpha_{g}\, \left( {\it I\_w\_xx}-{\it I\_w\_zz}
- \right)  \left( \cos \left( \beta \right)  \right) ^{2}+ \left( 
- \left( 2\,\omega_{g}\, \left( {\it I\_w\_xx}-{\it I\_w\_zz} \right) 
-\sin \left( \beta \right) +\omega_{w}\, \left( {\it I\_w\_xx}-{\it 
-I\_w\_yy}+{\it I\_w\_zz} \right)  \right) \omega_{i}\,\cos \left( 
-\alpha \right) -\sin \left( \alpha \right) \omega_{g}\, \left( \omega_
-{g}\, \left( {\it I\_w\_xx}-{\it I\_w\_zz} \right) \sin \left( \beta
- \right) +\omega_{w}\, \left( {\it I\_w\_xx}+{\it I\_w\_yy}-{\it 
-I\_w\_zz} \right)  \right)  \right) \cos \left( \beta \right) -{\it 
-I\_w\_xx}\, \left( \sin \left( \beta \right) \alpha_{w}-\alpha_{g}
- \right) \cos \left( \alpha \right) +{\it I\_w\_yy}\,\sin \left( 
-\alpha \right) \alpha_{i}\
+-2\,{\it I\_w\_xx}\, \left( \cos \left( 
+\beta \right)  \right) ^{2}\omega_{g}\,\omega_{i}+2\,{\it I\_w\_zz}\,
+ \left( \cos \left( \beta \right)  \right) ^{2}\omega_{g}\,\omega_{i}-
+{\it I\_w\_xx}\,\sin \left( \beta \right) \cos \left( \beta \right) 
+\alpha_{g}+{\it I\_w\_xx}\,\sin \left( \beta \right) \omega_{i}\,
+\omega_{w}-{\it I\_w\_yy}\,\sin \left( \beta \right) \omega_{i}\,
+\omega_{w}+{\it I\_w\_zz}\,\sin \left( \beta \right) \cos \left( \beta
+ \right) \alpha_{g}+{\it I\_w\_zz}\,\sin \left( \beta \right) \omega_{
+i}\,\omega_{w}+{\it I\_w\_xx}\,\cos \left( \beta \right) \alpha_{w}+{
+\it I\_w\_xx}\,\omega_{g}\,\omega_{i}-{\it I\_w\_yy}\,\omega_{g}\,
+\omega_{i}-{\it I\_w\_zz}\,\omega_{g}\,\omega_{i}
+\\ 
+-2\,{\it I\_w\_xx}\,\sin \left( \beta \right) \cos \left( \beta
+ \right) \sin \left( \alpha \right) \omega_{g}\,\omega_{i}-{\it 
+I\_w\_xx}\,\sin \left( \beta \right) \cos \left( \beta \right) \cos
+ \left( \alpha \right) {\omega_{g}}^{2}+2\,{\it I\_w\_zz}\,\sin
+ \left( \beta \right) \cos \left( \beta \right) \sin \left( \alpha
+ \right) \omega_{g}\,\omega_{i}+{\it I\_w\_zz}\,\sin \left( \beta
+ \right) \cos \left( \beta \right) \cos \left( \alpha \right) {\omega_
+{g}}^{2}+{\it I\_w\_xx}\, \left( \cos \left( \beta \right)  \right) ^{
+2}\sin \left( \alpha \right) \alpha_{g}-{\it I\_w\_xx}\,\cos \left( 
+\beta \right) \sin \left( \alpha \right) \omega_{i}\,\omega_{w}-{\it 
+I\_w\_xx}\,\cos \left( \beta \right) \cos \left( \alpha \right) \omega
+_{g}\,\omega_{w}+{\it I\_w\_yy}\,\cos \left( \beta \right) \sin
+ \left( \alpha \right) \omega_{i}\,\omega_{w}-{\it I\_w\_yy}\,\cos
+ \left( \beta \right) \cos \left( \alpha \right) \omega_{g}\,\omega_{w
+}-{\it I\_w\_zz}\, \left( \cos \left( \beta \right)  \right) ^{2}\sin
+ \left( \alpha \right) \alpha_{g}-{\it I\_w\_zz}\,\cos \left( \beta
+ \right) \sin \left( \alpha \right) \omega_{i}\,\omega_{w}+{\it 
+I\_w\_zz}\,\cos \left( \beta \right) \cos \left( \alpha \right) \omega
+_{g}\,\omega_{w}+{\it I\_w\_xx}\,\sin \left( \beta \right) \sin
+ \left( \alpha \right) \alpha_{w}-{\it I\_w\_xx}\,\sin \left( \alpha
+ \right) \alpha_{g}+{\it I\_w\_yy}\,\cos \left( \alpha \right) \alpha_
+{i}\\
+-{\it I\_w\_xx}\,\sin \left( \beta \right) 
+\cos \left( \beta \right) \sin \left( \alpha \right) {\omega_{g}}^{2}+
+2\,{\it I\_w\_xx}\,\sin \left( \beta \right) \cos \left( \beta
+ \right) \cos \left( \alpha \right) \omega_{g}\,\omega_{i}+{\it 
+I\_w\_zz}\,\sin \left( \beta \right) \cos \left( \beta \right) \sin
+ \left( \alpha \right) {\omega_{g}}^{2}-2\,{\it I\_w\_zz}\,\sin
+ \left( \beta \right) \cos \left( \beta \right) \cos \left( \alpha
+ \right) \omega_{g}\,\omega_{i}-{\it I\_w\_xx}\, \left( \cos \left( 
+\beta \right)  \right) ^{2}\cos \left( \alpha \right) \alpha_{g}-{\it 
+I\_w\_xx}\,\cos \left( \beta \right) \sin \left( \alpha \right) \omega
+_{g}\,\omega_{w}+{\it I\_w\_xx}\,\cos \left( \beta \right) \cos
+ \left( \alpha \right) \omega_{i}\,\omega_{w}-{\it I\_w\_yy}\,\cos
+ \left( \beta \right) \sin \left( \alpha \right) \omega_{g}\,\omega_{w
+}-{\it I\_w\_yy}\,\cos \left( \beta \right) \cos \left( \alpha
+ \right) \omega_{i}\,\omega_{w}+{\it I\_w\_zz}\, \left( \cos \left( 
+\beta \right)  \right) ^{2}\cos \left( \alpha \right) \alpha_{g}+{\it 
+I\_w\_zz}\,\cos \left( \beta \right) \sin \left( \alpha \right) \omega
+_{g}\,\omega_{w}+{\it I\_w\_zz}\,\cos \left( \beta \right) \cos
+ \left( \alpha \right) \omega_{i}\,\omega_{w}-{\it I\_w\_xx}\,\sin
+ \left( \beta \right) \cos \left( \alpha \right) \alpha_{w}+{\it 
+I\_w\_xx}\,\cos \left( \alpha \right) \alpha_{g}+{\it I\_w\_yy}\,\sin
+ \left( \alpha \right) \alpha_{i}\
 \end{bmatrix}
 \end{split}
 \end{equation*}
