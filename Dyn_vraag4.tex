@@ -2,9 +2,9 @@ Ook voor het berekenen van het moment van het landingsgestel op de vleugel zijn 
 
 Er speelt maar \'e\'en moment in op het wiel, namelijk het moment vanwege het landingsgestel. De krachten zorgen niet voor momenten aangezien ze aangrijpen in het massacentrum.
 
-\begin{equation*}
+\begin{equation}
 \overrightarrow{M_{w,l}}=\frac{d\overrightarrow{L_{w,wereld}}}{dt}
-\end{equation*}
+\end{equation}
 
 Het moment van het wiel op het landingsgestel is gelijk aan het tegengestelde van dit moment.
 
@@ -14,104 +14,104 @@ Het moment van het wiel op het landingsgestel is gelijk aan het tegengestelde va
 
 Het momentenevenwicht van het landingsgestel rond het massacentrum is minder eenvoudig. De krachten op het landingsgestel vanwege het wiel en de vleugel zorgen voor een moment, dat gemakkelijk berekend kan worden. Er zijn ook twee vrije momenten, namelijk het moment door de vleugel en het moment door het wiel. Deze vergelijking wordt nu opgelost naar het moment door de vleugel.
 
-\begin{equation*}
+\begin{equation}
 \overrightarrow{M_{l,v}}=\frac{d\overrightarrow{L_{l,wereld}}}{dt}-\left(-\overrightarrow{{r}_{D,C}}\times \overrightarrow{R_{l,w}}\right)-\left(-\overrightarrow{{r}_{D,B}}\times \overrightarrow{F_{l,v}} \right)-\overrightarrow{M_{l,w}}
-\end{equation*}
+\end{equation}
 
-\begin{equation*}
-M_{v,l}=-M_{l,v}=\frac{dL_{l,wereld}}{dt}+\begin{bmatrix}
-1/16\, \left( -2\,
-\omega_{g}\,\omega_{i}\, \left( m_{l}+16\,m_{w} \right) {l_{4}}^{2}+6
-\,l_{4}\,l_{3}\,\alpha_{g}\, \left( m_{l}+16/3\,m_{w} \right) +32\,
-\omega_{g}\,\omega_{i}\, \left(  \left( {\frac {9\,m_{l}}{16}}+m_{w}
- \right) {l_{3}}^{2}+{\it I\_w\_xx}-{\it I\_w\_zz} \right)  \right) 
- \left( \cos \left( \beta \right)  \right) ^{2}+1/16\, \left(  \left( 
--\alpha_{g}\, \left( m_{l}+16\,m_{w} \right) {l_{4}}^{2}-12\,l_{4}\,
-\omega_{i}\,l_{3}\, \left( m_{l}+16/3\,m_{w} \right) \omega_{g}+16\,
- \left(  \left( {\frac {9\,m_{l}}{16}}+m_{w} \right) {l_{3}}^{2}+{\it 
-I\_w\_xx}-{\it I\_w\_zz} \right) \alpha_{g} \right) \sin \left( \beta
- \right) -12\,l_{3}\, \left( m_{l}+4/3\,m_{w} \right) g\sin \left( 
-\alpha \right) -12\, \left( m_{l}+4/3\,m_{w} \right)  \left( l_{1}\,
-\alpha_{g}+{\it a\_v} \right) l_{3}-16\,\alpha_{w}\,{\it I\_w\_xx}
- \right) \cos \left( \beta \right) +1/16\, \left( 4\,gl_{4}\, \left( m
-_{l}+4\,m_{w} \right) \sin \left( \alpha \right) +4\, \left( m_{l}+4\,
-m_{w} \right)  \left( l_{1}\,\alpha_{g}+{\it a\_v} \right) l_{4}-16\,
-\omega_{i}\,\omega_{w}\, \left( {\it I\_w\_xx}-{\it I\_w\_yy}+{\it 
-I\_w\_zz} \right)  \right) \sin \left( \beta \right) +1/8\,\omega_{g}
-\,\omega_{i}\, \left( m_{l}+16\,m_{w} \right) {l_{4}}^{2}-3/16\,l_{4}
-\,l_{3}\,\alpha_{g}\, \left( m_{l}+16/3\,m_{w} \right) -\omega_{g}\,
-\omega_{i}\, \left( {\it I\_w\_xx}-{\it I\_w\_yy}-{\it I\_w\_zz}
- \right) \\
- %
- 1/16\, \left(  \left( -9\, \left( m_{l}+
-{\frac {16\,m_{w}}{9}} \right) \alpha_{g}\,{l_{3}}^{2}+12\,l_{4}\,
-\omega_{i}\,l_{3}\, \left( m_{l}+16/3\,m_{w} \right) \omega_{g}-16\,
- \left(  \left( -m_{l}/16-m_{w} \right) {l_{4}}^{2}+{\it I\_w\_xx}-{
-\it I\_w\_zz} \right) \alpha_{g} \right) \sin \left( \alpha \right) +6
-\,\cos \left( \alpha \right)  \left( m_{l}+16/3\,m_{w} \right) l_{3}\,
-{\omega_{g}}^{2}l_{4} \right)  \left( \cos \left( \beta \right) 
- \right) ^{2}+1/16\, \left(  \left(  \left( 18\, \left( m_{l}+{\frac {
-16\,m_{w}}{9}} \right) \omega_{g}\,\omega_{i}\,{l_{3}}^{2}+6\,l_{4}\,l
-_{3}\,\alpha_{g}\, \left( m_{l}+16/3\,m_{w} \right) +32\, \left( 
- \left( -m_{l}/16-m_{w} \right) {l_{4}}^{2}+{\it I\_w\_xx}-{\it 
-I\_w\_zz} \right) \omega_{g}\,\omega_{i} \right) \sin \left( \beta
- \right) -4\, \left( m_{l}+4\,m_{w} \right)  \left( l_{1}\,\alpha_{g}+
-{\it a\_v} \right) l_{4}+16\,\omega_{i}\,\omega_{w}\, \left( {\it 
-I\_w\_xx}-{\it I\_w\_yy}+{\it I\_w\_zz} \right)  \right) \sin \left( 
-\alpha \right) +16\, \left(  \left( {\frac {9\,m_{l}}{16}}+m_{w}
- \right) {l_{3}}^{2}+ \left( -m_{l}/16-m_{w} \right) {l_{4}}^{2}+{\it 
-I\_w\_xx}-{\it I\_w\_zz} \right) \cos \left( \alpha \right) {\omega_{g
-}}^{2}\sin \left( \beta \right) +16\,\omega_{g}\, \left( -3/4\,
- \left( m_{l}+4/3\,m_{w} \right) l_{3}\,l_{1}\,\omega_{g}+\omega_{w}\,
- \left( {\it I\_w\_yy}-{\it I\_w\_zz}+{\it I\_w\_xx} \right)  \right) 
-\cos \left( \alpha \right) -4\,gl_{4}\, \left( m_{l}+4\,m_{w} \right) 
- \right) \cos \left( \beta \right) +1/16\, \left(  \left( -12\,
- \left( m_{l}+4/3\,m_{w} \right)  \left( l_{1}\,\alpha_{g}+{\it a\_v}
- \right) l_{3}-16\,\alpha_{w}\,{\it I\_w\_xx} \right) \sin \left( 
-\beta \right) +9\, \left( m_{l}+{\frac {16\,m_{w}}{9}} \right) \alpha_
-{g}\,{l_{3}}^{2}-6\,l_{4}\,\omega_{i}\,l_{3}\, \left( m_{l}+16/3\,m_{w
-} \right) \omega_{g}+16\,\alpha_{g}\,{\it I\_w\_xx} \right) \sin
- \left( \alpha \right) +1/16\, \left( 4\,{\omega_{g}}^{2}l_{1}\,l_{4}
-\, \left( m_{l}+4\,m_{w} \right) \cos \left( \alpha \right) -12\,l_{3}
-\, \left( m_{l}+4/3\,m_{w} \right) g \right) \sin \left( \beta
- \right) -\cos \left( \alpha \right)  \left( {\frac {9\,\alpha_{i}\,{l
-_{3}}^{2}}{16} \left( m_{l}+{\frac {16\,m_{w}}{9}} \right) }+3/16\,l_{
-4}\,l_{3}\, \left( m_{l}+16/3\,m_{w} \right) {\omega_{g}}^{2}+ \left( 
- \left( m_{l}/16+m_{w} \right) {l_{4}}^{2}+{\it I\_w\_yy} \right) 
-\alpha_{i} \right) \\ 
-%
-1/16\, \left(  \left( -12\,l_{
-4}\,\omega_{i}\,l_{3}\, \left( m_{l}+16/3\,m_{w} \right) \omega_{g}-16
-\,\alpha_{g}\, \left(  \left( -{\frac {9\,m_{l}}{16}}-m_{w} \right) {l
-_{3}}^{2}+ \left( m_{l}/16+m_{w} \right) {l_{4}}^{2}+{\it I\_w\_zz}-{
-\it I\_w\_xx} \right)  \right) \cos \left( \alpha \right) +6\,{\omega_
-{g}}^{2}\sin \left( \alpha \right) l_{4}\,l_{3}\, \left( m_{l}+16/3\,m
-_{w} \right)  \right)  \left( \cos \left( \beta \right)  \right) ^{2}+
-1/16\, \left(  \left(  \left( 32\,\omega_{i}\, \left(  \left( -{\frac 
-{9\,m_{l}}{16}}-m_{w} \right) {l_{3}}^{2}+ \left( m_{l}/16+m_{w}
- \right) {l_{4}}^{2}+{\it I\_w\_zz}-{\it I\_w\_xx} \right) \omega_{g}-
-6\,l_{4}\,l_{3}\,\alpha_{g}\, \left( m_{l}+16/3\,m_{w} \right) 
- \right) \sin \left( \beta \right) +4\, \left( m_{l}+4\,m_{w} \right) 
- \left( l_{1}\,\alpha_{g}+{\it a\_v} \right) l_{4}+16\,\omega_{i}\,
-\omega_{w}\, \left( {\it I\_w\_yy}-{\it I\_w\_zz}-{\it I\_w\_xx}
- \right)  \right) \cos \left( \alpha \right) +16\,\omega_{g}\,\sin
- \left( \alpha \right)  \left( -\omega_{g}\, \left(  \left( -{\frac {9
-\,m_{l}}{16}}-m_{w} \right) {l_{3}}^{2}+ \left( m_{l}/16+m_{w}
- \right) {l_{4}}^{2}+{\it I\_w\_zz}-{\it I\_w\_xx} \right) \sin
- \left( \beta \right) -3/4\, \left( m_{l}+4/3\,m_{w} \right) l_{3}\,l_
-{1}\,\omega_{g}+\omega_{w}\, \left( {\it I\_w\_yy}-{\it I\_w\_zz}+{
-\it I\_w\_xx} \right)  \right)  \right) \cos \left( \beta \right) +1/
-16\, \left(  \left( 12\, \left( m_{l}+4/3\,m_{w} \right)  \left( l_{1}
-\,\alpha_{g}+{\it a\_v} \right) l_{3}+16\,\alpha_{w}\,{\it I\_w\_xx}
- \right) \sin \left( \beta \right) +6\,l_{4}\,\omega_{i}\,l_{3}\,
- \left( m_{l}+16/3\,m_{w} \right) \omega_{g}-9\,\alpha_{g}\, \left( 
- \left( m_{l}+{\frac {16\,m_{w}}{9}} \right) {l_{3}}^{2}+{\frac {16\,{
-\it I\_w\_xx}}{9}} \right)  \right) \cos \left( \alpha \right) -
- \left( -1/4\,{\omega_{g}}^{2}l_{1}\,l_{4}\, \left( m_{l}+4\,m_{w}
- \right) \sin \left( \beta \right) +3/16\,l_{4}\,l_{3}\, \left( m_{l}+
-16/3\,m_{w} \right) {\omega_{g}}^{2}+ \left(  \left( {\frac {9\,m_{l}
-}{16}}+m_{w} \right) {l_{3}}^{2}+ \left( m_{l}/16+m_{w} \right) {l_{4}
-}^{2}+{\it I\_w\_yy} \right) \alpha_{i} \right) \sin \left( \alpha
- \right) \
-\end{bmatrix}
-\end{equation*}
+%\begin{equation*}
+%M_{v,l}=-M_{l,v}=\frac{dL_{l,wereld}}{dt}+\begin{bmatrix}
+%1/16\, \left( -2\,
+%\omega_{g}\,\omega_{i}\, \left( m_{l}+16\,m_{w} \right) {l_{4}}^{2}+6
+%\,l_{4}\,l_{3}\,\alpha_{g}\, \left( m_{l}+16/3\,m_{w} \right) +32\,
+%\omega_{g}\,\omega_{i}\, \left(  \left( {\frac {9\,m_{l}}{16}}+m_{w}
+% \right) {l_{3}}^{2}+{\it I\_w\_xx}-{\it I\_w\_zz} \right)  \right) 
+% \left( \cos \left( \beta \right)  \right) ^{2}+1/16\, \left(  \left( 
+%-\alpha_{g}\, \left( m_{l}+16\,m_{w} \right) {l_{4}}^{2}-12\,l_{4}\,
+%\omega_{i}\,l_{3}\, \left( m_{l}+16/3\,m_{w} \right) \omega_{g}+16\,
+% \left(  \left( {\frac {9\,m_{l}}{16}}+m_{w} \right) {l_{3}}^{2}+{\it 
+%I\_w\_xx}-{\it I\_w\_zz} \right) \alpha_{g} \right) \sin \left( \beta
+% \right) -12\,l_{3}\, \left( m_{l}+4/3\,m_{w} \right) g\sin \left( 
+%\alpha \right) -12\, \left( m_{l}+4/3\,m_{w} \right)  \left( l_{1}\,
+%\alpha_{g}+{\it a\_v} \right) l_{3}-16\,\alpha_{w}\,{\it I\_w\_xx}
+% \right) \cos \left( \beta \right) +1/16\, \left( 4\,gl_{4}\, \left( m
+%_{l}+4\,m_{w} \right) \sin \left( \alpha \right) +4\, \left( m_{l}+4\,
+%m_{w} \right)  \left( l_{1}\,\alpha_{g}+{\it a\_v} \right) l_{4}-16\,
+%\omega_{i}\,\omega_{w}\, \left( {\it I\_w\_xx}-{\it I\_w\_yy}+{\it 
+%I\_w\_zz} \right)  \right) \sin \left( \beta \right) +1/8\,\omega_{g}
+%\,\omega_{i}\, \left( m_{l}+16\,m_{w} \right) {l_{4}}^{2}-3/16\,l_{4}
+%\,l_{3}\,\alpha_{g}\, \left( m_{l}+16/3\,m_{w} \right) -\omega_{g}\,
+%\omega_{i}\, \left( {\it I\_w\_xx}-{\it I\_w\_yy}-{\it I\_w\_zz}
+% \right) \\
+% %
+% 1/16\, \left(  \left( -9\, \left( m_{l}+
+%{\frac {16\,m_{w}}{9}} \right) \alpha_{g}\,{l_{3}}^{2}+12\,l_{4}\,
+%\omega_{i}\,l_{3}\, \left( m_{l}+16/3\,m_{w} \right) \omega_{g}-16\,
+% \left(  \left( -m_{l}/16-m_{w} \right) {l_{4}}^{2}+{\it I\_w\_xx}-{
+%\it I\_w\_zz} \right) \alpha_{g} \right) \sin \left( \alpha \right) +6
+%\,\cos \left( \alpha \right)  \left( m_{l}+16/3\,m_{w} \right) l_{3}\,
+%{\omega_{g}}^{2}l_{4} \right)  \left( \cos \left( \beta \right) 
+% \right) ^{2}+1/16\, \left(  \left(  \left( 18\, \left( m_{l}+{\frac {
+%16\,m_{w}}{9}} \right) \omega_{g}\,\omega_{i}\,{l_{3}}^{2}+6\,l_{4}\,l
+%_{3}\,\alpha_{g}\, \left( m_{l}+16/3\,m_{w} \right) +32\, \left( 
+% \left( -m_{l}/16-m_{w} \right) {l_{4}}^{2}+{\it I\_w\_xx}-{\it 
+%I\_w\_zz} \right) \omega_{g}\,\omega_{i} \right) \sin \left( \beta
+% \right) -4\, \left( m_{l}+4\,m_{w} \right)  \left( l_{1}\,\alpha_{g}+
+%{\it a\_v} \right) l_{4}+16\,\omega_{i}\,\omega_{w}\, \left( {\it 
+%I\_w\_xx}-{\it I\_w\_yy}+{\it I\_w\_zz} \right)  \right) \sin \left( 
+%\alpha \right) +16\, \left(  \left( {\frac {9\,m_{l}}{16}}+m_{w}
+% \right) {l_{3}}^{2}+ \left( -m_{l}/16-m_{w} \right) {l_{4}}^{2}+{\it 
+%I\_w\_xx}-{\it I\_w\_zz} \right) \cos \left( \alpha \right) {\omega_{g
+%}}^{2}\sin \left( \beta \right) +16\,\omega_{g}\, \left( -3/4\,
+% \left( m_{l}+4/3\,m_{w} \right) l_{3}\,l_{1}\,\omega_{g}+\omega_{w}\,
+% \left( {\it I\_w\_yy}-{\it I\_w\_zz}+{\it I\_w\_xx} \right)  \right) 
+%\cos \left( \alpha \right) -4\,gl_{4}\, \left( m_{l}+4\,m_{w} \right) 
+% \right) \cos \left( \beta \right) +1/16\, \left(  \left( -12\,
+% \left( m_{l}+4/3\,m_{w} \right)  \left( l_{1}\,\alpha_{g}+{\it a\_v}
+% \right) l_{3}-16\,\alpha_{w}\,{\it I\_w\_xx} \right) \sin \left( 
+%\beta \right) +9\, \left( m_{l}+{\frac {16\,m_{w}}{9}} \right) \alpha_
+%{g}\,{l_{3}}^{2}-6\,l_{4}\,\omega_{i}\,l_{3}\, \left( m_{l}+16/3\,m_{w
+%} \right) \omega_{g}+16\,\alpha_{g}\,{\it I\_w\_xx} \right) \sin
+% \left( \alpha \right) +1/16\, \left( 4\,{\omega_{g}}^{2}l_{1}\,l_{4}
+%\, \left( m_{l}+4\,m_{w} \right) \cos \left( \alpha \right) -12\,l_{3}
+%\, \left( m_{l}+4/3\,m_{w} \right) g \right) \sin \left( \beta
+% \right) -\cos \left( \alpha \right)  \left( {\frac {9\,\alpha_{i}\,{l
+%_{3}}^{2}}{16} \left( m_{l}+{\frac {16\,m_{w}}{9}} \right) }+3/16\,l_{
+%4}\,l_{3}\, \left( m_{l}+16/3\,m_{w} \right) {\omega_{g}}^{2}+ \left( 
+% \left( m_{l}/16+m_{w} \right) {l_{4}}^{2}+{\it I\_w\_yy} \right) 
+%\alpha_{i} \right) \\ 
+%%
+%1/16\, \left(  \left( -12\,l_{
+%4}\,\omega_{i}\,l_{3}\, \left( m_{l}+16/3\,m_{w} \right) \omega_{g}-16
+%\,\alpha_{g}\, \left(  \left( -{\frac {9\,m_{l}}{16}}-m_{w} \right) {l
+%_{3}}^{2}+ \left( m_{l}/16+m_{w} \right) {l_{4}}^{2}+{\it I\_w\_zz}-{
+%\it I\_w\_xx} \right)  \right) \cos \left( \alpha \right) +6\,{\omega_
+%{g}}^{2}\sin \left( \alpha \right) l_{4}\,l_{3}\, \left( m_{l}+16/3\,m
+%_{w} \right)  \right)  \left( \cos \left( \beta \right)  \right) ^{2}+
+%1/16\, \left(  \left(  \left( 32\,\omega_{i}\, \left(  \left( -{\frac 
+%{9\,m_{l}}{16}}-m_{w} \right) {l_{3}}^{2}+ \left( m_{l}/16+m_{w}
+% \right) {l_{4}}^{2}+{\it I\_w\_zz}-{\it I\_w\_xx} \right) \omega_{g}-
+%6\,l_{4}\,l_{3}\,\alpha_{g}\, \left( m_{l}+16/3\,m_{w} \right) 
+% \right) \sin \left( \beta \right) +4\, \left( m_{l}+4\,m_{w} \right) 
+% \left( l_{1}\,\alpha_{g}+{\it a\_v} \right) l_{4}+16\,\omega_{i}\,
+%\omega_{w}\, \left( {\it I\_w\_yy}-{\it I\_w\_zz}-{\it I\_w\_xx}
+% \right)  \right) \cos \left( \alpha \right) +16\,\omega_{g}\,\sin
+% \left( \alpha \right)  \left( -\omega_{g}\, \left(  \left( -{\frac {9
+%\,m_{l}}{16}}-m_{w} \right) {l_{3}}^{2}+ \left( m_{l}/16+m_{w}
+% \right) {l_{4}}^{2}+{\it I\_w\_zz}-{\it I\_w\_xx} \right) \sin
+% \left( \beta \right) -3/4\, \left( m_{l}+4/3\,m_{w} \right) l_{3}\,l_
+%{1}\,\omega_{g}+\omega_{w}\, \left( {\it I\_w\_yy}-{\it I\_w\_zz}+{
+%\it I\_w\_xx} \right)  \right)  \right) \cos \left( \beta \right) +1/
+%16\, \left(  \left( 12\, \left( m_{l}+4/3\,m_{w} \right)  \left( l_{1}
+%\,\alpha_{g}+{\it a\_v} \right) l_{3}+16\,\alpha_{w}\,{\it I\_w\_xx}
+% \right) \sin \left( \beta \right) +6\,l_{4}\,\omega_{i}\,l_{3}\,
+% \left( m_{l}+16/3\,m_{w} \right) \omega_{g}-9\,\alpha_{g}\, \left( 
+% \left( m_{l}+{\frac {16\,m_{w}}{9}} \right) {l_{3}}^{2}+{\frac {16\,{
+%\it I\_w\_xx}}{9}} \right)  \right) \cos \left( \alpha \right) -
+% \left( -1/4\,{\omega_{g}}^{2}l_{1}\,l_{4}\, \left( m_{l}+4\,m_{w}
+% \right) \sin \left( \beta \right) +3/16\,l_{4}\,l_{3}\, \left( m_{l}+
+%16/3\,m_{w} \right) {\omega_{g}}^{2}+ \left(  \left( {\frac {9\,m_{l}
+%}{16}}+m_{w} \right) {l_{3}}^{2}+ \left( m_{l}/16+m_{w} \right) {l_{4}
+%}^{2}+{\it I\_w\_yy} \right) \alpha_{i} \right) \sin \left( \alpha
+% \right) \
+%\end{bmatrix}
+%\end{equation*}
