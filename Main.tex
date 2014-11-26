@@ -1,4 +1,6 @@
 \documentclass[a4paper,11pt,fleqn]{article}
+\usepackage[pdftex]{graphicx}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 \usepackage{fullpage}
 \usepackage{pdfpages}
 \usepackage{amsmath}
@@ -21,17 +23,20 @@
 
 %Titelblad
 \input{./Titelblad.tex}
+\thispagestyle{empty}
 
 \newpage
 %ToC
 \tableofcontents
-\thispagestyle{plain}
+\thispagestyle{empty}
 \newpage
 
 
 \setcounter{page}{1}
 \pagenumbering{arabic}
 %Transformatiematrices
+\setcounter{page}{1}
+\pagenumbering{arabic}
 \section{Transformatiematrices}
 \thispagestyle{plain}
 \input{./Transformatiematrices.tex}
