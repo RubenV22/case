@@ -2,7 +2,7 @@ Om de kracht op de vleugel door het landingsgestel te berekenen is het door een 
 Het krachtenevenwicht van het landingsgestel is volledig bepaald als de kracht van het wiel op het landingsgestel bekend is. Het wiel wordt dus als eerste volledig vrijgemaakt.
 
 \subsubsection{Het wiel}
-OP het wiel werken twee krachten in, namelijk het gewicht en de kracht van het landingsgestel op het wiel. De som van deze twee krachten is gelijk aan de verandering van de impuls van het wiel.
+Op het wiel werken twee krachten in, namelijk het gewicht en de kracht van het landingsgestel op het wiel. De som van deze twee krachten is gelijk aan de verandering van de impuls van het wiel.
 
 \begin{equation}
 \overrightarrow{G_{w}}+\overrightarrow{R_{wl}}=\frac{d\overrightarrow{p_{w}}}{dt}
@@ -21,6 +21,11 @@ In een vorige opgave is de verandering van het impuls al eens berekend. Het gewi
 
 De kracht $\overrightarrow{R_{wl}}$ wordt nu berekend en omgekeerd om de gewenste kracht $\overrightarrow{R_{lw}}$ te bekomen.
 
+\begin{equation*}
+\overrightarrow{R_{wl}} =\frac{d\overrightarrow{p_{w}}}{dt}-\overrightarrow{G_{w}}
+\longrightarrow\overrightarrow{R_{lw}}=-\frac{d\overrightarrow{p_{w}}}{dt}+\overrightarrow{G_{w}}
+\end{equation*}
+
 
 \subsubsection{Het landingsgestel}
 Op het landingsgestel werken er drie krachten. De eerste kracht is natuurlijk het gewicht van het landingsgestel zelf. Vervolgens is er nog de kracht omwille van het wiel die in het vorige deel werd berekend en de kracht door de vleugel. Deze laatste kracht wordt berekend en omgedraaid om de gevraagde kracht te bekomen.
@@ -29,5 +34,19 @@ Op het landingsgestel werken er drie krachten. De eerste kracht is natuurlijk he
 \overrightarrow{G_{l}}+\overrightarrow{R_{lw}}+\overrightarrow{F_{lv}}=\frac{d\overrightarrow{p_{l}}}{dt}
 \end{equation}
 
+\begin{equation*}
+\overrightarrow{G_{l}}
+=	\begin{bmatrix}
+	0\\
+	0\\
+	-gm_{l}\
+	\end{bmatrix}
+\end{equation*}
+
 Van deze termen is er maar \'e\'en onbekend, namelijk de kracht door de vleugel. De vergelijking wordt dus opgelost naar deze term en de oplossing wordt omgedraaid. Dit is de gevraagde kracht van het landingsgestel op de vleugel.
+
+\begin{equation}
+\overrightarrow{F_{lv}}=\frac{d\overrightarrow{p_{l}}}{dt}-\overrightarrow{G_{l}}-\overrightarrow{R_{lw}}\longrightarrow\overrightarrow{F_{vl}}=-\frac{d\overrightarrow{p_{l}}}{dt}+\overrightarrow{G_{l}}+\overrightarrow{R_{lw}}
+\end{equation}
+
 
