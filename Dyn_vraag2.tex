@@ -27,20 +27,20 @@ Ten slotte wordt het resultaat nog getransformeerd naar het wereldassenstelsel o
 
 \begin{equation}
 \begin{split}
-L_{l}&=I_{l}\,\overrightarrow{\omega}_{l,I}&=
+\overrightarrow{L_{l}}&=I_{l}\,\overrightarrow{\omega}_{l,I}&=
 \begin{bmatrix}
--{\it I\_l\_xx}\,\sin \left( \beta \right) 
+-{\ I_{l,x''x''}}\,\sin \left( \beta \right) 
 \omega_{g}\\
-{\it I\_l\_yy}\,\omega_{i}
+{ I_{l,y''y''}}\,\omega_{i}
 \\
-{\it I\_l\_zz}\,\cos \left( \beta \right) \omega_
+{I_{l,z''z''}}\,\cos \left( \beta \right) \omega_
 {g}\
 \end{bmatrix}
 \end{split}
 \end{equation}
 
 \begin{align*}
-&L_{l,wereld}=R^{x'''y'''z''' \rightarrow xyz}\,\L_{l}\\
+&\overrightarrow{L_{l,wereld}}=R^{x'''y'''z''' \rightarrow xyz}\,\overrightarrow{\L_{l}}\\
 &=
 \begin{bmatrix}
 -\cos \left( \beta \right){\it I\_l\_xx}\,\sin \left( \beta \right) \omega_{g}+\sin \left( \beta \right) {\it 
@@ -79,7 +79,7 @@ _{w}\\
 
 \begin{equation}
 \begin{split}
-L_{w}&=I_{w}\,\overrightarrow{\omega}_{w,I}&=
+\overrightarrow{L_{w}}&=I_{w}\,\overrightarrow{\omega}_{w,I}&=
 \begin{bmatrix}
 {\it I\_w\_xx}\, \left( -\sin \left( \beta
  \right) \omega_{g}-\omega_{w} \right) \\
@@ -92,16 +92,20 @@ I\_w\_yy}\,\omega_{i}\\
 \end{equation}
 
 \begin{align*}
-&L_{w,wereld}=R^{x'''y'''z''' \rightarrow xyz}\,L_{w}\\
+&\overrightarrow{L_{w,wereld}}=R^{x'''y'''z''' \rightarrow xyz}\,\overrightarrow{L_{w}}\\
 &=\begin{bmatrix}
 -\cos \left( \beta \right)  \left( {\it I\_w\_xx}\,\sin \left( \beta \right) \omega_{g}-\sin \left( \beta\right) {\it I\_w\_zz}\,\omega_{g}+{\it I\_w\_xx}\,\omega_{w}
 \right)
 \\ 
+\\
 {\it I\_w\_xx}\, \left( \cos \left( \beta \right)  \right) ^{2}\sin \left( \alpha \right) \omega_{g}-\sin\left( \alpha \right)  \left( \cos \left( \beta \right)  \right) ^{2}
-{\it I\_w\_zz}\,\omega_{g}-{\it I\_w\_xx}\,\sin \left( \beta \right) \sin \left( \alpha \right) \omega_{w}-{\it I\_w\_xx}\,\sin \left( \alpha \right) \omega_{g}+\cos \left( \alpha \right) {\it I\_w\_yy}\,\omega_{i}
+{\it I\_w\_zz}\,\omega_{g} \cdots\\
+\cdots -{\it I\_w\_xx}\,\sin \left( \beta \right) \sin \left( \alpha \right) \omega_{w}-{\it I\_w\_xx}\,\sin \left( \alpha \right) \omega_{g}+\cos \left( \alpha \right) {\it I\_w\_yy}\,\omega_{i}
 \\ 
+\\
 -{\it I\_w\_xx}\, \left( \cos \left( \beta \right)  \right) ^{2}\cos \left( \alpha \right) \omega_{g}+\cos\left( \alpha \right)  \left( \cos \left( \beta \right)  \right) ^{2}
-{\it I\_w\_zz}\,\omega_{g}+{\it I\_w\_xx}\,\sin \left( \beta \right) \cos \left( \alpha \right) \omega_{w}+{\it I\_w\_xx}\,\cos \left( \alpha \right) \omega_{g}+\sin \left( \alpha \right) {\it I\_w\_yy}\,\omega_{i}\
+{\it I\_w\_zz}\,\omega_{g}+\cdots \\
+\cdots{\it I\_w\_xx}\,\sin \left( \beta \right) \cos \left( \alpha \right) \omega_{w}+{\it I\_w\_xx}\,\cos \left( \alpha \right) \omega_{g}+\sin \left( \alpha \right) {\it I\_w\_yy}\,\omega_{i}\
 \end{bmatrix}
 \end{align*}
 
@@ -113,7 +117,7 @@ De verandering van de impulsmomentvector wordt gegeven door de volgende formule.
 Het resultaat van deze bewerking wordt getransformeerd naar het wereldassenstelsel om de gevraagde impulsmomentvector te bekomen.
 
 \begin{align*}
-\left(\frac{dL_{l}}{dt}\right)_{rel}&=I_{l}\,\left(R^{x''y''z'' \rightarrow x'''y'''z'''}\,\begin{bmatrix}
+\left(\frac{d\overrightarrow{L_{l}}}{dt}\right)_{rel}&=I_{l}\,\left(R^{x''y''z'' \rightarrow x'''y'''z'''}\,\begin{bmatrix}
 0\\
 0\\
 \alpha_{g}\
@@ -150,7 +154,7 @@ Het resultaat van deze bewerking wordt getransformeerd naar het wereldassenstels
 
 \begin{equation*}
 \begin{split}
-\overrightarrow{\omega}_{l,I}\times L_{l}&=\begin{bmatrix}
+\overrightarrow{\omega}_{l,I}\times \overrightarrow{L_{l}}&=\begin{bmatrix}
 -\cos \left( \beta \right) \omega_{g}\,
 \omega_{i}\, \left( {\it I\_l\_yy}-{\it I\_l\_zz} \right) 
 \\ 
@@ -164,7 +168,7 @@ Het resultaat van deze bewerking wordt getransformeerd naar het wereldassenstels
 \end{equation*}
 
 \begin{align*}
-\frac{dL_{l}}{dt}&=\left(\frac{dL_{l}}{dt}\right)_{rel}+\overrightarrow{\omega}_{l,I}\times L_{l}\\
+\frac{d\overrightarrow{L_{l}}}{dt}&=\left(\frac{d\overrightarrow{L_{l}}}{dt}\right)_{rel}+\overrightarrow{\omega}_{l,I}\times  \overrightarrow{L_{l}}\\
 &=\begin{bmatrix}
 -\omega_{g}\,\omega_{i}\, \left( {\it 
 I\_l\_xx}+{\it I\_l\_yy}-{\it I\_l\_zz} \right) \cos \left( \beta
@@ -181,7 +185,7 @@ I\_l\_xx}+{\it I\_l\_yy}-{\it I\_l\_zz} \right) \cos \left( \beta
 \end{align*}
 
 \begin{align*}
-&\frac{dL_{l,wereld}}{dt}=R^{x'''y'''z''' \rightarrow xyz}\,\frac{dL_{l}}{dt}\\
+&\frac{d\overrightarrow{L_{l,wereld}}}{dt}=R^{x'''y'''z''' \rightarrow xyz}\,\frac{d\overrightarrow{L_{l}}}{dt}\\
 &=\begin{bmatrix}
 \cos \left( \beta \right)  \left( {\it 
 I\_l\_xx}\, \left( -\sin \left( \beta \right) \alpha_{g}-\cos \left( 
@@ -294,7 +298,7 @@ _{i}-\cos \left( \beta \right) \omega_{g}\,\omega_{w} \right)
 
 \begin{equation*}
 \begin{split}
-\overrightarrow{\Omega}_{w,I}\times L_{w}&=\begin{bmatrix}
+\overrightarrow{\Omega}_{w,I}\times \overrightarrow{L_{w}}&=\begin{bmatrix}
 \omega_{i}\,{\it I\_w\_zz}\,\cos \left( 
 \beta \right) \omega_{g}-\cos \left( \beta \right) \omega_{g}\,{\it 
 I\_w\_yy}\,\omega_{i}
@@ -315,7 +319,7 @@ I\_w\_xx}\, \left( -\sin \left( \beta \right) \omega_{g}-\omega_{w}
 
 \begin{equation*}
 \begin{split}
-&\frac{d\overrightarrow{L_{w}}}{dt}=\left(\frac{d\overrightarrow{L_{w}}}{dt}\right)_{rel}+\overrightarrow{\Omega}_{w,I}\times L_{w}\\
+&\frac{d\overrightarrow{L_{w}}}{dt}=\left(\frac{d\overrightarrow{L_{w}}}{dt}\right)_{rel}+\overrightarrow{\Omega}_{w,I}\times \overrightarrow{L_{w}}\\
 &=\begin{bmatrix}
 \omega_{i}\,{\it I\_w\_zz
 }\,\cos \left( \beta \right) \omega_{g}-\cos \left( \beta \right) 
@@ -338,7 +342,7 @@ I\_w\_xx}\, \left( -\sin \left( \beta \right) \omega_{g}-\omega_{w}
 
 \begin{equation*}
 \begin{split}
-&\frac{dL_{w,wereld}}{dt}=R^{x'''y'''z''' \rightarrow xyz}\,\frac{dL_{w}}{dt}\\
+&\frac{d\overrightarrow{L_{w,wereld}}}{dt}=R^{x'''y'''z''' \rightarrow xyz}\,\frac{d\overrightarrow{L_{w}}}{dt}\\
 &=\begin{bmatrix}
 -2\,{\it I\_w\_xx}\, \left( \cos \left( 
 \beta \right)  \right) ^{2}\omega_{g}\,\omega_{i}+2\,{\it I\_w\_zz}\,
