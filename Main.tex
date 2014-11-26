@@ -3,6 +3,8 @@
 \usepackage{pdfpages}
 \usepackage{amsmath}
 \usepackage[dutch]{babel}
+\usepackage{float}
+\setlength{\mathindent}{0cm}
 \usepackage{fancyhdr}
 \setlength{\headheight}{15.2pt}
 \pagestyle{fancy}
@@ -19,11 +21,18 @@
 %Titelblad
 \input{./Titelblad.tex}
 
+\newpage
+%ToC
+\tableofcontents
+\thispagestyle{plain}
+\newpage
+
 %Transformatiematrices
 \section{Transformatiematrices}
+\thispagestyle{plain}
 \input{./Transformatiematrices.tex}
 
-%\newpage
+\newpage
 %Deel kinematica
 \newpage
 \section{Kinematica}
