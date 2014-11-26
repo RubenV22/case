@@ -2,9 +2,13 @@
 \usepackage{fullpage}
 \usepackage{pdfpages}
 \usepackage{amsmath}
-\usepackage{float}
-\setlength{\mathindent}{0cm}
 \usepackage[dutch]{babel}
+\usepackage{fancyhdr}
+\setlength{\headheight}{15.2pt}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\leftmark}
+\rhead{\thepage}
 
 \hyphenation{gegeven}
 \hyphenation{kruisproducten}
@@ -15,22 +19,21 @@
 %Titelblad
 \input{./Titelblad.tex}
 
-\newpage
-\tableofcontents
-\newpage
-
 %Transformatiematrices
 \section{Transformatiematrices}
 \input{./Transformatiematrices.tex}
 
-\newpage
+%\newpage
 %Deel kinematica
+\newpage
 \section{Kinematica}
+\thispagestyle{plain}
 
 \subsection{Vraag 1}
 \input{./Kin_vraag1.tex}
 
 \subsection{Vraag 2}
+
 \input{./Kin_vraag2.tex}
 
 \subsection{Vraag 3}
@@ -42,6 +45,7 @@
 \newpage
 %Deel dynamica
 \section{Dynamica}
+\thispagestyle{plain}
 
 \subsection{Vraag 1}
 \input{./Dyn_vraag1.tex}
